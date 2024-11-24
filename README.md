@@ -181,7 +181,10 @@ To verify the dataset's representativeness:
 **Visualization Examples**:  
 Graphs comparing the distribution of states and policy areas in the sampled dataset are included to validate the sampling process.  
 
+<p align="center">
 <img src="images/sample_distribution_state.png" alt="Weighted Sample Distribution for State Activity" style="width: 50%;">  
+</p>  
+
 
 ---
 
