@@ -178,24 +178,9 @@ To verify the dataset's representativeness:
 
 ---
 
-### Example Outputs
-
-#### `final_sample.csv`
-
-| **Column**       | **Description**                                             |
-|-------------------|-------------------------------------------------------------|
-| `post_id`        | Unique identifier of the Reddit post                        |
-| `state`          | Name of the subreddit (state)                               |
-| `title`          | Title of the post                                           |
-| `selftext`       | Body text of the post                                       |
-| `policy_area`    | Classified policy area of the post                          |
-| `num_comments`   | Number of comments on the post                              |
-| `score`          | Score (upvotes - downvotes) of the post                     |
-| `image_url`      | URL of the image associated with the post                   |
-
 **Visualization Examples**:  
 Graphs comparing the distribution of states and policy areas in the sampled dataset are included to validate the sampling process.
-
+![](/images/sample_distribution_on_state.png)
 ---
 
 ### How to Run the Sampling Process
@@ -210,6 +195,18 @@ Graphs comparing the distribution of states and policy areas in the sampled data
    Run `labelStudioSampleCreation.Rmd` to generate the balanced ready to label dataset
    - Output: `final_sample.csv`
   
+#### `final_sample.csv`
+
+| **Column**       | **Description**                                             |
+|-------------------|-------------------------------------------------------------|
+| `post_id`        | Unique identifier of the Reddit post                        |
+| `state`          | Name of the subreddit (state)                               |
+| `title`          | Title of the post                                           |
+| `selftext`       | Body text of the post                                       |
+| `policy_area`    | Classified policy area of the post                          |
+| `num_comments`   | Number of comments on the post                              |
+| `score`          | Score (upvotes - downvotes) of the post                     |
+| `image_url`      | URL of the image associated with the post                   |
 
 
 
