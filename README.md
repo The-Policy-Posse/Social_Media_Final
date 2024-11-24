@@ -56,6 +56,7 @@ The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and la
          }
        ]
      }
+4.  R
 
 
 #### Step 1: Run redditPostPull.py must be run first, as redditCommentsPull.py utilizies the post_ids created
