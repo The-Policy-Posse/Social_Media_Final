@@ -1,4 +1,4 @@
-# Social_Media_Classification Modeling for Policy Topics
+# Social Media Classification Modeling for Policy Topics
 
 
 ## Reddit Data Collection
