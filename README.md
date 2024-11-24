@@ -110,7 +110,146 @@ The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and la
 
 
 
-# Policy Area Categories
+
+
+## Image Handling and Sampling for Label Studio
+To prepare to for manual labeling of the social media data, several preprocessing steps need to be completed, namely image handling and sampling.  In our dataset, 35% of reddit posts 
+contained images, many of which were crucial for determining context.  To addresss this, the script `reddit_post_image_handling.py` uses reddit_posts.csv urls to search for image 
+extensions and retrieves images from Reddit post URLs and saves them locally.  Warning: This will easily be over 20GB of data, and the script will take several hours to run.  We moved these to the cloud for hosting, but if you're working local that's fine too.
+
+### Image Download Script
+
+`reddit_post_image_handling.py`
+
+**Key Features:**
+- **Normalization of URLs**: The script cleans and normalizes the URLs to address inconsistencies such as backslashes or whitespace.
+- **Filtering Valid Image Links**: Only URLs pointing to supported image formats (`.jpg`, `.png`, `.gif`, etc.) are retained.
+- **Concurrent Downloading**: Uses `asyncio` and `aiohttp` to download multiple images simultaneously, significantly reducing runtime.
+- **Retry Logic with Exponential Backoff**: Handles rate limits and transient errors by retrying failed downloads with increasing delays.
+
+**Output**:  
+Images are saved in the directory `post_images/`, with filenames corresponding to their respective `post_id` (e.g., `abc123.jpg`).
+
+---
+
+### Data Sampling for Label Studio
+Once the images have been downloaded, you can proceed to using `labelStudioSampleCreation.rmd`, which handles Label Studio preprocessing as well as generates a stratified,
+proportional, and constrained sample with prioritization based on engagement metrics within each State.  It also performs lemmatization on a dummy column to facilitate a keyword search for each policy topic of interest, to further drive representative sampling for all classes into the manual phase.  
+
+
+#### Sampling Methodology
+
+1. **Policy Area Classification**  
+   Each post is classified into one of several predefined policy areas using a keyword-based matching approach.  
+   - **Text Preprocessing**: Titles and body text are lemmatized for better keyword matching using the `textstem` R library.  
+   - **Keyword Matching**: Policy areas are defined by a set of keywords, such as:
+     - *Health*: `health`, `medicine`, `hospital`, `insurance`, etc.
+     - *Environment*: `climate`, `pollution`, `wildlife`, etc.  
+     Posts without a match are classified as *Other / Uncategorized*.
+
+2. **State-Specific Sampling**  
+   The sampling ensures a balanced representation across U.S. states while prioritizing relevance:
+   - **Minimum and Maximum Constraints**: Each state contributes at least 90 posts but no more than 350.
+   - **Weighting by Engagement**: Sampling is limited-weight proportional to the total comments per state.
+   - **Stratification by Policy Area**: Posts are distributed across policy areas to maintain diversity in content.
+
+3. **Post Selection Criteria**  
+   Posts are prioritized based on engagement:
+   - **80th Percentile Thresholds**: Posts in the top 20% for each State by `num_comments` or `score` are prioritized for selection.
+   - **Random Sampling for Remaining Posts**: To fill gaps, additional posts are randomly sampled within states, excluding duplicates.
+
+4. **"Other / Uncategorized" Posts**  
+   An additional 1,000 posts classified as "Other / Uncategorized" are included in the final dataset to ensure representation of general or miscellaneous topics.
+
+#### Final Dataset Characteristics
+
+- **Total Sample Size**: 6,000 posts, plus 1,000 *Other / Uncategorized* posts.
+- **Balanced Distribution**: Ensures proportional representation of states and policy areas while maintaining diversity.
+- **Output File**: The final dataset is saved as `final_sample.csv`.
+
+---
+
+#### Visualization and Quality Assurance
+
+To verify the dataset's representativeness:
+- **State Distribution**: The number of posts per state is visualized in a bar chart.
+- **Policy Area Distribution**: Policy areas are similarly analyzed to confirm proportional representation.
+- **Comparison to Original Data**: Distributions of the final sample are compared to the original dataset to highlight differences and ensure sampling goals are met.
+
+---
+
+### Example Outputs
+
+#### `final_sample.csv`
+
+| **Column**       | **Description**                                             |
+|-------------------|-------------------------------------------------------------|
+| `post_id`        | Unique identifier of the Reddit post                        |
+| `state`          | Name of the subreddit (state)                               |
+| `title`          | Title of the post                                           |
+| `selftext`       | Body text of the post                                       |
+| `policy_area`    | Classified policy area of the post                          |
+| `num_comments`   | Number of comments on the post                              |
+| `score`          | Score (upvotes - downvotes) of the post                     |
+| `image_url`      | URL of the image associated with the post                   |
+
+**Visualization Examples**:  
+Graphs comparing the distribution of states and policy areas in the sampled dataset are included to validate the sampling process.
+
+---
+
+### How to Run the Sampling Process
+
+1. **Prepare the Input Data**  
+   Ensure `reddit_posts.csv` and `reddit_comments.csv` are available in the working directory.
+
+2. **Run Image Download**  
+   Use `download_images.py` to fetch images linked in posts. Save them in `post_images/`.
+
+3. **Execute the Sampling Script**  
+   Run `labelStudioSampleCreation.Rmd` to generate the balanced ready to label dataset
+   - Output: `final_sample.csv`
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Policy Area Categories
 
 ---
 
