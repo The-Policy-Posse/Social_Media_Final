@@ -58,6 +58,7 @@ The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and la
        ]
      }
 
+
 #### Step 1: Run redditPostPull.py must be run first, as redditCommentsPull.py utilizies the post_ids created
 - **Script**: `redditPostPull.py`  
 - **Description**:
@@ -87,7 +88,10 @@ The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and la
 - **Description**:
   - Collects all the comments from the top posts produced by redditPostPull.py
   - Rotates between multiple API key groups for rate-limited, asynchronous scraping.
-## `reddit_posts.csv`  
+- **Output**:
+  - Saves comments to `reddit_comments.csv`
+    
+## `reddit_comments.csv`  
 
 | **Column**       | **Description**                                             |
 |-------------------|-------------------------------------------------------------|
