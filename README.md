@@ -452,10 +452,10 @@ This loss function reduces the relative loss for well-classified examples and fo
 
 - **Optimizer**: Used `AdamW` with weight decay for regularization.
 - **Layer-wise Learning Rates**: Applied different learning rates to different layers:
-  - Embeddings and lower layers: \( 1 \times 10^{-5} \)
-  - Middle layers: \( 1 \times 10^{-5} \)
-  - Higher layers: \( 2 \times 10^{-5} \)
-  - Classification head: \( 3 \times 10^{-5} \)
+  - Embeddings and lower layers: `1e-5`
+  - Middle layers: `1e-5`
+  - Higher layers: `2e-5`
+  - Classification head: `3e-5`
 - **Learning Rate Scheduler**: Employed a linear learning rate scheduler with a warm-up phase (10% of total steps).
 
 ### Threshold Optimization
@@ -464,7 +464,7 @@ In multi-label classification, it's essential to determine the optimal threshold
 
 #### Finding Optimal Thresholds
 
-For each class \( c \), we determined the threshold \( \tau_c \) that maximizes a chosen metric (e.g., F1 score) on the validation set.
+For each class `c`, we determined the threshold `τ_c` that maximizes the chosen metric (e.g., F1 or Micro F1 score) on the validation set.
 
 The process involved:
 
