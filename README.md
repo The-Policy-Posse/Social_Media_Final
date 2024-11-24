@@ -72,7 +72,7 @@ The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and la
 - **Output**:
   - Saves posts to `reddit_posts.csv`
 
-## `reddit_posts.csv`
+### `reddit_posts.csv`
 
 | **Column**       | **Description**                                             |
 |-------------------|-------------------------------------------------------------|
@@ -88,7 +88,7 @@ The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and la
 
 ---
 
-## Step 2: Run 
+### Step 2: Run 
 - **Script**: `redditCommentPull.py`  
 - **Description**:
   - Collects all the comments from the top posts produced by redditPostPull.py
@@ -96,7 +96,7 @@ The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and la
 - **Output**:
   - Saves comments to `reddit_comments.csv`
     
-## `reddit_comments.csv`  
+### `reddit_comments.csv`  
 
 | **Column**       | **Description**                                             |
 |-------------------|-------------------------------------------------------------|
@@ -110,6 +110,20 @@ The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and la
 
 
 
+
+## Quick Overview on **Why** we decided on on investing in manual labeling and advanced Classification Models  
+
+Once the data successfully scraped and validated, extensive EDA was run using several exploratory methods to determine if this data would be a good candidate for modeling.  
+
+The first step was employing Allotaxonometry-Style graphs on several test states to determine if rough trends and differences could be detected in the data, or if it was simply too noisy to be worth the trouble.    
+
+
+<p">
+<img src="images/kentucky-5-01-23" alt="Weighted Sample Distribution for State Activity" style="width: 40%;">  
+</p>  
+<p">
+<img src="images/vermont_7-30" alt="Weighted Sample Distribution for State Activity" style="width: 40%;">  
+</p>  
 
 
 ## Image Handling and Sampling for Label Studio
