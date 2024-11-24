@@ -114,7 +114,7 @@ The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and la
 
 ---
 
-### 🔴 Health and Healthcare
+### 🔴 Health and Healthcare 🔴
 **Description:**  
 Topics related to health, healthcare services, public health initiatives, and medical research.
 
@@ -129,7 +129,7 @@ Topics related to health, healthcare services, public health initiatives, and me
 
 ---
 
-### 🟠 Defense and National Security
+### 🟠 Defense and National Security 🟠
 **Description:**  
 Covers armed forces, national defense, homeland security, and military policies.
 
@@ -144,7 +144,7 @@ Covers armed forces, national defense, homeland security, and military policies.
 
 ---
 
-### 🔵 Crime and Law Enforcement
+### 🔵 Crime and Law Enforcement 🔵
 **Description:**  
 Includes crime prevention, law enforcement, policing, and emergency management.
 
@@ -159,7 +159,7 @@ Includes crime prevention, law enforcement, policing, and emergency management.
 
 ---
 
-### 🌍 International Affairs and Trade
+### 🌍 International Affairs and Trade 🌍
 **Description:**  
 Focuses on international relations, foreign trade, diplomacy, and international finance.
 
@@ -174,7 +174,7 @@ Focuses on international relations, foreign trade, diplomacy, and international 
 
 ---
 
-### 🟢 Government Operations and Politics
+### 🟢 Government Operations and Politics 🟢
 **Description:**  
 Topics on government operations, legislation, law, political processes, and congressional matters.
 
@@ -189,7 +189,7 @@ Topics on government operations, legislation, law, political processes, and cong
 
 ---
 
-### 🟠 Economy and Finance
+### 🟠 Economy and Finance 🟠
 **Description:**  
 Encompasses topics related to financial stability, economic growth, labor policies, and trade practices that impact citizens’ day-to-day lives and the overall economy.
 
@@ -206,7 +206,7 @@ Encompasses topics related to financial stability, economic growth, labor polici
 
 ---
 
-### 🌱 Environment and Natural Resources
+### 🌱 Environment and Natural Resources 🌱
 **Description:**  
 Covers environmental protection, natural resources, energy, and water resource management.
 
@@ -221,7 +221,7 @@ Covers environmental protection, natural resources, energy, and water resource m
 
 ---
 
-### 📚 Education and Social Services
+### 📚 Education and Social Services 📚
 **Description:**  
 Covers education, social welfare, housing, family support, and social sciences.
 
@@ -236,7 +236,7 @@ Covers education, social welfare, housing, family support, and social sciences.
 
 ---
 
-### 🌾 Agriculture and Food
+### 🌾 Agriculture and Food 🌾
 **Description:**  
 Includes agriculture, farming policies, food production, and food safety.
 
@@ -251,7 +251,7 @@ Includes agriculture, farming policies, food production, and food safety.
 
 ---
 
-### 🔬 Science, Technology, and Communications
+### 🔬 Science, Technology, and Communications 🔬
 **Description:**  
 Topics on scientific research, technological advancements, and communication systems.
 
@@ -266,7 +266,7 @@ Topics on scientific research, technological advancements, and communication sys
 
 ---
 
-### 🛂 Immigration and Civil Rights
+### 🛂 Immigration and Civil Rights 🛂
 **Description:**  
 Focuses on immigration policies, civil rights, minority issues, and Native American matters.
 
@@ -281,7 +281,7 @@ Focuses on immigration policies, civil rights, minority issues, and Native Ameri
 
 ---
 
-### 🚧 Transportation and Infrastructure
+### 🚧 Transportation and Infrastructure 🚧
 **Description:**  
 Covers transportation systems, public works, and infrastructure development.
 
@@ -296,7 +296,7 @@ Covers transportation systems, public works, and infrastructure development.
 
 ---
 
-### 🎭 Culture and Recreation
+### 🎭 Culture and Recreation 🎭
 **Description:**  
 Includes arts, culture, religion, sports, recreational activities, and animal-related topics.
 
@@ -311,7 +311,7 @@ Includes arts, culture, religion, sports, recreational activities, and animal-re
 
 ---
 
-### ❓ Other / Uncategorized
+### ❓ Other / Uncategorized ❓
 **Description:**  
 Use this label if the content does not fit into any specific category or is uncategorized.
 
