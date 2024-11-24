@@ -87,6 +87,7 @@ The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and la
 - **Description**:
   - Collects all the comments from the top posts produced by redditPostPull.py
   - Rotates between multiple API key groups for rate-limited, asynchronous scraping.
+## `reddit_posts.csv`  
 
 | **Column**       | **Description**                                             |
 |-------------------|-------------------------------------------------------------|
