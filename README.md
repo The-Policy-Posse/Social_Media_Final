@@ -180,8 +180,7 @@ To verify the dataset's representativeness:
 
 **Visualization Examples**:  
 Graphs comparing the distribution of states and policy areas in the sampled dataset are included to validate the sampling process.
-![State Distribution Weighted on Activity](images/sample_distribution_state.png){width=50%}
-<img src="images/sample_distribution_state.png" alt="Alt text" style="width: 50%;">
+<img src="images/sample_distribution_state.png" alt="Weighted Sample Distribution for State Activity" style="width: 50%;">
 ---
 
 ### How to Run the Sampling Process
@@ -212,16 +211,173 @@ Graphs comparing the distribution of states and policy areas in the sampled data
 
 
 
+## Labeling Process with Label Studio
+
+To prepare the dataset for analysis, we used **[Label Studio](https://labelstud.io/)** for labeling Reddit posts. This process involved both **single-label** and **multi-label classification** tasks.  We set ours up on a virtual machine on Google Cloud, and uploaded the reddit images downloaded from the previous script to a bucket on the Cloud.  Those images were then efficently fed into the Label Studio setup so that our annotators could have full context while labeling.
+Ours can be seen here: http://34.23.190.214:8080/projects/
 
 
 
+### Overview of the Labeling Process
+
+1. **Team Collaboration**:
+   - We recruited additional annotators and provided training to ensure consistent and high-quality annotations.
+   - We provided a setup guide, training, and reference guide for all labelers (Including members of our team), which were displayed everytime someone entered a project
+   - Reference guide provided in-depth category definitions and explainations to keep labeling between annotators consistent.
+        - [Starting Guide PDF](pdfs/Labeling_Getting_Started.pdf)
+        - [Reference Guide PDF](pdfs/LAbeling_Reference_Guide.pdf)
+   - Label Studio Info: [Label Studio Documentation](https://labelstud.io/guide/)
+   
+2. **Task Types**:
+   - **Multi-Label Classification**: 2,500 posts were labeled with one or more categories, allowing for posts to belong to multiple policy areas or topics.
+   - **Single-Label Classification**: 1,000 posts were labeled with exactly one category, simplifying the classification process.
+
+---
+
+### Label Studio Setup
+
+1. **Data Preparation**:
+   - The sampled dataset (`final_sample.csv`) was uploaded to Label Studio.
+   - Each record included:
+     - **State**: State subreddit the post was made in
+     - **Post Title**: Title of the Post
+     - **Image URL**: (if applicable): Visual content automatically displayed with posts from Google Cloud bucket
+     - **Post Contents**: Text the author posted along with the title, if any
+
+
+3. **Label Studio Interface**:
+   - Each labeler was assigned tasks directly in Label Studio.
+   - The interface included:
+      - Large color annotation buttons for each category, to assist in speed and comfortability of annotators
+      - Automated queue on Submit or Skip
+      - Full random delivery to keep things interesting for annotators and ensure distribution of class balance
+
+4. **Quality Assurance**:
+   - An initial training phase allowed labelers to familiarize themselves with the task.
+   - Randomly selected posts were reviewed to ensure labeling consistency.
+   - Individual annotator results for Cohen's Kappa statistics
+
+---
+
+### Outputs
+
+- **Labeled Dataset**:
+  - After completion, the labeled data was exported from Label Studio in .CSV format.
+  - The final dataset was processed into CSV format for further analysis.
+
+- **Label Summary**:
+  - A summary of labeled categories, including frequency and distribution, was generated for exploratory analysis.
+  - Save this file as Classification_Model/data/raw/labeled_reddit_posts_raw.csv
+  - Bring in an additional copy of reddit_posts.csv and place into Classification_Model/data/raw/reddit_posts_raw.csv
+
+---
 
 
 
+## Classification Model Preprocessing
 
+The **classification model preprocessing pipeline** is implemented in Python to prepare Reddit post and comment data for classification tasks. This includes handling both labeled and unlabeled datasets, ensuring they are cleaned, normalized, and formatted for multi-label and single-label classification.  Only Posts will be covered here due to the large file size and computing requirements for handling the 4.5 million comments.
 
+---
 
+### Overview of Preprocessing Pipeline
 
+The preprocessing process is orchestrated by the script `Classification_Model/main_preprocessing.py`, which utilizes helper modules to automate and modularize tasks.
+
+#### Key Features:
+1. **Labeled Data Preprocessing**:
+   - Parses multi-label topics from raw data fields from Label Studio Export.
+   - Cleans and combines text fields (title + body text).
+   - Converts multi-label topics into a **binary label matrix** for machine learning.
+   - Assigns a **primary label** to each post for single-label classification using a prioritization strategy (Note: No Single-Label models were moved to production).
+   - Outputs a processed dataset for labeled posts (`Classification_Model/data/processed/labeled_reddit_posts_processed.csv`).
+
+2. **Unlabeled Data Preprocessing**:
+   - Filters out posts already labeled to avoid duplication.
+   - Cleans and combines text fields (title + body text).
+   - Initializes placeholders for topic and label fields.
+   - Outputs a processed dataset for unlabeled posts (`Classification_Model/data/processed/unlabeled_reddit_posts_processed.csv`).
+
+3. **Topic Distribution Analysis**:
+   - Computes and prints the distribution of primary labels.
+   - Counts the occurrences of all topics across the dataset (multi-label).
+   - Outputs summary statistics to a CSV (`Classification_Model/data/processed/total_topic_occurrences.csv`).
+
+---
+
+### Script Breakdown
+
+#### **`main_preprocessing.py`**  
+The entry point for the preprocessing pipeline:
+- Calls labeled and unlabeled data preprocessing functions.
+- Outputs processed datasets and summary statistics.
+
+#### **`utils.py`**  
+Utility functions used throughout the pipeline:
+- **`clean_text()`**: Cleans text by removing URLs, special characters, and unnecessary spaces, and converts it to lowercase.
+- **`assign_single_label()`**: Assigns a single primary label to a post, prioritizing non-governmental labels if multiple are present.
+- **`normalize_topics()`**: Ensures consistent formatting for topic labels.
+
+#### **`preprocess_labeled.py`**  
+Handles preprocessing for the labeled dataset:
+- Parses and normalizes multi-label topics.
+- Converts topics to a binary matrix using `MultiLabelBinarizer`.
+- Cleans text fields and combines title and body.
+- Assigns a primary label to each post for single-label classification.
+
+#### **`preprocess_unlabeled.py`**  
+Handles preprocessing for the unlabeled dataset:
+- Filters out posts already present in the labeled dataset.
+- Cleans text fields and combines title and body.
+- Initializes empty labels for future annotation.
+
+---
+
+### Outputs
+
+1. **Processed Labeled Dataset (`labeled_reddit_posts_processed.csv`)**:
+   - Includes cleaned text fields, binary topic labels, and primary labels.
+
+2. **Processed Unlabeled Dataset (`unlabeled_reddit_posts_processed.csv`)**:
+   - Includes cleaned text fields and placeholders for future labeling.
+
+3. **Summary Statistics**:
+   - **Total Topic Occurrences (`total_topic_occurrences.csv`)**:
+     - Provides the count of each topic across all posts.
+   - **Primary Label Distribution**:
+     - Displays the count of posts per primary label (printed to console).
+
+---
+
+### Topics and Labels
+
+The classification task uses the following predefined topics:
+- **National Security and International Affairs** (combined from "Defense" and "International Affairs")
+- **Government Operations and Politics**
+- **Health and Healthcare**
+- **Crime and Law Enforcement**
+- **Education and Social Services**
+- **Economy and Finance**
+- **Science, Technology, and Communications**
+- **Immigration and Civil Rights**
+- **Agriculture and Food**
+- **Environment and Natural Resources**
+- **Culture and Recreation**
+- **Transportation and Infrastructure**
+- **Other / Uncategorized**
+
+---
+
+### How to Run the Preprocessing Pipeline
+
+1. **Prepare the Raw Data**:
+   - Place the raw labeled and unlabeled datasets in the `data/raw/` directory:
+     - `labeled_reddit_posts_raw.csv`
+     - `reddit_posts_raw.csv`
+
+2. **Run the Main Preprocessing Script**:
+   ```bash
+   python main_preprocessing.py
 
 
 
