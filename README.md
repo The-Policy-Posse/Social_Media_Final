@@ -218,7 +218,7 @@ Graphs comparing the distribution of states and policy areas in the sampled data
 To prepare the dataset for analysis, we used **[Label Studio](https://labelstud.io/)** for labeling Reddit posts. This process involved both **single-label** and **multi-label classification** tasks.  We set ours up on a virtual machine on Google Cloud, and uploaded the reddit images downloaded from the previous script to a bucket on the Cloud.  Those images were then efficently fed into the Label Studio setup so that our annotators could have full context while labeling.
 Ours can be seen here: http://34.23.190.214:8080/projects/
 
-
+<img src="images/label_studio_example.jpg" alt="Our Label Studio UI" style="width: 50%;">  
 
 ### Overview of the Labeling Process
 
