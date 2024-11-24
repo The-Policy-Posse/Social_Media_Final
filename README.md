@@ -180,7 +180,7 @@ To verify the dataset's representativeness:
 
 **Visualization Examples**:  
 Graphs comparing the distribution of states and policy areas in the sampled dataset are included to validate the sampling process.
-![State Distribution Weighted on Activity](images/sample_distribution_state.png)
+![State Distribution Weighted on Activity](images/sample_distribution_state.png){width=50%}
 ---
 
 ### How to Run the Sampling Process
