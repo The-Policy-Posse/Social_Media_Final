@@ -107,3 +107,217 @@ The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and la
 | `created_utc`    | UTC timestamp of when the comment was created               |
 | `score`          | Score of the comment                                        |
 | `author`         | Username of the comment's author                            |
+
+
+
+# Policy Area Categories
+
+---
+
+### 🔴 Health and Healthcare
+**Description:**  
+Topics related to health, healthcare services, public health initiatives, and medical research.
+
+**Includes:**  
+- Public health policies  
+- Healthcare funding and access  
+- Medical research and innovation  
+- Health insurance regulations  
+
+**Example:**  
+*"Another public hospital closes in Montana, the third this year."*
+
+---
+
+### 🟠 Defense and National Security
+**Description:**  
+Covers armed forces, national defense, homeland security, and military policies.
+
+**Includes:**  
+- Military funding and procurement  
+- Defense strategies and policies  
+- Homeland security measures  
+- Veteran affairs  
+
+**Example:**  
+*"I’m worried that China may come and steal my goats in the night, is that possible? Do they like goats?"*
+
+---
+
+### 🔵 Crime and Law Enforcement
+**Description:**  
+Includes crime prevention, law enforcement, policing, and emergency management.
+
+**Includes:**  
+- Police funding and reform  
+- Criminal justice policies  
+- Emergency response protocols  
+- Crime statistics and prevention programs  
+
+**Example:**  
+*"Third officer arrested in New York this week on corruption charges."*
+
+---
+
+### 🌍 International Affairs and Trade
+**Description:**  
+Focuses on international relations, foreign trade, diplomacy, and international finance.
+
+**Includes:**  
+- Trade agreements and tariffs  
+- Diplomatic relations  
+- International aid and development  
+- Global economic policies  
+
+**Example:**  
+*"Vermont tightens border regulations with Canada, will maple syrup prices go up?"*
+
+---
+
+### 🟢 Government Operations and Politics
+**Description:**  
+Topics on government operations, legislation, law, political processes, and congressional matters.
+
+**Includes:**  
+- Legislative procedures  
+- Government budgeting and spending  
+- Political reforms  
+- Electoral processes  
+
+**Example:**  
+*"State congress motions for unlimited snack budget."*
+
+---
+
+### 🟠 Economy and Finance
+**Description:**  
+Encompasses topics related to financial stability, economic growth, labor policies, and trade practices that impact citizens’ day-to-day lives and the overall economy.
+
+**Includes:**  
+- Taxation and fiscal policy  
+- Economic growth and development initiatives  
+- Commerce and trade regulations  
+- Employment and labor policies  
+- Financial markets and regulations  
+- Inflation and interest rate policies  
+
+**Example:**  
+*"If our property taxes go up again this year, I’m moving to the moon. I mean it this time, Elon is really making progress on the moon."*
+
+---
+
+### 🌱 Environment and Natural Resources
+**Description:**  
+Covers environmental protection, natural resources, energy, and water resource management.
+
+**Includes:**  
+- Renewable energy initiatives  
+- Conservation efforts  
+- Water resource management  
+- Climate change policies  
+
+**Example:**  
+*"Historic flood washes away brand new solar panel installations."*
+
+---
+
+### 📚 Education and Social Services
+**Description:**  
+Covers education, social welfare, housing, family support, and social sciences.
+
+**Includes:**  
+- Public education funding  
+- Social welfare programs  
+- Housing policies  
+- Family support services  
+
+**Example:**  
+*"Affordable housing is impossible to find right now in our state!"*
+
+---
+
+### 🌾 Agriculture and Food
+**Description:**  
+Includes agriculture, farming policies, food production, and food safety.
+
+**Includes:**  
+- Agricultural subsidies  
+- Food safety regulations  
+- Sustainable farming practices  
+- Rural development  
+
+**Example:**  
+*"Organic farming takes a big hit this year, due to the wow-crop-delicious insect boom."*
+
+---
+
+### 🔬 Science, Technology, and Communications
+**Description:**  
+Topics on scientific research, technological advancements, and communication systems.
+
+**Includes:**  
+- Research and development funding  
+- Technology infrastructure  
+- Telecommunications regulations  
+- Innovation policies  
+
+**Example:**  
+*"Comcast sues small family-owned telephone maker in Florida."*
+
+---
+
+### 🛂 Immigration and Civil Rights
+**Description:**  
+Focuses on immigration policies, civil rights, minority issues, and Native American matters.
+
+**Includes:**  
+- Immigration reform  
+- Civil liberties protections  
+- Minority rights  
+- Native American affairs  
+
+**Example:**  
+*"This is crazy, my son can’t even get a job at Fast Food Express due to the recent influx of Swedish Meatball Farmers from Portugal."*
+
+---
+
+### 🚧 Transportation and Infrastructure
+**Description:**  
+Covers transportation systems, public works, and infrastructure development.
+
+**Includes:**  
+- Public transportation funding  
+- Infrastructure projects  
+- Transportation safety regulations  
+- Urban planning  
+
+**Example:**  
+*"I swear to god if they don’t fix these potholes I’m going to write another strongly written letter."*
+
+---
+
+### 🎭 Culture and Recreation
+**Description:**  
+Includes arts, culture, religion, sports, recreational activities, and animal-related topics.
+
+**Includes:**  
+- Arts funding and grants  
+- Cultural heritage preservation  
+- Recreational facilities  
+- Animal welfare policies  
+
+**Example:**  
+*"I love these moose. I’m so glad we can own 5 now legally."*
+
+---
+
+### ❓ Other / Uncategorized
+**Description:**  
+Use this label if the content does not fit into any specific category or is uncategorized.
+
+**Includes:**  
+- Miscellaneous topics not covered by other categories  
+- Ambiguous or unclear content  
+
+**Example:**  
+*"The post discusses personal opinions on various unrelated topics without a clear topic focus."*
