@@ -56,7 +56,12 @@ The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and la
          }
        ]
      }
-4.  R
+4.  **Environment**:
+   - Python 3.8+.
+   - Install dependencies via:
+     ```bash
+     pip install -r requirements.txt
+     ```
 
 
 #### Step 1: Run redditPostPull.py must be run first, as redditCommentsPull.py utilizies the post_ids created
