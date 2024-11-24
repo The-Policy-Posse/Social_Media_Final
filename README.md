@@ -15,8 +15,7 @@ The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and la
 2. **`redditCommentPull.py`**  
    - **Purpose**: Fetches all comments for posts collected by `redditPostPull.py`.  
    - **Output**: Saves comments to a CSV file (`reddit_comments.csv`), grouped by state.
-   - 
-** Note: New York had an issue in data collection and has two specific scripts to append to the created dataframes.
+   - (New York had an issue in data collection and has two specific scripts to append to the created dataframes)
 ---
 
 ### Requirements
