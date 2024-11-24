@@ -647,15 +647,15 @@ This script uses the ensemble of fine-tuned RoBERTa models to perform multi-labe
 
 #### **Requirements**
 - Pre-trained ensemble models, thresholds, and `MultiLabelBinarizer` saved during training.
-- Unlabeled data in a CSV file with a `combined_text` column.
+- Unlabeled data in `/data/processed/unlabeled_reddit_posts_processed` (From the Classification Preprocessing Step)
 
 ---
 
-#### **Usage**
+### **Usage**
 1. Configure the paths and settings in the `CONFIG` dictionary within the script.
 2. Run the script:
    ```bash
-   python prediction_script.py
+   python nonFusion_Predict.py
 
 
 
