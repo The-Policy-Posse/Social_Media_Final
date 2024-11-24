@@ -220,9 +220,9 @@ To prepare the dataset for analysis, we used **[Label Studio](https://labelstud.
 
 Ours can be seen here: http://34.23.190.214:8080/projects/
 
-<div style="text-align: center;">
+<p align="center">
   <img src="images/label_studio_example.jpg" alt="Our Label Studio UI" style="width: 40%;">
-</div>  
+</p>
 
 
 
@@ -358,21 +358,6 @@ Handles preprocessing for the unlabeled dataset:
 ---
 
 ### Topics and Labels
-
-The classification task uses the following predefined topics:
-- **National Security and International Affairs** (combined from "Defense" and "International Affairs")
-- **Government Operations and Politics**
-- **Health and Healthcare**
-- **Crime and Law Enforcement**
-- **Education and Social Services**
-- **Economy and Finance**
-- **Science, Technology, and Communications**
-- **Immigration and Civil Rights**
-- **Agriculture and Food**
-- **Environment and Natural Resources**
-- **Culture and Recreation**
-- **Transportation and Infrastructure**
-- **Other / Uncategorized**
 
 ---
 
