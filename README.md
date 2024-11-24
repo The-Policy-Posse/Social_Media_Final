@@ -367,22 +367,182 @@ Handles preprocessing for the unlabeled dataset:
 ### How to Run the Preprocessing Pipeline
 
 1. **Prepare the Raw Data**:
-   - Place the raw labeled and unlabeled datasets in the `data/raw/` directory:
+   - Place the raw labeled and unlabeled datasets in the `Classification_Model/data/raw/` directory:
      - `labeled_reddit_posts_raw.csv`
      - `reddit_posts_raw.csv`
 
 2. **Run the Main Preprocessing Script**:
    ```bash
    python main_preprocessing.py
+3. **Outputs**:
+  - Both processed .csvs are put into the Classification_Model/data/processed/ directory:
+    - `labeled_reddit_posts_processed.csv`
+    - `unlabeled_reddit_posts_processed.csv`
 
 
 
+## Classification Model
 
+### Overview
 
+We developed a multi-label text classification model to categorize Reddit posts into multiple policy areas. By fine-tuning a pre-trained RoBERTa transformer model, we adapted it to handle the multi-label nature of our classification task, where each post may belong to multiple policy categories.
 
+### Data Preprocessing
 
+#### Label Binarization
 
+- **MultiLabelBinarizer**: We utilized scikit-learn's `MultiLabelBinarizer` to convert the list of policy area labels for each post into a binary matrix. This matrix is suitable for multi-label classification tasks, where each post can belong to multiple classes.
 
+#### Text Preprocessing
+
+- **Text Cleaning**: Combined the post's title and body text into a single string. We performed cleaning steps such as:
+  - Removing URLs
+  - Removing special characters
+- **Tokenization**: Used `RobertaTokenizer` with a maximum sequence length of 128 tokens to tokenize the cleaned text.
+
+### Model Architecture
+
+We fine-tuned the pre-trained `roberta-base` model from Hugging Face's Transformers library for our classification task.
+
+- **Model Modification**:
+  - Set `problem_type="multi_label_classification"` to adapt the model for multi-label outputs.
+  - Adjusted the output layer to match the number of policy area classes.
+
+### Loss Function: Focal Loss
+
+Due to class imbalance in our dataset, we implemented the **Focal Loss** function to focus training on hard-to-classify examples.
+
+The Focal Loss is defined as:
+
+$$
+\text{FL}(p_t) = -\alpha_t (1 - p_t)^\gamma \log(p_t)
+$$
+
+- \( p_t \) is the model's estimated probability for the true class.
+- \( \alpha_t \) is the weighting factor for the class (we used \( \alpha = 0.25 \)).
+- \( \gamma \) is the focusing parameter (we set \( \gamma = 2 \)).
+
+We customized the Focal Loss to handle the class imbalance in our dataset. The implementation in PyTorch is as follows:
+
+```{python}
+class FocalLoss(nn.Module):
+    def __init__(self, gamma=2, alpha=0.25):
+        super(FocalLoss, self).__init__()
+        self.gamma = gamma
+        self.alpha = alpha
+        
+    def forward(self, logits, labels):
+        probs = torch.sigmoid(logits)                                     ## Convert logits to probabilities
+        ce_loss = nn.BCEWithLogitsLoss(reduction='none')(logits, labels)  ## Binary cross-entropy loss
+        pt = torch.where(labels == 1, probs, 1 - probs)                   ## Probability of the true class
+        focal_loss = self.alpha * (1 - pt) ** self.gamma * ce_loss        ## Apply focal loss formula
+        return focal_loss.mean()                                          ## Return mean loss over the batch
+```
+
+This loss function reduces the relative loss for well-classified examples and focuses on those that the model struggles with.
+
+### Training Procedure
+
+#### Cross-Validation
+
+- **5-Fold Multilabel Stratified Cross-Validation**: Ensured that each fold has a similar distribution of labels, crucial for multi-label datasets.
+- **Early Stopping**: Monitored the validation Micro F1 score to prevent overfitting. Training stops if the performance doesn't improve for a specified number of epochs (patience of 3 epochs).
+
+#### Optimization
+
+- **Optimizer**: Used `AdamW` with weight decay for regularization.
+- **Layer-wise Learning Rates**: Applied different learning rates to different layers:
+  - Embeddings and lower layers: \( 1 \times 10^{-5} \)
+  - Middle layers: \( 1 \times 10^{-5} \)
+  - Higher layers: \( 2 \times 10^{-5} \)
+  - Classification head: \( 3 \times 10^{-5} \)
+- **Learning Rate Scheduler**: Employed a linear learning rate scheduler with a warm-up phase (10% of total steps).
+
+### Threshold Optimization
+
+In multi-label classification, it's essential to determine the optimal threshold to convert predicted probabilities into binary labels.
+
+#### Finding Optimal Thresholds
+
+For each class \( c \), we determined the threshold \( \tau_c \) that maximizes a chosen metric (e.g., F1 score) on the validation set.
+
+The process involved:
+
+1. For each class, iterate over possible thresholds in the range [0.1, 0.9] with steps of 0.01.
+2. For each threshold, compute the metric (e.g., F1 score) using the validation data.
+3. Select the threshold that yields the highest metric value.
+
+```{python}
+def apply_thresholds_with_limit_dynamic(y_probs, thresholds, max_labels=3):
+
+    binary_preds = np.zeros_like(y_probs)
+    for i in range(y_probs.shape[0]):
+        probs = y_probs[i]
+        
+        ## Get indices sorted by probability in descending order
+        sorted_indices = np.argsort(probs)[::-1]
+        selected_indices = []
+        for idx in sorted_indices:
+            if probs[idx] >= thresholds[idx]:
+                selected_indices.append(idx)
+            if len(selected_indices) == max_labels:
+                break
+            
+        ## Assign label if conditions met    
+        binary_preds[i, selected_indices] = 1
+    return binary_preds
+```
+
+#### Applying Thresholds with Label Limit
+
+To ensure that each instance is assigned a realistic number of labels, we applied the thresholds while limiting the maximum number of labels per instance to \( k \) (we used \( k = 3 \)).
+
+The procedure is:
+
+1. **For each instance**:
+   - Obtain the predicted probabilities for all classes.
+   - Sort the classes by their predicted probabilities in descending order.
+2. **Assign labels**:
+   - Iterate through the sorted classes.
+   - Assign a label if the predicted probability exceeds the class threshold \( \tau_c \).
+   - Stop assigning labels once \( k \) labels have been assigned.
+
+This method ensures that the most confident predictions (above the threshold) are selected, up to the maximum number of labels per instance.
+
+### Evaluation Metrics
+
+We evaluated our model using several metrics suitable for multi-label classification:
+
+- **Micro F1 Score**: Measures the F1 score globally by counting the total true positives, false negatives, and false positives.
+- **Macro F1 Score**: Averages the F1 score per class without considering class imbalance.
+- **Weighted F1 Score**: Averages the F1 score per class, weighted by the number of true instances per class.
+- **Hamming Loss**: Fraction of labels that are incorrectly predicted.
+- **Jaccard Index**: Also known as Intersection over Union, measures the similarity between the predicted and true label sets.
+- **Per-Class Precision, Recall, and F1 Scores**: Provides insight into the model's performance on individual classes.
+
+### Results
+
+#### Cross-Validation Performance
+
+- The best model per fold was saved based on the highest validation Micro F1 score.
+- Optimal thresholds per class were saved for each fold.
+- The fold models were added to an ensemble for final evaluation.
+
+#### Test Set Evaluation
+
+- **Ensemble Model**: Combined the models from each fold using weighted averaging based on their validation performance.
+- **Threshold Aggregation**: The optimal thresholds from each fold were averaged to obtain ensemble thresholds.
+- **Test Metrics**:
+
+## Ensemble Test Set Metrics
+
+| Metric            | Score  |
+|--------------------|--------|
+| Micro F1          | 0.7359 |
+| Macro F1          | 0.7042 |
+| Weighted F1       | 0.7359 |
+| Hamming Loss      | 0.0637 |
+| Jaccard Index     | 0.6711 |
 
 
 
