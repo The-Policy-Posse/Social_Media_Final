@@ -1,0 +1,333 @@
+2024-11-04 00:09:13,028:INFO:Wrote 600 posts for Alaska.
+2024-11-04 00:09:13,267:INFO:Wrote 36184 comments for Alaska.
+2024-11-04 00:09:13,268:INFO:Completed fetching posts and comments for Alaska
+2024-11-04 00:09:56,043:ERROR:Error fetching comments for post 18oiscw in Alabama: received 429 HTTP response
+2024-11-04 00:09:56,326:ERROR:Error fetching comments for post 1fm3spz in Alabama: received 429 HTTP response
+2024-11-04 00:09:57,131:ERROR:Error fetching comments for post 1g2blib in California: received 429 HTTP response
+2024-11-04 00:09:57,305:ERROR:Error fetching comments for post 1cp1e0p in Alabama: received 429 HTTP response
+2024-11-04 00:09:57,854:ERROR:Error fetching comments for post 1cef97r in Alabama: received 429 HTTP response
+2024-11-04 00:09:58,268:ERROR:Error fetching comments for post 1eeyz6u in Arkansas: received 429 HTTP response
+2024-11-04 00:09:58,328:ERROR:Error fetching comments for post 1frnxrg in California: received 429 HTTP response
+2024-11-04 00:09:58,514:ERROR:Error fetching comments for post 1ewg8xd in Arizona: received 429 HTTP response
+2024-11-04 00:09:58,603:ERROR:Error fetching comments for post 1fg3zz6 in California: received 429 HTTP response
+2024-11-04 00:09:58,942:ERROR:Error fetching comments for post 19es1sm in Arizona: received 429 HTTP response
+2024-11-04 00:09:59,019:ERROR:Error fetching comments for post 1dkny1d in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,066:ERROR:Error fetching comments for post 1bpfq5u in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,088:ERROR:Error fetching comments for post 1awdt6j in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,099:ERROR:Error fetching comments for post 1bw6feg in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,108:ERROR:Error fetching comments for post 1ersq8c in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,138:ERROR:Error fetching comments for post 1co55fu in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,145:ERROR:Error fetching comments for post 1at2cpu in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,151:ERROR:Error fetching comments for post 1eoczjs in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,179:ERROR:Error fetching comments for post 1faqsq5 in California: received 429 HTTP response
+2024-11-04 00:09:59,184:ERROR:Error fetching comments for post 1c8ujs7 in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,193:ERROR:Error fetching comments for post 1dg7549 in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,195:ERROR:Error fetching comments for post 19ateim in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,231:ERROR:Error fetching comments for post 1g3v1i7 in California: received 429 HTTP response
+2024-11-04 00:09:59,234:ERROR:Error fetching comments for post 1ftqjr0 in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,236:ERROR:Error fetching comments for post 18uha7z in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,240:ERROR:Error fetching comments for post 18tqyxq in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,254:ERROR:Error fetching comments for post 1fgsgb3 in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,274:ERROR:Error fetching comments for post 1e4s5q1 in California: received 429 HTTP response
+2024-11-04 00:09:59,280:ERROR:Error fetching comments for post 1g4g482 in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,284:ERROR:Error fetching comments for post 1fb9il3 in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,289:ERROR:Error fetching comments for post 1elozjv in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,300:ERROR:Error fetching comments for post 1c91ryn in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,319:ERROR:Error fetching comments for post 1fq71r7 in California: received 429 HTTP response
+2024-11-04 00:09:59,325:ERROR:Error fetching comments for post 1ae91pn in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,327:ERROR:Error fetching comments for post 1fc0frd in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,337:ERROR:Error fetching comments for post 1d9lu2e in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,341:ERROR:Error fetching comments for post 18t6lwe in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,346:ERROR:Error fetching comments for post 1feb6q1 in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,352:ERROR:Error fetching comments for post 1d4258r in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,362:ERROR:Error fetching comments for post 181fmij in California: received 429 HTTP response
+2024-11-04 00:09:59,375:ERROR:Error fetching comments for post 1apfxvf in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,377:ERROR:Error fetching comments for post 19esjvh in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,381:ERROR:Error fetching comments for post 1byrr6v in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,382:ERROR:Error fetching comments for post 1flpdwg in California: received 429 HTTP response
+2024-11-04 00:09:59,382:ERROR:Error fetching comments for post 1cr82tt in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,389:ERROR:Error fetching comments for post 1e0e4yc in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,396:ERROR:Error fetching comments for post 1dhajk4 in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,399:ERROR:Error fetching comments for post 1d2uqwe in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,406:ERROR:Error fetching comments for post 1ebxcyu in California: received 429 HTTP response
+2024-11-04 00:09:59,426:ERROR:Error fetching comments for post 1b34yrx in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,427:ERROR:Error fetching comments for post 1bqd7uy in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,429:ERROR:Error fetching comments for post 1c6sepy in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,431:ERROR:Error fetching comments for post 1awqbri in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,435:ERROR:Error fetching comments for post 1axqsa1 in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,437:ERROR:Error fetching comments for post 1c3dp43 in California: received 429 HTTP response
+2024-11-04 00:09:59,446:ERROR:Error fetching comments for post 18t2rao in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,448:ERROR:Error fetching comments for post 1akpcro in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,456:ERROR:Error fetching comments for post 1fwdrq6 in California: received 429 HTTP response
+2024-11-04 00:09:59,468:ERROR:Error fetching comments for post 1ghftic in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,474:ERROR:Error fetching comments for post 1axfqsb in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,478:ERROR:Error fetching comments for post 1fg1of3 in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,479:ERROR:Error fetching comments for post 1figwxz in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,484:ERROR:Error fetching comments for post 18sfdpd in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,485:ERROR:Error fetching comments for post 1g7gyta in California: received 429 HTTP response
+2024-11-04 00:09:59,497:ERROR:Error fetching comments for post 1b2oudc in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,501:ERROR:Error fetching comments for post 1dbhxf8 in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,503:ERROR:Error fetching comments for post 1fnya6y in California: received 429 HTTP response
+2024-11-04 00:09:59,510:ERROR:Error fetching comments for post 196r8gd in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,517:ERROR:Error fetching comments for post 1bj1h9z in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,521:ERROR:Error fetching comments for post 1ddikku in Arizona: received 429 HTTP response
+2024-11-04 00:09:59,526:ERROR:Error fetching comments for post 1823vfb in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,527:ERROR:Error fetching comments for post 1filq0g in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,532:ERROR:Error fetching comments for post 1dvw51y in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,534:ERROR:Error fetching comments for post 18brq8y in California: received 429 HTTP response
+2024-11-04 00:09:59,538:ERROR:Error fetching comments for post 1b4ncbh in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,545:ERROR:Error fetching comments for post 1f3mngb in California: received 429 HTTP response
+2024-11-04 00:09:59,547:ERROR:Error fetching comments for post 1d6exmx in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,552:ERROR:Error fetching comments for post 1cj0dlh in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,563:ERROR:Error fetching comments for post 196l3v3 in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,564:ERROR:Error fetching comments for post 1fnujoi in Arizona: received 429 HTTP response
+2024-11-04 00:09:59,574:ERROR:Error fetching comments for post 1cr1cm9 in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,575:ERROR:Error fetching comments for post 1ab6m5q in Arizona: received 429 HTTP response
+2024-11-04 00:09:59,577:ERROR:Error fetching comments for post 1cefc8n in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,579:ERROR:Error fetching comments for post 18vfjqv in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,582:ERROR:Error fetching comments for post 189babm in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,586:ERROR:Error fetching comments for post 1dqmnfb in California: received 429 HTTP response
+2024-11-04 00:09:59,590:ERROR:Error fetching comments for post 1ejybp4 in California: received 429 HTTP response
+2024-11-04 00:09:59,595:ERROR:Error fetching comments for post 1cjo4gt in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,598:ERROR:Error fetching comments for post 1ewuv3c in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,608:ERROR:Error fetching comments for post 1b8kr2d in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,617:ERROR:Error fetching comments for post 1dv33qx in Arizona: received 429 HTTP response
+2024-11-04 00:09:59,620:ERROR:Error fetching comments for post 1ak1owk in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,628:ERROR:Error fetching comments for post 1ablj9u in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,630:ERROR:Error fetching comments for post 1eouzlv in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,631:ERROR:Error fetching comments for post 1f1vvui in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,632:ERROR:Error fetching comments for post 1bfdtmq in Arizona: received 429 HTTP response
+2024-11-04 00:09:59,634:ERROR:Error fetching comments for post 1g6w11d in California: received 429 HTTP response
+2024-11-04 00:09:59,636:ERROR:Error fetching comments for post 1gexrcf in California: received 429 HTTP response
+2024-11-04 00:09:59,640:ERROR:Error fetching comments for post 197h7es in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,645:ERROR:Error fetching comments for post 1g8z23x in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,655:ERROR:Error fetching comments for post 1b7mh00 in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,659:ERROR:Error fetching comments for post 1eo3iia in California: received 429 HTTP response
+2024-11-04 00:09:59,662:ERROR:Error fetching comments for post 1bzc0wy in Arizona: received 429 HTTP response
+2024-11-04 00:09:59,667:ERROR:Error fetching comments for post 191ioi7 in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,679:ERROR:Error fetching comments for post 1eubc5t in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,684:ERROR:Error fetching comments for post 1c9l0r0 in California: received 429 HTTP response
+2024-11-04 00:09:59,686:ERROR:Error fetching comments for post 1gc4n6b in California: received 429 HTTP response
+2024-11-04 00:09:59,687:ERROR:Error fetching comments for post 1f89vxk in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,688:ERROR:Error fetching comments for post 1ewjeek in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,690:ERROR:Error fetching comments for post 1aeucjh in Arizona: received 429 HTTP response
+2024-11-04 00:09:59,694:ERROR:Error fetching comments for post 1cu7zai in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,695:ERROR:Error fetching comments for post 1f11mzs in Arkansas: received 429 HTTP response
+2024-11-04 00:09:59,698:ERROR:Error fetching comments for post 1cofkkm in Alabama: received 429 HTTP response
+2024-11-04 00:09:59,707:ERROR:Error fetching comments for post 1fnpi3r in California: received 429 HTTP response
+2024-11-04 00:09:59,712:ERROR:Error fetching comments for post 18xsw7h in Arizona: received 429 HTTP response
+2024-11-04 00:09:59,715:ERROR:Error fetching comments for post 1es8f48 in Alabama: received 429 HTTP response
+2024-11-04 00:10:14,823:ERROR:Error fetching comments for post 184bhwr in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:14,857:ERROR:Error fetching comments for post 1fi9lnl in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:14,960:ERROR:Error fetching comments for post 1fj8688 in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:15,066:ERROR:Error fetching comments for post 1gd94f6 in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:15,181:ERROR:Error fetching comments for post 1e9ss5y in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:15,339:ERROR:Error fetching comments for post 1dg4iab in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:15,343:ERROR:Error fetching comments for post 1fmz5dh in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:15,523:ERROR:Error fetching comments for post 1cwyete in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:15,524:ERROR:Error fetching comments for post 1gdjwax in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:15,544:ERROR:Error fetching comments for post 19aajws in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:15,595:ERROR:Error fetching comments for post 1atyfel in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:15,696:ERROR:Error fetching comments for post 1cli60r in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:15,697:ERROR:Error fetching comments for post 1bpz2py in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:15,714:ERROR:Error fetching comments for post 1d81o40 in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:15,728:ERROR:Error fetching comments for post 1dvff4a in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:15,812:ERROR:Error fetching comments for post 1ffijgn in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:30,431:ERROR:Error fetching comments for post 1doapza in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:30,610:ERROR:Error fetching comments for post 1b8b8dy in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:30,957:ERROR:Error fetching comments for post 1d4gdoi in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:31,086:ERROR:Error fetching comments for post 1eh2uxg in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:31,431:ERROR:Error fetching comments for post 18f9bzi in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:31,475:ERROR:Error fetching comments for post 1dolm91 in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:31,585:ERROR:Error fetching comments for post 1amtchj in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:31,594:ERROR:Error fetching comments for post 1fxpeou in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:31,614:ERROR:Error fetching comments for post 1auxboh in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:31,714:ERROR:Error fetching comments for post 1c5o5cf in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:31,718:ERROR:Error fetching comments for post 181di09 in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:31,797:ERROR:Error fetching comments for post 17w3ltw in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:31,798:ERROR:Error fetching comments for post 1gftzsy in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:32,305:ERROR:Error fetching comments for post 1c6sahd in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:32,306:ERROR:Error fetching comments for post 1frqboj in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:32,349:ERROR:Error fetching comments for post 1fbsjzj in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:46,012:ERROR:Error fetching comments for post 18vx3wx in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:46,297:ERROR:Error fetching comments for post 1do8vqo in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:46,584:ERROR:Error fetching comments for post 1f621e7 in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:46,809:ERROR:Error fetching comments for post 1dmpybz in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:47,297:ERROR:Error fetching comments for post 1emq9sk in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:47,591:ERROR:Error fetching comments for post 17xhvgb in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:47,631:ERROR:Error fetching comments for post 1g5yygd in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:47,709:ERROR:Error fetching comments for post 1cwpiqx in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:47,760:ERROR:Error fetching comments for post 18zniza in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:47,799:ERROR:Error fetching comments for post 1e2mufa in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:47,804:ERROR:Error fetching comments for post 1dtp4la in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:47,811:ERROR:Error fetching comments for post 1dkh34n in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:48,088:ERROR:Error fetching comments for post 1afhpnf in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:48,140:ERROR:Error fetching comments for post 1feo1ed in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:48,196:ERROR:Error fetching comments for post 1g4juan in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:10:48,442:ERROR:Error fetching comments for post 1esa6mq in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:02,169:ERROR:Error fetching comments for post 1extdeo in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:02,362:ERROR:Error fetching comments for post 1cd3iln in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:02,447:ERROR:Error fetching comments for post 1df4mtv in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:02,655:ERROR:Error fetching comments for post 1evjofe in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:02,730:ERROR:Error fetching comments for post 1cdyq11 in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:03,281:ERROR:Error fetching comments for post 1b7mjgt in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:03,332:ERROR:Error fetching comments for post 1c3u3xs in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:03,423:ERROR:Error fetching comments for post 1fm8zo7 in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:03,613:ERROR:Error fetching comments for post 1eblgfb in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:03,860:ERROR:Error fetching comments for post 1ds7b2p in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:03,961:ERROR:Error fetching comments for post 1feg9bx in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:04,026:ERROR:Error fetching comments for post 1fi9ah3 in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:04,069:ERROR:Error fetching comments for post 1buyicx in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:04,071:ERROR:Error fetching comments for post 1c5pv0f in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:04,423:ERROR:Error fetching comments for post 1g48lpc in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:04,505:ERROR:Error fetching comments for post 1df4jv9 in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:17,620:ERROR:Error fetching comments for post 1927j90 in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:18,304:ERROR:Error fetching comments for post 1ciobun in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:18,587:ERROR:Error fetching comments for post 18shfgs in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:18,714:ERROR:Error fetching comments for post 17uea69 in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:18,800:ERROR:Error fetching comments for post 1fmax3y in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:19,315:ERROR:Error fetching comments for post 195gfgx in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:19,348:ERROR:Error fetching comments for post 1dj9w7m in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:19,525:ERROR:Error fetching comments for post 1dq2w5u in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:19,528:ERROR:Error fetching comments for post 1e893nu in Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:19,590:ERROR:Error fetching comments for post 1abrp8j in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:19,595:ERROR:Error fetching comments for post 1f6a17t in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:19,714:ERROR:Error fetching comments for post 18g0bdq in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:20,164:ERROR:Error fetching comments for post 1fehzgl in Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:20,350:ERROR:Error fetching comments for post 182dw14 in Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:20,419:ERROR:Error fetching comments for post 1d3hcip in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:11:20,434:ERROR:Error fetching comments for post 1gamyeg in California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:20:28,058:ERROR:Failed to process subreddit Alabama: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,058:ERROR:Failed to process subreddit Arizona: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,058:ERROR:Failed to process subreddit Arkansas: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,059:ERROR:Failed to process subreddit California: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,059:ERROR:Failed to process subreddit Colorado: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,059:ERROR:Failed to process subreddit Connecticut: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,059:ERROR:Failed to process subreddit Delaware: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,059:ERROR:Failed to process subreddit Florida: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,059:ERROR:Failed to process subreddit Georgia: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,059:ERROR:Failed to process subreddit Hawaii: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,059:ERROR:Failed to process subreddit Idaho: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,059:ERROR:Failed to process subreddit Illinois: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,059:ERROR:Failed to process subreddit Indiana: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,061:ERROR:Failed to process subreddit Iowa: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,061:ERROR:Failed to process subreddit Kansas: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,061:ERROR:Failed to process subreddit Kentucky: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,061:ERROR:Failed to process subreddit Louisiana: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,061:ERROR:Failed to process subreddit Maine: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,061:ERROR:Failed to process subreddit Maryland: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,062:ERROR:Failed to process subreddit Massachusetts: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,062:ERROR:Failed to process subreddit Michigan: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,062:ERROR:Failed to process subreddit Minnesota: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,062:ERROR:Failed to process subreddit Mississippi: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,062:ERROR:Failed to process subreddit Missouri: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,063:ERROR:Failed to process subreddit Montana: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,063:ERROR:Failed to process subreddit Nebraska: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,063:ERROR:Failed to process subreddit Nevada: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,063:ERROR:Failed to process subreddit NewHampshire: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,063:ERROR:Failed to process subreddit NewJersey: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,063:ERROR:Failed to process subreddit NewMexico: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,064:ERROR:Failed to process subreddit NewYork: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,064:ERROR:Failed to process subreddit NorthCarolina: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,064:ERROR:Failed to process subreddit NorthDakota: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,064:ERROR:Failed to process subreddit Ohio: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,064:ERROR:Failed to process subreddit Oklahoma: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,064:ERROR:Failed to process subreddit Oregon: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,065:ERROR:Failed to process subreddit Pennsylvania: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,065:ERROR:Failed to process subreddit RhodeIsland: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,065:ERROR:Failed to process subreddit SouthCarolina: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,065:ERROR:Failed to process subreddit SouthDakota: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,065:ERROR:Failed to process subreddit Tennessee: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,065:ERROR:Failed to process subreddit Texas: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,065:ERROR:Failed to process subreddit Utah: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,066:ERROR:Failed to process subreddit Vermont: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,066:ERROR:Failed to process subreddit Virginia: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,066:ERROR:Failed to process subreddit Washington: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,066:ERROR:Failed to process subreddit WestVirginia: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,066:ERROR:Failed to process subreddit Wisconsin: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,066:ERROR:Failed to process subreddit Wyoming: 'Reddit' object has no attribute 'config_dict'
+2024-11-04 00:20:28,068:INFO:Scraping completed for all states.
+2024-11-04 00:21:51,522:INFO:Using API key QO01pM00jXJ9PWxtgKdwjA for group 0
+2024-11-04 00:21:51,524:INFO:Using API key B1K6OMdWk6n1KGiGm19ylg for group 1
+2024-11-04 00:21:51,525:INFO:Using API key PBdD0YSx_CAgYHv13Y5Paw for group 2
+2024-11-04 00:21:51,526:INFO:Using API key n9LcLzZxkrsACeARW9u-eA for group 3
+2024-11-04 00:21:51,526:INFO:Using API key -yf4-LHB0CiFuxuRMn9dfQ for group 0
+2024-11-04 00:21:51,527:INFO:Using API key -pxCx_ggfXctBSdo_PLPYw for group 1
+2024-11-04 00:21:51,529:INFO:Using API key F70giaq7vZsMfT-ol6RXAA for group 2
+2024-11-04 00:21:51,529:INFO:Using API key djI4X1qizkpvcgNGCvHa3w for group 3
+2024-11-04 00:21:51,530:INFO:Using API key 0SVfMpQoeQcD1hxcta_Xqg for group 0
+2024-11-04 00:21:51,530:INFO:Using API key w1I4PCY1PqCyR_xX3Rt7wA for group 1
+2024-11-04 00:21:51,532:INFO:Using API key F1JvVZG6nLP35gYXGvXpDQ for group 2
+2024-11-04 00:21:51,533:INFO:Using API key eI1g2MMs3gjoe781WzgAFw for group 3
+2024-11-04 00:22:08,356:ERROR:Error fetching posts for Colorado: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:08,356:ERROR:Failed to process subreddit Colorado: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:08,357:INFO:Using API key QO01pM00jXJ9PWxtgKdwjA for group 0
+2024-11-04 00:22:08,557:ERROR:Error fetching posts for California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:08,557:ERROR:Failed to process subreddit California: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:08,557:INFO:Using API key B1K6OMdWk6n1KGiGm19ylg for group 1
+2024-11-04 00:22:08,656:ERROR:Error fetching posts for Connecticut: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:08,657:ERROR:Failed to process subreddit Connecticut: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:08,657:INFO:Using API key PBdD0YSx_CAgYHv13Y5Paw for group 2
+2024-11-04 00:22:08,736:ERROR:Error fetching posts for Hawaii: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:08,736:ERROR:Failed to process subreddit Hawaii: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:08,737:INFO:Using API key n9LcLzZxkrsACeARW9u-eA for group 3
+2024-11-04 00:22:08,755:ERROR:Error fetching posts for Georgia: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:08,757:ERROR:Error fetching posts for Delaware: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:08,757:ERROR:Failed to process subreddit Delaware: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:08,757:INFO:Using API key -yf4-LHB0CiFuxuRMn9dfQ for group 0
+2024-11-04 00:22:08,758:ERROR:Failed to process subreddit Georgia: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:08,758:INFO:Using API key -pxCx_ggfXctBSdo_PLPYw for group 1
+2024-11-04 00:22:09,327:ERROR:Error fetching posts for Illinois: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:09,327:ERROR:Failed to process subreddit Illinois: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:09,327:INFO:Using API key F70giaq7vZsMfT-ol6RXAA for group 2
+2024-11-04 00:22:09,361:ERROR:Error fetching posts for Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:09,361:ERROR:Failed to process subreddit Arizona: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:09,361:INFO:Using API key djI4X1qizkpvcgNGCvHa3w for group 3
+2024-11-04 00:22:09,391:ERROR:Error fetching posts for Florida: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:09,392:ERROR:Failed to process subreddit Florida: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:09,392:INFO:Using API key 0SVfMpQoeQcD1hxcta_Xqg for group 0
+2024-11-04 00:22:09,426:ERROR:Error fetching posts for Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:09,427:ERROR:Failed to process subreddit Alabama: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:09,427:INFO:Using API key w1I4PCY1PqCyR_xX3Rt7wA for group 1
+2024-11-04 00:22:09,488:ERROR:Error fetching posts for Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:09,489:ERROR:Failed to process subreddit Arkansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:09,489:INFO:Using API key F1JvVZG6nLP35gYXGvXpDQ for group 2
+2024-11-04 00:22:09,565:ERROR:Error fetching posts for Idaho: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:09,566:ERROR:Failed to process subreddit Idaho: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:09,566:INFO:Using API key eI1g2MMs3gjoe781WzgAFw for group 3
+2024-11-04 00:22:23,948:ERROR:Error fetching posts for Indiana: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:23,949:ERROR:Failed to process subreddit Indiana: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:23,949:INFO:Using API key QO01pM00jXJ9PWxtgKdwjA for group 0
+2024-11-04 00:22:24,689:ERROR:Error fetching posts for Maine: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:24,689:ERROR:Failed to process subreddit Maine: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:24,689:INFO:Using API key B1K6OMdWk6n1KGiGm19ylg for group 1
+2024-11-04 00:22:24,755:ERROR:Error fetching posts for Louisiana: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:24,756:ERROR:Failed to process subreddit Louisiana: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:24,756:INFO:Using API key PBdD0YSx_CAgYHv13Y5Paw for group 2
+2024-11-04 00:22:24,794:ERROR:Error fetching posts for Iowa: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:24,794:ERROR:Failed to process subreddit Iowa: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:24,794:INFO:Using API key n9LcLzZxkrsACeARW9u-eA for group 3
+2024-11-04 00:22:24,892:ERROR:Error fetching posts for Kentucky: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:24,893:ERROR:Failed to process subreddit Kentucky: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:24,893:INFO:Using API key -yf4-LHB0CiFuxuRMn9dfQ for group 0
+2024-11-04 00:22:25,050:ERROR:Error fetching posts for Kansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:25,051:ERROR:Failed to process subreddit Kansas: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:25,051:INFO:Using API key -pxCx_ggfXctBSdo_PLPYw for group 1
+2024-11-04 00:22:25,341:ERROR:Error fetching posts for Missouri: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:25,341:ERROR:Failed to process subreddit Missouri: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:25,341:INFO:Using API key F70giaq7vZsMfT-ol6RXAA for group 2
+2024-11-04 00:22:25,391:ERROR:Error fetching posts for Maryland: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:25,391:ERROR:Failed to process subreddit Maryland: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:25,392:INFO:Using API key djI4X1qizkpvcgNGCvHa3w for group 3
+2024-11-04 00:22:25,455:ERROR:Error fetching posts for Minnesota: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:25,456:ERROR:Failed to process subreddit Minnesota: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:25,456:INFO:Using API key 0SVfMpQoeQcD1hxcta_Xqg for group 0
+2024-11-04 00:22:25,656:ERROR:Error fetching posts for Michigan: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:25,656:ERROR:Failed to process subreddit Michigan: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:25,656:INFO:Using API key w1I4PCY1PqCyR_xX3Rt7wA for group 1
+2024-11-04 00:22:25,821:ERROR:Error fetching posts for Massachusetts: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:25,821:ERROR:Failed to process subreddit Massachusetts: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:25,821:INFO:Using API key F1JvVZG6nLP35gYXGvXpDQ for group 2
+2024-11-04 00:22:25,845:ERROR:Error fetching posts for Mississippi: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:25,846:ERROR:Failed to process subreddit Mississippi: received 429 HTTP response. Please wait at least 0.0 seconds before re-trying this request.
+2024-11-04 00:22:25,846:INFO:Using API key eI1g2MMs3gjoe781WzgAFw for group 3

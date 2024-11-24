@@ -1,0 +1,11 @@
+# Ignore .env file to prevent secret data from being tracked by Git
+creds.env
+reddit_api_keys.env
+reddit_api_keys.json
+
+# Ignore all .pkl and .npy files (ML Outputs)
+*.pkl
+*.npy
+
+# Ignore the bertopic_model file
+bertopic_model
