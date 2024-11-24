@@ -1,0 +1,116 @@
+2024-11-21 16:06:44,601 - INFO - Prediction Script Initialized.
+2024-11-21 16:06:44,606 - INFO - Loaded MultiLabelBinarizer from: ./artifacts/mlb_multi_label.pkl
+2024-11-21 16:06:44,610 - INFO - Loaded ensemble optimal thresholds from: ./artifacts/thresholds/ensemble_optimal_thresholds.pkl
+2024-11-21 16:06:44,615 - INFO - Loaded fold weights from: ./artifacts/thresholds/fold_weights.pkl
+2024-11-21 16:06:44,617 - ERROR - An error occurred during the prediction workflow.
+Traceback (most recent call last):
+  File "c:\users\dforc\desktop\gt\dva_project\social_media_processing\classification_model\nonfusion\nonfusion_predict.py", line 490, in main
+    tokenizer = RobertaTokenizer.from_pretrained(CONFIG['models_dir'])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dforc\AppData\Roaming\Python\Python311\site-packages\transformers\tokenization_utils_base.py", line 2197, in from_pretrained
+    raise EnvironmentError(
+OSError: Can't load tokenizer for './artifacts/models'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure './artifacts/models' is the correct path to a directory containing all relevant files for a RobertaTokenizer tokenizer.
+2024-11-21 16:12:02,650 - INFO - Prediction Script Initialized.
+2024-11-21 16:12:02,651 - INFO - Loaded MultiLabelBinarizer from: ./artifacts/mlb_multi_label.pkl
+2024-11-21 16:12:02,653 - INFO - Loaded ensemble optimal thresholds from: ./artifacts/thresholds/ensemble_optimal_thresholds.pkl
+2024-11-21 16:12:02,654 - INFO - Loaded fold weights from: ./artifacts/thresholds/fold_weights.pkl
+2024-11-21 16:12:03,139 - INFO - Loaded tokenizer from 'roberta-base'.
+2024-11-21 16:12:03,140 - ERROR - An error occurred during the prediction workflow.
+Traceback (most recent call last):
+  File "c:\users\dforc\desktop\gt\dva_project\social_media_processing\classification_model\nonfusion\nonfusion_predict.py", line 495, in main
+    ensemble_models = load_ensemble_models(CONFIG['models_dir'], CONFIG['num_folds'], CONFIG['device'])
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\dforc\desktop\gt\dva_project\social_media_processing\classification_model\nonfusion\nonfusion_predict.py", line 197, in load_ensemble_models
+    model = RobertaForSequenceClassification.from_pretrained(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dforc\AppData\Roaming\Python\Python311\site-packages\transformers\modeling_utils.py", line 3613, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dforc\AppData\Roaming\Python\Python311\site-packages\transformers\configuration_utils.py", line 552, in from_pretrained
+    return cls.from_dict(config_dict, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dforc\AppData\Roaming\Python\Python311\site-packages\transformers\configuration_utils.py", line 740, in from_dict
+    setattr(config, key, value)
+  File "C:\Users\dforc\AppData\Roaming\Python\Python311\site-packages\transformers\configuration_utils.py", line 200, in __setattr__
+    super().__setattr__(key, value)
+  File "C:\Users\dforc\AppData\Roaming\Python\Python311\site-packages\transformers\configuration_utils.py", line 346, in num_labels
+    self.id2label = {i: f"LABEL_{i}" for i in range(num_labels)}
+                                              ^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object cannot be interpreted as an integer
+2024-11-21 16:14:27,358 - INFO - Prediction Script Initialized.
+2024-11-21 16:14:27,361 - INFO - Loaded MultiLabelBinarizer from: ./artifacts/mlb_multi_label.pkl
+2024-11-21 16:14:27,363 - INFO - Loaded ensemble optimal thresholds from: ./artifacts/thresholds/ensemble_optimal_thresholds.pkl
+2024-11-21 16:14:27,364 - INFO - Loaded fold weights from: ./artifacts/thresholds/fold_weights.pkl
+2024-11-21 16:14:27,496 - INFO - Loaded tokenizer from 'roberta-base'.
+2024-11-21 16:14:27,871 - INFO - Successfully loaded model from: ./artifacts/models\fold_1_best_model
+2024-11-21 16:14:28,149 - INFO - Successfully loaded model from: ./artifacts/models\fold_2_best_model
+2024-11-21 16:14:28,412 - INFO - Successfully loaded model from: ./artifacts/models\fold_3_best_model
+2024-11-21 16:14:28,671 - INFO - Successfully loaded model from: ./artifacts/models\fold_4_best_model
+2024-11-21 16:14:28,932 - INFO - Successfully loaded model from: ./artifacts/models\fold_5_best_model
+2024-11-21 16:14:28,933 - INFO - Loaded 5 ensemble models.
+2024-11-21 16:14:29,256 - INFO - Loaded unlabeled data from: ../data/processed/unlabeled_reddit_posts_processed.csv
+2024-11-21 16:14:29,259 - INFO - Missing 'combined_text' entries: 0
+2024-11-21 16:14:29,260 - INFO - Created Dataset and DataLoader for unlabeled data.
+2024-11-21 16:14:29,262 - INFO - Starting ensemble predictions...
+2024-11-21 16:14:40,496 - ERROR - An error occurred during the prediction workflow.
+Traceback (most recent call last):
+  File "c:\users\dforc\desktop\gt\dva_project\social_media_processing\classification_model\nonfusion\nonfusion_predict.py", line 548, in main
+    ensemble_probs = ensemble_predict_weighted(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\dforc\desktop\gt\dva_project\social_media_processing\classification_model\nonfusion\nonfusion_predict.py", line 239, in ensemble_predict_weighted
+    probs = torch.sigmoid(logits).cpu().numpy()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2024-11-21 16:16:07,323 - INFO - Prediction Script Initialized.
+2024-11-21 16:16:07,325 - INFO - Loaded MultiLabelBinarizer from: ./artifacts/mlb_multi_label.pkl
+2024-11-21 16:16:07,327 - INFO - Loaded ensemble optimal thresholds from: ./artifacts/thresholds/ensemble_optimal_thresholds.pkl
+2024-11-21 16:16:07,329 - INFO - Loaded fold weights from: ./artifacts/thresholds/fold_weights.pkl
+2024-11-21 16:16:07,469 - INFO - Loaded tokenizer from 'roberta-base'.
+2024-11-21 16:16:07,785 - INFO - Successfully loaded model from: ./artifacts/models\fold_1_best_model
+2024-11-21 16:16:08,050 - INFO - Successfully loaded model from: ./artifacts/models\fold_2_best_model
+2024-11-21 16:16:08,310 - INFO - Successfully loaded model from: ./artifacts/models\fold_3_best_model
+2024-11-21 16:16:08,562 - INFO - Successfully loaded model from: ./artifacts/models\fold_4_best_model
+2024-11-21 16:16:08,812 - INFO - Successfully loaded model from: ./artifacts/models\fold_5_best_model
+2024-11-21 16:16:08,813 - INFO - Loaded 5 ensemble models.
+2024-11-21 16:16:09,126 - INFO - Loaded unlabeled data from: ../data/processed/unlabeled_reddit_posts_processed.csv
+2024-11-21 16:16:09,129 - INFO - Missing 'combined_text' entries: 0
+2024-11-21 16:16:09,131 - INFO - Created Dataset and DataLoader for unlabeled data.
+2024-11-21 16:16:09,132 - INFO - Starting ensemble predictions...
+2024-11-21 16:24:19,739 - INFO - Ensemble predictions completed.
+2024-11-21 16:24:20,001 - INFO - Assigned labels to unlabeled data based on thresholds.
+2024-11-21 16:24:20,003 - INFO - Computed overall confidence scores using 'average' method.
+2024-11-21 16:24:20,014 - INFO - Selected top 10% high-confidence samples: 2760 entries.
+2024-11-21 16:24:20,113 - INFO - Top 10% high-confidence predictions saved to './artifacts/top_10_percent_predictions.csv'.
+2024-11-21 16:24:20,711 - INFO - All predictions saved to '../data/model_predictions/nonFusion_predictions.csv'.
+2024-11-21 16:24:20,713 - INFO - Applying t-SNE on ensemble probabilities...
+2024-11-21 16:25:29,570 - INFO - t-SNE coordinates saved to 'labeled_with_tsne.csv'.
+2024-11-21 16:25:29,571 - INFO - Generating t-SNE plots...
+2024-11-21 16:25:29,786 - INFO - Saved t-SNE plot for topic 'agriculture and food' to './artifacts/tsne_plots\tsne_topic_agriculture and food.png'.
+2024-11-21 16:25:29,982 - INFO - Saved t-SNE plot for topic 'crime and law enforcement' to './artifacts/tsne_plots\tsne_topic_crime and law enforcement.png'.
+2024-11-21 16:25:30,296 - INFO - Saved t-SNE plot for topic 'culture and recreation' to './artifacts/tsne_plots\tsne_topic_culture and recreation.png'.
+2024-11-21 16:25:30,481 - INFO - Saved t-SNE plot for topic 'economy and finance' to './artifacts/tsne_plots\tsne_topic_economy and finance.png'.
+2024-11-21 16:25:30,651 - INFO - Saved t-SNE plot for topic 'education and social services' to './artifacts/tsne_plots\tsne_topic_education and social services.png'.
+2024-11-21 16:25:30,826 - INFO - Saved t-SNE plot for topic 'environment and natural resources' to './artifacts/tsne_plots\tsne_topic_environment and natural resources.png'.
+2024-11-21 16:25:31,118 - INFO - Saved t-SNE plot for topic 'government operations and politics' to './artifacts/tsne_plots\tsne_topic_government operations and politics.png'.
+2024-11-21 16:25:31,380 - INFO - Saved t-SNE plot for topic 'health and healthcare' to './artifacts/tsne_plots\tsne_topic_health and healthcare.png'.
+2024-11-21 16:25:31,549 - INFO - Saved t-SNE plot for topic 'immigration and civil rights' to './artifacts/tsne_plots\tsne_topic_immigration and civil rights.png'.
+2024-11-21 16:25:31,700 - INFO - Saved t-SNE plot for topic 'national security and international affairs' to './artifacts/tsne_plots\tsne_topic_national security and international affairs.png'.
+2024-11-21 16:25:31,939 - INFO - Saved t-SNE plot for topic 'other / uncategorized' to './artifacts/tsne_plots\tsne_topic_other _ uncategorized.png'.
+2024-11-21 16:25:32,139 - INFO - Saved t-SNE plot for topic 'science, technology, and communications' to './artifacts/tsne_plots\tsne_topic_science, technology, and communications.png'.
+2024-11-21 16:25:32,335 - INFO - Saved t-SNE plot for topic 'transportation and infrastructure' to './artifacts/tsne_plots\tsne_topic_transportation and infrastructure.png'.
+2024-11-21 16:25:34,096 - INFO - Saved combined t-SNE plot with all topics to './artifacts/tsne_plots\tsne_combined_all_topics.png'.
+2024-11-21 16:25:34,096 - INFO - Creating word clouds for each topic...
+2024-11-21 16:25:35,363 - INFO - Saved word cloud for topic 'agriculture and food' to './artifacts/wordclouds\wordcloud_topic_agriculture and food.png'.
+2024-11-21 16:25:36,662 - INFO - Saved word cloud for topic 'crime and law enforcement' to './artifacts/wordclouds\wordcloud_topic_crime and law enforcement.png'.
+2024-11-21 16:25:38,200 - INFO - Saved word cloud for topic 'culture and recreation' to './artifacts/wordclouds\wordcloud_topic_culture and recreation.png'.
+2024-11-21 16:25:39,515 - INFO - Saved word cloud for topic 'economy and finance' to './artifacts/wordclouds\wordcloud_topic_economy and finance.png'.
+2024-11-21 16:25:40,751 - INFO - Saved word cloud for topic 'education and social services' to './artifacts/wordclouds\wordcloud_topic_education and social services.png'.
+2024-11-21 16:25:42,005 - INFO - Saved word cloud for topic 'environment and natural resources' to './artifacts/wordclouds\wordcloud_topic_environment and natural resources.png'.
+2024-11-21 16:25:43,580 - INFO - Saved word cloud for topic 'government operations and politics' to './artifacts/wordclouds\wordcloud_topic_government operations and politics.png'.
+2024-11-21 16:25:44,825 - INFO - Saved word cloud for topic 'health and healthcare' to './artifacts/wordclouds\wordcloud_topic_health and healthcare.png'.
+2024-11-21 16:25:46,089 - INFO - Saved word cloud for topic 'immigration and civil rights' to './artifacts/wordclouds\wordcloud_topic_immigration and civil rights.png'.
+2024-11-21 16:25:47,324 - INFO - Saved word cloud for topic 'national security and international affairs' to './artifacts/wordclouds\wordcloud_topic_national security and international affairs.png'.
+2024-11-21 16:25:48,561 - INFO - Saved word cloud for topic 'other / uncategorized' to './artifacts/wordclouds\wordcloud_topic_other _ uncategorized.png'.
+2024-11-21 16:25:49,769 - INFO - Saved word cloud for topic 'science, technology, and communications' to './artifacts/wordclouds\wordcloud_topic_science, technology, and communications.png'.
+2024-11-21 16:25:51,081 - INFO - Saved word cloud for topic 'transportation and infrastructure' to './artifacts/wordclouds\wordcloud_topic_transportation and infrastructure.png'.
+2024-11-21 16:25:51,083 - INFO - Prediction workflow completed successfully.

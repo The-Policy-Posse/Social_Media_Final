@@ -1,0 +1,2060 @@
+2024-11-21 14:29:41,737 - INFO - Random seeds set to 47.
+2024-11-21 14:29:41,737 - INFO - Using device: cuda
+2024-11-21 14:29:41,738 - INFO - Loading labeled data...
+2024-11-21 14:29:42,204 - INFO - Valid topics (>=2 samples): ['government operations and politics', 'culture and recreation', 'crime and law enforcement', 'economy and finance', 'transportation and infrastructure', 'immigration and civil rights', 'education and social services', 'environment and natural resources', 'health and healthcare', 'agriculture and food', 'national security and international affairs', 'other / uncategorized', 'science, technology, and communications']
+2024-11-21 14:29:42,209 - INFO - Number of samples after filtering: 2421
+2024-11-21 14:29:42,847 - INFO - Number of labels: 13
+2024-11-21 14:29:42,849 - INFO - MultiLabelBinarizer saved at: ./artifacts/mlb_multi_label.pkl
+2024-11-21 14:29:42,885 - INFO - Training + Validation samples: 2065, Test samples: 356
+2024-11-21 14:29:42,932 - INFO - 
+=== Fold 1/5 ===
+2024-11-21 14:29:42,933 - INFO - Datasets and DataLoaders created for this fold.
+2024-11-21 14:29:43,376 - INFO - Model initialized for this fold.
+2024-11-21 14:29:43,388 - INFO - Optimizer and scheduler initialized for this fold.
+2024-11-21 14:29:43,388 - INFO - 
+Epoch 1/10
+2024-11-21 14:29:43,389 - INFO - -----------------------------------
+2024-11-21 14:30:03,014 - INFO - Train Loss: 0.0279
+2024-11-21 14:30:06,053 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0173
+Micro F1 Score: 0.5938
+Macro F1 Score: 0.5241
+Weighted F1 Score: 0.6072
+Hamming Loss: 0.0995
+Jaccard Index: 0.4964
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.6923     0.8571     0.5806    
+Class 1       0.6903     0.7091     0.6724    
+Class 2       0.5735     0.6842     0.4937    
+Class 3       0.6353     0.8438     0.5094    
+Class 4       0.5753     0.6364     0.5250    
+Class 5       0.4835     0.4151     0.5789    
+Class 6       0.8121     0.7486     0.8874    
+Class 7       0.4500     0.3673     0.5806    
+Class 8       0.4416     0.5000     0.3953    
+Class 9       0.3415     0.4118     0.2917    
+Class 10      0.4103     0.4444     0.3810    
+Class 11      0.1039     0.0667     0.2353    
+Class 12      0.6038     0.6038     0.6038    
+Optimal Thresholds: 0.35, 0.40, 0.35, 0.38, 0.37, 0.34, 0.41, 0.33, 0.37, 0.31, 0.28, 0.22, 0.37
+########################################
+
+2024-11-21 14:30:06,054 - INFO - New best model found at epoch 1 with Micro F1: 0.5938
+2024-11-21 14:30:07,292 - INFO - Model saved to: ./artifacts/models\fold_1_best_model
+2024-11-21 14:30:07,294 - INFO - Optimal thresholds for fold 1 saved to: ./artifacts/thresholds\fold_1_optimal_thresholds.pkl
+2024-11-21 14:30:07,294 - INFO - -----------------------------------
+
+2024-11-21 14:30:07,295 - INFO - 
+Epoch 2/10
+2024-11-21 14:30:07,295 - INFO - -----------------------------------
+2024-11-21 14:30:26,393 - INFO - Train Loss: 0.0145
+2024-11-21 14:30:29,329 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0129
+Micro F1 Score: 0.7239
+Macro F1 Score: 0.6809
+Weighted F1 Score: 0.7210
+Hamming Loss: 0.0667
+Jaccard Index: 0.6566
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7451     0.9500     0.6129    
+Class 1       0.8000     0.7222     0.8966    
+Class 2       0.6707     0.6364     0.7089    
+Class 3       0.8081     0.8696     0.7547    
+Class 4       0.6977     0.6522     0.7500    
+Class 5       0.6471     0.7333     0.5789    
+Class 6       0.8089     0.7791     0.8411    
+Class 7       0.8000     0.7647     0.8387    
+Class 8       0.6136     0.6000     0.6279    
+Class 9       0.5172     0.4412     0.6250    
+Class 10      0.5882     0.7692     0.4762    
+Class 11      0.4545     1.0000     0.2941    
+Class 12      0.7000     0.7447     0.6604    
+Optimal Thresholds: 0.34, 0.44, 0.38, 0.44, 0.41, 0.52, 0.42, 0.40, 0.46, 0.43, 0.55, 0.40, 0.48
+########################################
+
+2024-11-21 14:30:29,329 - INFO - New best model found at epoch 2 with Micro F1: 0.7239
+2024-11-21 14:30:30,281 - INFO - Model saved to: ./artifacts/models\fold_1_best_model
+2024-11-21 14:30:30,282 - INFO - Optimal thresholds for fold 1 saved to: ./artifacts/thresholds\fold_1_optimal_thresholds.pkl
+2024-11-21 14:30:30,282 - INFO - -----------------------------------
+
+2024-11-21 14:30:30,283 - INFO - 
+Epoch 3/10
+2024-11-21 14:30:30,283 - INFO - -----------------------------------
+2024-11-21 14:30:49,372 - INFO - Train Loss: 0.0107
+2024-11-21 14:30:52,312 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0116
+Micro F1 Score: 0.7464
+Macro F1 Score: 0.7129
+Weighted F1 Score: 0.7458
+Hamming Loss: 0.0628
+Jaccard Index: 0.6822
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7937     0.7812     0.8065    
+Class 1       0.8000     0.7463     0.8621    
+Class 2       0.7349     0.7011     0.7722    
+Class 3       0.7965     0.7500     0.8491    
+Class 4       0.6988     0.6744     0.7250    
+Class 5       0.6582     0.6341     0.6842    
+Class 6       0.8155     0.7975     0.8344    
+Class 7       0.8197     0.8333     0.8065    
+Class 8       0.6579     0.7576     0.5814    
+Class 9       0.5965     0.5152     0.7083    
+Class 10      0.5714     0.5000     0.6667    
+Class 11      0.5833     1.0000     0.4118    
+Class 12      0.7407     0.7273     0.7547    
+Optimal Thresholds: 0.43, 0.41, 0.43, 0.43, 0.37, 0.35, 0.43, 0.39, 0.56, 0.36, 0.37, 0.49, 0.47
+########################################
+
+2024-11-21 14:30:52,313 - INFO - New best model found at epoch 3 with Micro F1: 0.7464
+2024-11-21 14:30:53,340 - INFO - Model saved to: ./artifacts/models\fold_1_best_model
+2024-11-21 14:30:53,341 - INFO - Optimal thresholds for fold 1 saved to: ./artifacts/thresholds\fold_1_optimal_thresholds.pkl
+2024-11-21 14:30:53,342 - INFO - -----------------------------------
+
+2024-11-21 14:30:53,342 - INFO - 
+Epoch 4/10
+2024-11-21 14:30:53,343 - INFO - -----------------------------------
+2024-11-21 14:31:12,441 - INFO - Train Loss: 0.0084
+2024-11-21 14:31:15,467 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0120
+Micro F1 Score: 0.7516
+Macro F1 Score: 0.7197
+Weighted F1 Score: 0.7500
+Hamming Loss: 0.0584
+Jaccard Index: 0.7007
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7812     0.7576     0.8065    
+Class 1       0.8254     0.7647     0.8966    
+Class 2       0.7347     0.7941     0.6835    
+Class 3       0.8081     0.8696     0.7547    
+Class 4       0.6842     0.7222     0.6500    
+Class 5       0.6349     0.8000     0.5263    
+Class 6       0.8123     0.8380     0.7881    
+Class 7       0.7742     0.7742     0.7742    
+Class 8       0.6596     0.6078     0.7209    
+Class 9       0.6667     0.6667     0.6667    
+Class 10      0.5946     0.6875     0.5238    
+Class 11      0.6061     0.6250     0.5882    
+Class 12      0.7736     0.7736     0.7736    
+Optimal Thresholds: 0.28, 0.41, 0.39, 0.47, 0.43, 0.54, 0.50, 0.46, 0.43, 0.32, 0.45, 0.37, 0.53
+########################################
+
+2024-11-21 14:31:15,467 - INFO - New best model found at epoch 4 with Micro F1: 0.7516
+2024-11-21 14:31:16,474 - INFO - Model saved to: ./artifacts/models\fold_1_best_model
+2024-11-21 14:31:16,475 - INFO - Optimal thresholds for fold 1 saved to: ./artifacts/thresholds\fold_1_optimal_thresholds.pkl
+2024-11-21 14:31:16,476 - INFO - -----------------------------------
+
+2024-11-21 14:31:16,476 - INFO - 
+Epoch 5/10
+2024-11-21 14:31:16,477 - INFO - -----------------------------------
+2024-11-21 14:31:35,453 - INFO - Train Loss: 0.0068
+2024-11-21 14:31:38,401 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0119
+Micro F1 Score: 0.7439
+Macro F1 Score: 0.7109
+Weighted F1 Score: 0.7439
+Hamming Loss: 0.0613
+Jaccard Index: 0.6781
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.8065     0.8065     0.8065    
+Class 1       0.7869     0.7500     0.8276    
+Class 2       0.7183     0.8095     0.6456    
+Class 3       0.8288     0.7931     0.8679    
+Class 4       0.6829     0.6667     0.7000    
+Class 5       0.6349     0.8000     0.5263    
+Class 6       0.8161     0.8243     0.8079    
+Class 7       0.7667     0.7931     0.7419    
+Class 8       0.6667     0.6829     0.6512    
+Class 9       0.5862     0.5000     0.7083    
+Class 10      0.5909     0.5652     0.6190    
+Class 11      0.5946     0.5500     0.6471    
+Class 12      0.7619     0.7692     0.7547    
+Optimal Thresholds: 0.36, 0.41, 0.52, 0.43, 0.36, 0.52, 0.45, 0.45, 0.54, 0.29, 0.39, 0.31, 0.50
+########################################
+
+2024-11-21 14:31:38,402 - INFO - No improvement in Micro F1. (1/3)
+2024-11-21 14:31:38,403 - INFO - -----------------------------------
+
+2024-11-21 14:31:38,403 - INFO - 
+Epoch 6/10
+2024-11-21 14:31:38,404 - INFO - -----------------------------------
+2024-11-21 14:31:57,359 - INFO - Train Loss: 0.0057
+2024-11-21 14:32:00,316 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0121
+Micro F1 Score: 0.7475
+Macro F1 Score: 0.7155
+Weighted F1 Score: 0.7480
+Hamming Loss: 0.0628
+Jaccard Index: 0.6841
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7812     0.7576     0.8065    
+Class 1       0.8033     0.7656     0.8448    
+Class 2       0.7042     0.7937     0.6329    
+Class 3       0.8148     0.8000     0.8302    
+Class 4       0.7059     0.6667     0.7500    
+Class 5       0.6346     0.5000     0.8684    
+Class 6       0.8210     0.7688     0.8808    
+Class 7       0.7586     0.8148     0.7097    
+Class 8       0.6757     0.8065     0.5814    
+Class 9       0.5763     0.4857     0.7083    
+Class 10      0.6364     0.6087     0.6667    
+Class 11      0.5926     0.8000     0.4706    
+Class 12      0.7963     0.7818     0.8113    
+Optimal Thresholds: 0.37, 0.38, 0.52, 0.42, 0.31, 0.25, 0.39, 0.42, 0.61, 0.32, 0.44, 0.40, 0.44
+########################################
+
+2024-11-21 14:32:00,317 - INFO - No improvement in Micro F1. (2/3)
+2024-11-21 14:32:00,317 - INFO - -----------------------------------
+
+2024-11-21 14:32:00,317 - INFO - 
+Epoch 7/10
+2024-11-21 14:32:00,318 - INFO - -----------------------------------
+2024-11-21 14:32:19,465 - INFO - Train Loss: 0.0048
+2024-11-21 14:32:22,397 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0126
+Micro F1 Score: 0.7502
+Macro F1 Score: 0.7216
+Weighted F1 Score: 0.7494
+Hamming Loss: 0.0609
+Jaccard Index: 0.6938
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.8387     0.8387     0.8387    
+Class 1       0.8033     0.7656     0.8448    
+Class 2       0.7081     0.6951     0.7215    
+Class 3       0.7961     0.8200     0.7736    
+Class 4       0.6742     0.6122     0.7500    
+Class 5       0.6286     0.6875     0.5789    
+Class 6       0.8170     0.8065     0.8278    
+Class 7       0.7714     0.6923     0.8710    
+Class 8       0.6835     0.7500     0.6279    
+Class 9       0.5818     0.5161     0.6667    
+Class 10      0.6667     0.6667     0.6667    
+Class 11      0.6154     0.8889     0.4706    
+Class 12      0.7963     0.7818     0.8113    
+Optimal Thresholds: 0.36, 0.42, 0.47, 0.48, 0.33, 0.45, 0.42, 0.35, 0.56, 0.33, 0.45, 0.49, 0.41
+########################################
+
+2024-11-21 14:32:22,397 - INFO - No improvement in Micro F1. (3/3)
+2024-11-21 14:32:22,399 - INFO - Early stopping triggered.
+2024-11-21 14:32:22,399 - INFO - Training complete for Fold 1.
+2024-11-21 14:32:22,691 - ERROR - An error occurred during training: sigmoid(): argument 'input' (position 1) must be Tensor, not SequenceClassifierOutput
+2024-11-21 14:35:50,418 - INFO - Random seeds set to 47.
+2024-11-21 14:35:50,419 - INFO - Using device: cuda
+2024-11-21 14:35:50,420 - INFO - Loading labeled data...
+2024-11-21 14:35:50,598 - INFO - Valid topics (>=2 samples): ['government operations and politics', 'culture and recreation', 'crime and law enforcement', 'economy and finance', 'transportation and infrastructure', 'immigration and civil rights', 'education and social services', 'environment and natural resources', 'health and healthcare', 'agriculture and food', 'national security and international affairs', 'other / uncategorized', 'science, technology, and communications']
+2024-11-21 14:35:50,603 - INFO - Number of samples after filtering: 2421
+2024-11-21 14:35:51,106 - INFO - Number of labels: 13
+2024-11-21 14:35:51,106 - INFO - MultiLabelBinarizer saved at: ./artifacts/mlb_multi_label.pkl
+2024-11-21 14:35:51,142 - INFO - Training + Validation samples: 2065, Test samples: 356
+2024-11-21 14:35:51,188 - INFO - 
+=== Fold 1/5 ===
+2024-11-21 14:35:51,189 - INFO - Datasets and DataLoaders created for this fold.
+2024-11-21 14:35:51,621 - INFO - Model initialized for this fold.
+2024-11-21 14:35:51,625 - INFO - Optimizer and scheduler initialized for this fold.
+2024-11-21 14:35:51,626 - INFO - 
+Epoch 1/10
+2024-11-21 14:35:51,626 - INFO - -----------------------------------
+2024-11-21 14:36:11,278 - INFO - Train Loss: 0.0279
+2024-11-21 14:36:14,289 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0173
+Micro F1 Score: 0.5938
+Macro F1 Score: 0.5241
+Weighted F1 Score: 0.6072
+Hamming Loss: 0.0995
+Jaccard Index: 0.4964
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.6923     0.8571     0.5806    
+Class 1       0.6903     0.7091     0.6724    
+Class 2       0.5735     0.6842     0.4937    
+Class 3       0.6353     0.8438     0.5094    
+Class 4       0.5753     0.6364     0.5250    
+Class 5       0.4835     0.4151     0.5789    
+Class 6       0.8121     0.7486     0.8874    
+Class 7       0.4500     0.3673     0.5806    
+Class 8       0.4416     0.5000     0.3953    
+Class 9       0.3415     0.4118     0.2917    
+Class 10      0.4103     0.4444     0.3810    
+Class 11      0.1039     0.0667     0.2353    
+Class 12      0.6038     0.6038     0.6038    
+Optimal Thresholds: 0.35, 0.40, 0.35, 0.38, 0.37, 0.34, 0.41, 0.33, 0.37, 0.31, 0.28, 0.22, 0.37
+########################################
+
+2024-11-21 14:36:14,290 - INFO - New best model found at epoch 1 with Micro F1: 0.5938
+2024-11-21 14:36:15,241 - INFO - Model saved to: ./artifacts/models\fold_1_best_model
+2024-11-21 14:36:15,242 - INFO - Optimal thresholds for fold 1 saved to: ./artifacts/thresholds\fold_1_optimal_thresholds.pkl
+2024-11-21 14:36:15,243 - INFO - -----------------------------------
+
+2024-11-21 14:36:15,243 - INFO - 
+Epoch 2/10
+2024-11-21 14:36:15,243 - INFO - -----------------------------------
+2024-11-21 14:36:34,266 - INFO - Train Loss: 0.0145
+2024-11-21 14:36:37,183 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0129
+Micro F1 Score: 0.7239
+Macro F1 Score: 0.6809
+Weighted F1 Score: 0.7210
+Hamming Loss: 0.0667
+Jaccard Index: 0.6566
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7451     0.9500     0.6129    
+Class 1       0.8000     0.7222     0.8966    
+Class 2       0.6707     0.6364     0.7089    
+Class 3       0.8081     0.8696     0.7547    
+Class 4       0.6977     0.6522     0.7500    
+Class 5       0.6471     0.7333     0.5789    
+Class 6       0.8089     0.7791     0.8411    
+Class 7       0.8000     0.7647     0.8387    
+Class 8       0.6136     0.6000     0.6279    
+Class 9       0.5172     0.4412     0.6250    
+Class 10      0.5882     0.7692     0.4762    
+Class 11      0.4545     1.0000     0.2941    
+Class 12      0.7000     0.7447     0.6604    
+Optimal Thresholds: 0.34, 0.44, 0.38, 0.44, 0.41, 0.52, 0.42, 0.40, 0.46, 0.43, 0.55, 0.40, 0.48
+########################################
+
+2024-11-21 14:36:37,184 - INFO - New best model found at epoch 2 with Micro F1: 0.7239
+2024-11-21 14:36:38,087 - INFO - Model saved to: ./artifacts/models\fold_1_best_model
+2024-11-21 14:36:38,088 - INFO - Optimal thresholds for fold 1 saved to: ./artifacts/thresholds\fold_1_optimal_thresholds.pkl
+2024-11-21 14:36:38,088 - INFO - -----------------------------------
+
+2024-11-21 14:36:38,088 - INFO - 
+Epoch 3/10
+2024-11-21 14:36:38,089 - INFO - -----------------------------------
+2024-11-21 14:36:56,933 - INFO - Train Loss: 0.0107
+2024-11-21 14:36:59,879 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0116
+Micro F1 Score: 0.7464
+Macro F1 Score: 0.7129
+Weighted F1 Score: 0.7458
+Hamming Loss: 0.0628
+Jaccard Index: 0.6822
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7937     0.7812     0.8065    
+Class 1       0.8000     0.7463     0.8621    
+Class 2       0.7349     0.7011     0.7722    
+Class 3       0.7965     0.7500     0.8491    
+Class 4       0.6988     0.6744     0.7250    
+Class 5       0.6582     0.6341     0.6842    
+Class 6       0.8155     0.7975     0.8344    
+Class 7       0.8197     0.8333     0.8065    
+Class 8       0.6579     0.7576     0.5814    
+Class 9       0.5965     0.5152     0.7083    
+Class 10      0.5714     0.5000     0.6667    
+Class 11      0.5833     1.0000     0.4118    
+Class 12      0.7407     0.7273     0.7547    
+Optimal Thresholds: 0.43, 0.41, 0.43, 0.43, 0.37, 0.35, 0.43, 0.39, 0.56, 0.36, 0.37, 0.49, 0.47
+########################################
+
+2024-11-21 14:36:59,879 - INFO - New best model found at epoch 3 with Micro F1: 0.7464
+2024-11-21 14:37:00,830 - INFO - Model saved to: ./artifacts/models\fold_1_best_model
+2024-11-21 14:37:00,831 - INFO - Optimal thresholds for fold 1 saved to: ./artifacts/thresholds\fold_1_optimal_thresholds.pkl
+2024-11-21 14:37:00,831 - INFO - -----------------------------------
+
+2024-11-21 14:37:00,832 - INFO - 
+Epoch 4/10
+2024-11-21 14:37:00,832 - INFO - -----------------------------------
+2024-11-21 14:37:19,839 - INFO - Train Loss: 0.0084
+2024-11-21 14:37:22,802 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0120
+Micro F1 Score: 0.7516
+Macro F1 Score: 0.7197
+Weighted F1 Score: 0.7500
+Hamming Loss: 0.0584
+Jaccard Index: 0.7007
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7812     0.7576     0.8065    
+Class 1       0.8254     0.7647     0.8966    
+Class 2       0.7347     0.7941     0.6835    
+Class 3       0.8081     0.8696     0.7547    
+Class 4       0.6842     0.7222     0.6500    
+Class 5       0.6349     0.8000     0.5263    
+Class 6       0.8123     0.8380     0.7881    
+Class 7       0.7742     0.7742     0.7742    
+Class 8       0.6596     0.6078     0.7209    
+Class 9       0.6667     0.6667     0.6667    
+Class 10      0.5946     0.6875     0.5238    
+Class 11      0.6061     0.6250     0.5882    
+Class 12      0.7736     0.7736     0.7736    
+Optimal Thresholds: 0.28, 0.41, 0.39, 0.47, 0.43, 0.54, 0.50, 0.46, 0.43, 0.32, 0.45, 0.37, 0.53
+########################################
+
+2024-11-21 14:37:22,803 - INFO - New best model found at epoch 4 with Micro F1: 0.7516
+2024-11-21 14:37:23,712 - INFO - Model saved to: ./artifacts/models\fold_1_best_model
+2024-11-21 14:37:23,713 - INFO - Optimal thresholds for fold 1 saved to: ./artifacts/thresholds\fold_1_optimal_thresholds.pkl
+2024-11-21 14:37:23,713 - INFO - -----------------------------------
+
+2024-11-21 14:37:23,714 - INFO - 
+Epoch 5/10
+2024-11-21 14:37:23,714 - INFO - -----------------------------------
+2024-11-21 14:37:42,624 - INFO - Train Loss: 0.0068
+2024-11-21 14:37:45,558 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0119
+Micro F1 Score: 0.7439
+Macro F1 Score: 0.7109
+Weighted F1 Score: 0.7439
+Hamming Loss: 0.0613
+Jaccard Index: 0.6781
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.8065     0.8065     0.8065    
+Class 1       0.7869     0.7500     0.8276    
+Class 2       0.7183     0.8095     0.6456    
+Class 3       0.8288     0.7931     0.8679    
+Class 4       0.6829     0.6667     0.7000    
+Class 5       0.6349     0.8000     0.5263    
+Class 6       0.8161     0.8243     0.8079    
+Class 7       0.7667     0.7931     0.7419    
+Class 8       0.6667     0.6829     0.6512    
+Class 9       0.5862     0.5000     0.7083    
+Class 10      0.5909     0.5652     0.6190    
+Class 11      0.5946     0.5500     0.6471    
+Class 12      0.7619     0.7692     0.7547    
+Optimal Thresholds: 0.36, 0.41, 0.52, 0.43, 0.36, 0.52, 0.45, 0.45, 0.54, 0.29, 0.39, 0.31, 0.50
+########################################
+
+2024-11-21 14:37:45,558 - INFO - No improvement in Micro F1. (1/3)
+2024-11-21 14:37:45,559 - INFO - -----------------------------------
+
+2024-11-21 14:37:45,559 - INFO - 
+Epoch 6/10
+2024-11-21 14:37:45,560 - INFO - -----------------------------------
+2024-11-21 14:38:04,596 - INFO - Train Loss: 0.0057
+2024-11-21 14:38:07,617 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0121
+Micro F1 Score: 0.7475
+Macro F1 Score: 0.7155
+Weighted F1 Score: 0.7480
+Hamming Loss: 0.0628
+Jaccard Index: 0.6841
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7812     0.7576     0.8065    
+Class 1       0.8033     0.7656     0.8448    
+Class 2       0.7042     0.7937     0.6329    
+Class 3       0.8148     0.8000     0.8302    
+Class 4       0.7059     0.6667     0.7500    
+Class 5       0.6346     0.5000     0.8684    
+Class 6       0.8210     0.7688     0.8808    
+Class 7       0.7586     0.8148     0.7097    
+Class 8       0.6757     0.8065     0.5814    
+Class 9       0.5763     0.4857     0.7083    
+Class 10      0.6364     0.6087     0.6667    
+Class 11      0.5926     0.8000     0.4706    
+Class 12      0.7963     0.7818     0.8113    
+Optimal Thresholds: 0.37, 0.38, 0.52, 0.42, 0.31, 0.25, 0.39, 0.42, 0.61, 0.32, 0.44, 0.40, 0.44
+########################################
+
+2024-11-21 14:38:07,618 - INFO - No improvement in Micro F1. (2/3)
+2024-11-21 14:38:07,618 - INFO - -----------------------------------
+
+2024-11-21 14:38:07,618 - INFO - 
+Epoch 7/10
+2024-11-21 14:38:07,619 - INFO - -----------------------------------
+2024-11-21 14:38:26,576 - INFO - Train Loss: 0.0048
+2024-11-21 14:38:29,515 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0126
+Micro F1 Score: 0.7502
+Macro F1 Score: 0.7216
+Weighted F1 Score: 0.7494
+Hamming Loss: 0.0609
+Jaccard Index: 0.6938
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.8387     0.8387     0.8387    
+Class 1       0.8033     0.7656     0.8448    
+Class 2       0.7081     0.6951     0.7215    
+Class 3       0.7961     0.8200     0.7736    
+Class 4       0.6742     0.6122     0.7500    
+Class 5       0.6286     0.6875     0.5789    
+Class 6       0.8170     0.8065     0.8278    
+Class 7       0.7714     0.6923     0.8710    
+Class 8       0.6835     0.7500     0.6279    
+Class 9       0.5818     0.5161     0.6667    
+Class 10      0.6667     0.6667     0.6667    
+Class 11      0.6154     0.8889     0.4706    
+Class 12      0.7963     0.7818     0.8113    
+Optimal Thresholds: 0.36, 0.42, 0.47, 0.48, 0.33, 0.45, 0.42, 0.35, 0.56, 0.33, 0.45, 0.49, 0.41
+########################################
+
+2024-11-21 14:38:29,515 - INFO - No improvement in Micro F1. (3/3)
+2024-11-21 14:38:29,516 - INFO - Early stopping triggered.
+2024-11-21 14:38:29,516 - INFO - Training complete for Fold 1.
+2024-11-21 14:38:29,797 - ERROR - An error occurred during training: sigmoid(): argument 'input' (position 1) must be Tensor, not SequenceClassifierOutput
+2024-11-21 14:41:12,523 - INFO - Random seeds set to 47.
+2024-11-21 14:41:12,524 - INFO - Using device: cuda
+2024-11-21 14:41:12,524 - INFO - Loading labeled data...
+2024-11-21 14:41:12,771 - INFO - Valid topics (>=2 samples): ['government operations and politics', 'culture and recreation', 'crime and law enforcement', 'economy and finance', 'transportation and infrastructure', 'immigration and civil rights', 'education and social services', 'environment and natural resources', 'health and healthcare', 'agriculture and food', 'national security and international affairs', 'other / uncategorized', 'science, technology, and communications']
+2024-11-21 14:41:12,778 - INFO - Number of samples after filtering: 2421
+2024-11-21 14:41:13,318 - INFO - Number of labels: 13
+2024-11-21 14:41:13,319 - INFO - MultiLabelBinarizer saved at: ./artifacts/mlb_multi_label.pkl
+2024-11-21 14:41:13,357 - INFO - Training + Validation samples: 2065, Test samples: 356
+2024-11-21 14:41:13,410 - INFO - 
+=== Fold 1/5 ===
+2024-11-21 14:41:13,411 - INFO - Datasets and DataLoaders created for this fold.
+2024-11-21 14:41:13,852 - INFO - Model initialized for this fold.
+2024-11-21 14:41:13,855 - INFO - Optimizer and scheduler initialized for this fold.
+2024-11-21 14:41:13,857 - INFO - 
+Epoch 1/10
+2024-11-21 14:41:13,857 - INFO - -----------------------------------
+2024-11-21 14:41:33,933 - INFO - Train Loss: 0.0279
+2024-11-21 14:41:37,091 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0173
+Micro F1 Score: 0.5938
+Macro F1 Score: 0.5241
+Weighted F1 Score: 0.6072
+Hamming Loss: 0.0995
+Jaccard Index: 0.4964
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.6923     0.8571     0.5806    
+Class 1       0.6903     0.7091     0.6724    
+Class 2       0.5735     0.6842     0.4937    
+Class 3       0.6353     0.8438     0.5094    
+Class 4       0.5753     0.6364     0.5250    
+Class 5       0.4835     0.4151     0.5789    
+Class 6       0.8121     0.7486     0.8874    
+Class 7       0.4500     0.3673     0.5806    
+Class 8       0.4416     0.5000     0.3953    
+Class 9       0.3415     0.4118     0.2917    
+Class 10      0.4103     0.4444     0.3810    
+Class 11      0.1039     0.0667     0.2353    
+Class 12      0.6038     0.6038     0.6038    
+Optimal Thresholds: 0.35, 0.40, 0.35, 0.38, 0.37, 0.34, 0.41, 0.33, 0.37, 0.31, 0.28, 0.22, 0.37
+########################################
+
+2024-11-21 14:41:37,092 - INFO - New best model found at epoch 1 with Micro F1: 0.5938
+2024-11-21 14:41:38,217 - INFO - Model saved to: ./artifacts/models\fold_1_best_model
+2024-11-21 14:41:38,218 - INFO - Optimal thresholds for fold 1 saved to: ./artifacts/thresholds\fold_1_optimal_thresholds.pkl
+2024-11-21 14:41:38,219 - INFO - -----------------------------------
+
+2024-11-21 14:41:38,219 - INFO - 
+Epoch 2/10
+2024-11-21 14:41:38,220 - INFO - -----------------------------------
+2024-11-21 14:41:57,264 - INFO - Train Loss: 0.0145
+2024-11-21 14:42:00,201 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0129
+Micro F1 Score: 0.7239
+Macro F1 Score: 0.6809
+Weighted F1 Score: 0.7210
+Hamming Loss: 0.0667
+Jaccard Index: 0.6566
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7451     0.9500     0.6129    
+Class 1       0.8000     0.7222     0.8966    
+Class 2       0.6707     0.6364     0.7089    
+Class 3       0.8081     0.8696     0.7547    
+Class 4       0.6977     0.6522     0.7500    
+Class 5       0.6471     0.7333     0.5789    
+Class 6       0.8089     0.7791     0.8411    
+Class 7       0.8000     0.7647     0.8387    
+Class 8       0.6136     0.6000     0.6279    
+Class 9       0.5172     0.4412     0.6250    
+Class 10      0.5882     0.7692     0.4762    
+Class 11      0.4545     1.0000     0.2941    
+Class 12      0.7000     0.7447     0.6604    
+Optimal Thresholds: 0.34, 0.44, 0.38, 0.44, 0.41, 0.52, 0.42, 0.40, 0.46, 0.43, 0.55, 0.40, 0.48
+########################################
+
+2024-11-21 14:42:00,202 - INFO - New best model found at epoch 2 with Micro F1: 0.7239
+2024-11-21 14:42:00,915 - INFO - Model saved to: ./artifacts/models\fold_1_best_model
+2024-11-21 14:42:00,915 - INFO - Optimal thresholds for fold 1 saved to: ./artifacts/thresholds\fold_1_optimal_thresholds.pkl
+2024-11-21 14:42:00,917 - INFO - -----------------------------------
+
+2024-11-21 14:42:00,917 - INFO - 
+Epoch 3/10
+2024-11-21 14:42:00,918 - INFO - -----------------------------------
+2024-11-21 14:42:19,798 - INFO - Train Loss: 0.0107
+2024-11-21 14:42:22,702 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0116
+Micro F1 Score: 0.7464
+Macro F1 Score: 0.7129
+Weighted F1 Score: 0.7458
+Hamming Loss: 0.0628
+Jaccard Index: 0.6822
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7937     0.7812     0.8065    
+Class 1       0.8000     0.7463     0.8621    
+Class 2       0.7349     0.7011     0.7722    
+Class 3       0.7965     0.7500     0.8491    
+Class 4       0.6988     0.6744     0.7250    
+Class 5       0.6582     0.6341     0.6842    
+Class 6       0.8155     0.7975     0.8344    
+Class 7       0.8197     0.8333     0.8065    
+Class 8       0.6579     0.7576     0.5814    
+Class 9       0.5965     0.5152     0.7083    
+Class 10      0.5714     0.5000     0.6667    
+Class 11      0.5833     1.0000     0.4118    
+Class 12      0.7407     0.7273     0.7547    
+Optimal Thresholds: 0.43, 0.41, 0.43, 0.43, 0.37, 0.35, 0.43, 0.39, 0.56, 0.36, 0.37, 0.49, 0.47
+########################################
+
+2024-11-21 14:42:22,703 - INFO - New best model found at epoch 3 with Micro F1: 0.7464
+2024-11-21 14:42:23,652 - INFO - Model saved to: ./artifacts/models\fold_1_best_model
+2024-11-21 14:42:23,653 - INFO - Optimal thresholds for fold 1 saved to: ./artifacts/thresholds\fold_1_optimal_thresholds.pkl
+2024-11-21 14:42:23,654 - INFO - -----------------------------------
+
+2024-11-21 14:42:23,654 - INFO - 
+Epoch 4/10
+2024-11-21 14:42:23,655 - INFO - -----------------------------------
+2024-11-21 14:42:42,613 - INFO - Train Loss: 0.0084
+2024-11-21 14:42:45,534 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0120
+Micro F1 Score: 0.7516
+Macro F1 Score: 0.7197
+Weighted F1 Score: 0.7500
+Hamming Loss: 0.0584
+Jaccard Index: 0.7007
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7812     0.7576     0.8065    
+Class 1       0.8254     0.7647     0.8966    
+Class 2       0.7347     0.7941     0.6835    
+Class 3       0.8081     0.8696     0.7547    
+Class 4       0.6842     0.7222     0.6500    
+Class 5       0.6349     0.8000     0.5263    
+Class 6       0.8123     0.8380     0.7881    
+Class 7       0.7742     0.7742     0.7742    
+Class 8       0.6596     0.6078     0.7209    
+Class 9       0.6667     0.6667     0.6667    
+Class 10      0.5946     0.6875     0.5238    
+Class 11      0.6061     0.6250     0.5882    
+Class 12      0.7736     0.7736     0.7736    
+Optimal Thresholds: 0.28, 0.41, 0.39, 0.47, 0.43, 0.54, 0.50, 0.46, 0.43, 0.32, 0.45, 0.37, 0.53
+########################################
+
+2024-11-21 14:42:45,535 - INFO - New best model found at epoch 4 with Micro F1: 0.7516
+2024-11-21 14:42:46,307 - INFO - Model saved to: ./artifacts/models\fold_1_best_model
+2024-11-21 14:42:46,308 - INFO - Optimal thresholds for fold 1 saved to: ./artifacts/thresholds\fold_1_optimal_thresholds.pkl
+2024-11-21 14:42:46,309 - INFO - -----------------------------------
+
+2024-11-21 14:42:46,309 - INFO - 
+Epoch 5/10
+2024-11-21 14:42:46,310 - INFO - -----------------------------------
+2024-11-21 14:43:05,263 - INFO - Train Loss: 0.0068
+2024-11-21 14:43:08,175 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0119
+Micro F1 Score: 0.7439
+Macro F1 Score: 0.7109
+Weighted F1 Score: 0.7439
+Hamming Loss: 0.0613
+Jaccard Index: 0.6781
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.8065     0.8065     0.8065    
+Class 1       0.7869     0.7500     0.8276    
+Class 2       0.7183     0.8095     0.6456    
+Class 3       0.8288     0.7931     0.8679    
+Class 4       0.6829     0.6667     0.7000    
+Class 5       0.6349     0.8000     0.5263    
+Class 6       0.8161     0.8243     0.8079    
+Class 7       0.7667     0.7931     0.7419    
+Class 8       0.6667     0.6829     0.6512    
+Class 9       0.5862     0.5000     0.7083    
+Class 10      0.5909     0.5652     0.6190    
+Class 11      0.5946     0.5500     0.6471    
+Class 12      0.7619     0.7692     0.7547    
+Optimal Thresholds: 0.36, 0.41, 0.52, 0.43, 0.36, 0.52, 0.45, 0.45, 0.54, 0.29, 0.39, 0.31, 0.50
+########################################
+
+2024-11-21 14:43:08,176 - INFO - No improvement in Micro F1. (1/3)
+2024-11-21 14:43:08,176 - INFO - -----------------------------------
+
+2024-11-21 14:43:08,177 - INFO - 
+Epoch 6/10
+2024-11-21 14:43:08,177 - INFO - -----------------------------------
+2024-11-21 14:43:27,043 - INFO - Train Loss: 0.0057
+2024-11-21 14:43:29,978 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0121
+Micro F1 Score: 0.7475
+Macro F1 Score: 0.7155
+Weighted F1 Score: 0.7480
+Hamming Loss: 0.0628
+Jaccard Index: 0.6841
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7812     0.7576     0.8065    
+Class 1       0.8033     0.7656     0.8448    
+Class 2       0.7042     0.7937     0.6329    
+Class 3       0.8148     0.8000     0.8302    
+Class 4       0.7059     0.6667     0.7500    
+Class 5       0.6346     0.5000     0.8684    
+Class 6       0.8210     0.7688     0.8808    
+Class 7       0.7586     0.8148     0.7097    
+Class 8       0.6757     0.8065     0.5814    
+Class 9       0.5763     0.4857     0.7083    
+Class 10      0.6364     0.6087     0.6667    
+Class 11      0.5926     0.8000     0.4706    
+Class 12      0.7963     0.7818     0.8113    
+Optimal Thresholds: 0.37, 0.38, 0.52, 0.42, 0.31, 0.25, 0.39, 0.42, 0.61, 0.32, 0.44, 0.40, 0.44
+########################################
+
+2024-11-21 14:43:29,978 - INFO - No improvement in Micro F1. (2/3)
+2024-11-21 14:43:29,979 - INFO - -----------------------------------
+
+2024-11-21 14:43:29,979 - INFO - 
+Epoch 7/10
+2024-11-21 14:43:29,980 - INFO - -----------------------------------
+2024-11-21 14:43:48,885 - INFO - Train Loss: 0.0048
+2024-11-21 14:43:51,793 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0126
+Micro F1 Score: 0.7502
+Macro F1 Score: 0.7216
+Weighted F1 Score: 0.7494
+Hamming Loss: 0.0609
+Jaccard Index: 0.6938
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.8387     0.8387     0.8387    
+Class 1       0.8033     0.7656     0.8448    
+Class 2       0.7081     0.6951     0.7215    
+Class 3       0.7961     0.8200     0.7736    
+Class 4       0.6742     0.6122     0.7500    
+Class 5       0.6286     0.6875     0.5789    
+Class 6       0.8170     0.8065     0.8278    
+Class 7       0.7714     0.6923     0.8710    
+Class 8       0.6835     0.7500     0.6279    
+Class 9       0.5818     0.5161     0.6667    
+Class 10      0.6667     0.6667     0.6667    
+Class 11      0.6154     0.8889     0.4706    
+Class 12      0.7963     0.7818     0.8113    
+Optimal Thresholds: 0.36, 0.42, 0.47, 0.48, 0.33, 0.45, 0.42, 0.35, 0.56, 0.33, 0.45, 0.49, 0.41
+########################################
+
+2024-11-21 14:43:51,794 - INFO - No improvement in Micro F1. (3/3)
+2024-11-21 14:43:51,794 - INFO - Early stopping triggered.
+2024-11-21 14:43:51,795 - INFO - Training complete for Fold 1.
+2024-11-21 14:43:53,613 - INFO - Fold 1 weight based on Micro F1: 0.7516
+2024-11-21 14:43:53,614 - INFO - Fold 1 model added to ensemble.
+2024-11-21 14:43:53,614 - INFO - 
+=== Fold 2/5 ===
+2024-11-21 14:43:53,616 - INFO - Datasets and DataLoaders created for this fold.
+2024-11-21 14:43:53,969 - INFO - Model initialized for this fold.
+2024-11-21 14:43:53,973 - INFO - Optimizer and scheduler initialized for this fold.
+2024-11-21 14:43:53,973 - INFO - 
+Epoch 1/10
+2024-11-21 14:43:53,974 - INFO - -----------------------------------
+2024-11-21 14:44:12,833 - INFO - Train Loss: 0.0302
+2024-11-21 14:44:15,766 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0209
+Micro F1 Score: 0.4973
+Macro F1 Score: 0.4002
+Weighted F1 Score: 0.4984
+Hamming Loss: 0.1359
+Jaccard Index: 0.3796
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.2083     0.3125     0.1562    
+Class 1       0.5000     0.5400     0.4655    
+Class 2       0.5069     0.3986     0.6962    
+Class 3       0.5155     0.5682     0.4717    
+Class 4       0.4130     0.3654     0.4750    
+Class 5       0.3864     0.3400     0.4474    
+Class 6       0.7707     0.7423     0.8013    
+Class 7       0.4000     0.2877     0.6562    
+Class 8       0.4242     0.3750     0.4884    
+Class 9       0.3529     0.2459     0.6250    
+Class 10      0.3000     0.3158     0.2857    
+Class 11      0.0000     0.0000     0.0000    
+Class 12      0.4250     0.3178     0.6415    
+Optimal Thresholds: 0.25, 0.26, 0.30, 0.27, 0.29, 0.32, 0.57, 0.33, 0.37, 0.31, 0.28, 0.23, 0.32
+########################################
+
+2024-11-21 14:44:15,767 - INFO - New best model found at epoch 1 with Micro F1: 0.4973
+2024-11-21 14:44:16,818 - INFO - Model saved to: ./artifacts/models\fold_2_best_model
+2024-11-21 14:44:16,820 - INFO - Optimal thresholds for fold 2 saved to: ./artifacts/thresholds\fold_2_optimal_thresholds.pkl
+2024-11-21 14:44:16,820 - INFO - -----------------------------------
+
+2024-11-21 14:44:16,821 - INFO - 
+Epoch 2/10
+2024-11-21 14:44:16,821 - INFO - -----------------------------------
+2024-11-21 14:44:36,171 - INFO - Train Loss: 0.0160
+2024-11-21 14:44:39,425 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0129
+Micro F1 Score: 0.7030
+Macro F1 Score: 0.6662
+Weighted F1 Score: 0.7053
+Hamming Loss: 0.0701
+Jaccard Index: 0.6447
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7059     0.6667     0.7500    
+Class 1       0.8103     0.8103     0.8103    
+Class 2       0.6711     0.6986     0.6456    
+Class 3       0.7647     0.7959     0.7358    
+Class 4       0.6667     0.6364     0.7000    
+Class 5       0.7429     0.8125     0.6842    
+Class 6       0.7867     0.7919     0.7815    
+Class 7       0.7937     0.8065     0.7812    
+Class 8       0.6000     0.5745     0.6279    
+Class 9       0.5714     0.6667     0.5000    
+Class 10      0.4706     0.4000     0.5714    
+Class 11      0.4667     0.5000     0.4375    
+Class 12      0.6102     0.5538     0.6792    
+Optimal Thresholds: 0.37, 0.33, 0.42, 0.50, 0.38, 0.55, 0.53, 0.50, 0.49, 0.41, 0.31, 0.33, 0.41
+########################################
+
+2024-11-21 14:44:39,426 - INFO - New best model found at epoch 2 with Micro F1: 0.7030
+2024-11-21 14:44:40,850 - INFO - Model saved to: ./artifacts/models\fold_2_best_model
+2024-11-21 14:44:40,852 - INFO - Optimal thresholds for fold 2 saved to: ./artifacts/thresholds\fold_2_optimal_thresholds.pkl
+2024-11-21 14:44:40,852 - INFO - -----------------------------------
+
+2024-11-21 14:44:40,853 - INFO - 
+Epoch 3/10
+2024-11-21 14:44:40,853 - INFO - -----------------------------------
+2024-11-21 14:45:00,281 - INFO - Train Loss: 0.0115
+2024-11-21 14:45:03,469 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0122
+Micro F1 Score: 0.7346
+Macro F1 Score: 0.7118
+Weighted F1 Score: 0.7366
+Hamming Loss: 0.0608
+Jaccard Index: 0.6779
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7761     0.7429     0.8125    
+Class 1       0.8571     0.8889     0.8276    
+Class 2       0.6759     0.7424     0.6203    
+Class 3       0.7451     0.7755     0.7170    
+Class 4       0.6588     0.6222     0.7000    
+Class 5       0.7368     0.7368     0.7368    
+Class 6       0.7972     0.8615     0.7417    
+Class 7       0.8000     0.8571     0.7500    
+Class 8       0.6897     0.6818     0.6977    
+Class 9       0.7083     0.7083     0.7083    
+Class 10      0.5833     0.5185     0.6667    
+Class 11      0.5455     0.5294     0.5625    
+Class 12      0.6796     0.7000     0.6604    
+Optimal Thresholds: 0.51, 0.57, 0.50, 0.48, 0.39, 0.34, 0.54, 0.54, 0.47, 0.33, 0.33, 0.33, 0.34
+########################################
+
+2024-11-21 14:45:03,469 - INFO - New best model found at epoch 3 with Micro F1: 0.7346
+2024-11-21 14:45:04,199 - INFO - Model saved to: ./artifacts/models\fold_2_best_model
+2024-11-21 14:45:04,200 - INFO - Optimal thresholds for fold 2 saved to: ./artifacts/thresholds\fold_2_optimal_thresholds.pkl
+2024-11-21 14:45:04,201 - INFO - -----------------------------------
+
+2024-11-21 14:45:04,201 - INFO - 
+Epoch 4/10
+2024-11-21 14:45:04,201 - INFO - -----------------------------------
+2024-11-21 14:45:23,951 - INFO - Train Loss: 0.0089
+2024-11-21 14:45:27,081 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0117
+Micro F1 Score: 0.7353
+Macro F1 Score: 0.7108
+Weighted F1 Score: 0.7389
+Hamming Loss: 0.0637
+Jaccard Index: 0.6809
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.8000     0.7879     0.8125    
+Class 1       0.8276     0.8276     0.8276    
+Class 2       0.6780     0.6122     0.7595    
+Class 3       0.7586     0.6984     0.8302    
+Class 4       0.6750     0.6750     0.6750    
+Class 5       0.7595     0.7317     0.7895    
+Class 6       0.8175     0.9106     0.7417    
+Class 7       0.7667     0.8214     0.7188    
+Class 8       0.6522     0.6122     0.6977    
+Class 9       0.7234     0.7391     0.7083    
+Class 10      0.5455     0.5217     0.5714    
+Class 11      0.5600     0.7778     0.4375    
+Class 12      0.6765     0.5542     0.8679    
+Optimal Thresholds: 0.45, 0.33, 0.37, 0.49, 0.55, 0.47, 0.55, 0.63, 0.45, 0.41, 0.30, 0.38, 0.38
+########################################
+
+2024-11-21 14:45:27,082 - INFO - New best model found at epoch 4 with Micro F1: 0.7353
+2024-11-21 14:45:28,052 - INFO - Model saved to: ./artifacts/models\fold_2_best_model
+2024-11-21 14:45:28,053 - INFO - Optimal thresholds for fold 2 saved to: ./artifacts/thresholds\fold_2_optimal_thresholds.pkl
+2024-11-21 14:45:28,054 - INFO - -----------------------------------
+
+2024-11-21 14:45:28,054 - INFO - 
+Epoch 5/10
+2024-11-21 14:45:28,054 - INFO - -----------------------------------
+2024-11-21 14:45:47,389 - INFO - Train Loss: 0.0073
+2024-11-21 14:45:50,420 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0122
+Micro F1 Score: 0.7461
+Macro F1 Score: 0.7217
+Weighted F1 Score: 0.7469
+Hamming Loss: 0.0602
+Jaccard Index: 0.6926
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7778     0.7000     0.8750    
+Class 1       0.8522     0.8596     0.8448    
+Class 2       0.6946     0.6591     0.7342    
+Class 3       0.7573     0.7800     0.7358    
+Class 4       0.6914     0.6829     0.7000    
+Class 5       0.7532     0.7436     0.7632    
+Class 6       0.8151     0.8440     0.7881    
+Class 7       0.8136     0.8889     0.7500    
+Class 8       0.6809     0.6275     0.7442    
+Class 9       0.6939     0.6800     0.7083    
+Class 10      0.5294     0.6923     0.4286    
+Class 11      0.6452     0.6667     0.6250    
+Class 12      0.6780     0.6154     0.7547    
+Optimal Thresholds: 0.39, 0.45, 0.38, 0.46, 0.48, 0.48, 0.51, 0.65, 0.38, 0.35, 0.44, 0.31, 0.41
+########################################
+
+2024-11-21 14:45:50,420 - INFO - New best model found at epoch 5 with Micro F1: 0.7461
+2024-11-21 14:45:51,164 - INFO - Model saved to: ./artifacts/models\fold_2_best_model
+2024-11-21 14:45:51,166 - INFO - Optimal thresholds for fold 2 saved to: ./artifacts/thresholds\fold_2_optimal_thresholds.pkl
+2024-11-21 14:45:51,166 - INFO - -----------------------------------
+
+2024-11-21 14:45:51,167 - INFO - 
+Epoch 6/10
+2024-11-21 14:45:51,168 - INFO - -----------------------------------
+2024-11-21 14:46:10,627 - INFO - Train Loss: 0.0060
+2024-11-21 14:46:13,601 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0126
+Micro F1 Score: 0.7403
+Macro F1 Score: 0.7193
+Weighted F1 Score: 0.7435
+Hamming Loss: 0.0617
+Jaccard Index: 0.6898
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7397     0.6585     0.8438    
+Class 1       0.8276     0.8276     0.8276    
+Class 2       0.7051     0.7143     0.6962    
+Class 3       0.7636     0.7368     0.7925    
+Class 4       0.6988     0.6744     0.7250    
+Class 5       0.7532     0.7436     0.7632    
+Class 6       0.8058     0.8819     0.7417    
+Class 7       0.8276     0.9231     0.7500    
+Class 8       0.6742     0.6522     0.6977    
+Class 9       0.7234     0.7391     0.7083    
+Class 10      0.5455     0.5217     0.5714    
+Class 11      0.6154     0.8000     0.5000    
+Class 12      0.6715     0.5476     0.8679    
+Optimal Thresholds: 0.38, 0.41, 0.52, 0.43, 0.52, 0.50, 0.54, 0.68, 0.43, 0.39, 0.46, 0.45, 0.31
+########################################
+
+2024-11-21 14:46:13,601 - INFO - No improvement in Micro F1. (1/3)
+2024-11-21 14:46:13,602 - INFO - -----------------------------------
+
+2024-11-21 14:46:13,602 - INFO - 
+Epoch 7/10
+2024-11-21 14:46:13,603 - INFO - -----------------------------------
+2024-11-21 14:46:32,715 - INFO - Train Loss: 0.0051
+2024-11-21 14:46:35,685 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0129
+Micro F1 Score: 0.7411
+Macro F1 Score: 0.7229
+Weighted F1 Score: 0.7460
+Hamming Loss: 0.0639
+Jaccard Index: 0.6893
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7742     0.8000     0.7500    
+Class 1       0.8348     0.8421     0.8276    
+Class 2       0.6952     0.6019     0.8228    
+Class 3       0.8000     0.7719     0.8302    
+Class 4       0.6988     0.6744     0.7250    
+Class 5       0.7436     0.7250     0.7632    
+Class 6       0.8054     0.8163     0.7947    
+Class 7       0.8000     0.8571     0.7500    
+Class 8       0.6957     0.6531     0.7442    
+Class 9       0.7234     0.7391     0.7083    
+Class 10      0.5455     0.4412     0.7143    
+Class 11      0.6250     0.6250     0.6250    
+Class 12      0.6560     0.5694     0.7736    
+Optimal Thresholds: 0.53, 0.44, 0.37, 0.53, 0.42, 0.43, 0.41, 0.69, 0.41, 0.39, 0.34, 0.39, 0.36
+########################################
+
+2024-11-21 14:46:35,685 - INFO - No improvement in Micro F1. (2/3)
+2024-11-21 14:46:35,685 - INFO - -----------------------------------
+
+2024-11-21 14:46:35,687 - INFO - 
+Epoch 8/10
+2024-11-21 14:46:35,687 - INFO - -----------------------------------
+2024-11-21 14:46:54,761 - INFO - Train Loss: 0.0045
+2024-11-21 14:46:57,714 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0129
+Micro F1 Score: 0.7455
+Macro F1 Score: 0.7249
+Weighted F1 Score: 0.7468
+Hamming Loss: 0.0621
+Jaccard Index: 0.6895
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7632     0.6591     0.9062    
+Class 1       0.8348     0.8421     0.8276    
+Class 2       0.6957     0.6829     0.7089    
+Class 3       0.7885     0.8039     0.7736    
+Class 4       0.6914     0.6829     0.7000    
+Class 5       0.7467     0.7568     0.7368    
+Class 6       0.8077     0.7826     0.8344    
+Class 7       0.8136     0.8889     0.7500    
+Class 8       0.6804     0.6111     0.7674    
+Class 9       0.7234     0.7391     0.7083    
+Class 10      0.5641     0.6111     0.5238    
+Class 11      0.6429     0.7500     0.5625    
+Class 12      0.6716     0.5556     0.8491    
+Optimal Thresholds: 0.34, 0.45, 0.47, 0.48, 0.47, 0.56, 0.42, 0.61, 0.36, 0.38, 0.43, 0.42, 0.31
+########################################
+
+2024-11-21 14:46:57,716 - INFO - No improvement in Micro F1. (3/3)
+2024-11-21 14:46:57,717 - INFO - Early stopping triggered.
+2024-11-21 14:46:57,717 - INFO - Training complete for Fold 2.
+2024-11-21 14:46:59,529 - INFO - Fold 2 weight based on Micro F1: 0.7461
+2024-11-21 14:46:59,529 - INFO - Fold 2 model added to ensemble.
+2024-11-21 14:46:59,529 - INFO - 
+=== Fold 3/5 ===
+2024-11-21 14:46:59,530 - INFO - Datasets and DataLoaders created for this fold.
+2024-11-21 14:46:59,894 - INFO - Model initialized for this fold.
+2024-11-21 14:46:59,898 - INFO - Optimizer and scheduler initialized for this fold.
+2024-11-21 14:46:59,899 - INFO - 
+Epoch 1/10
+2024-11-21 14:46:59,899 - INFO - -----------------------------------
+2024-11-21 14:47:18,849 - INFO - Train Loss: 0.0296
+2024-11-21 14:47:21,787 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0167
+Micro F1 Score: 0.5480
+Macro F1 Score: 0.5419
+Weighted F1 Score: 0.6127
+Hamming Loss: 0.1205
+Jaccard Index: 0.4233
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.5902     0.6000     0.5806    
+Class 1       0.6852     0.7400     0.6379    
+Class 2       0.6197     0.6984     0.5570    
+Class 3       0.5825     0.6000     0.5660    
+Class 4       0.5172     0.7895     0.3846    
+Class 5       0.4065     0.2941     0.6579    
+Class 6       0.7793     0.8129     0.7483    
+Class 7       0.6207     0.6923     0.5625    
+Class 8       0.5496     0.4091     0.8372    
+Class 9       0.5789     0.7857     0.4583    
+Class 10      0.4000     0.3750     0.4286    
+Class 11      0.1058     0.0578     0.6250    
+Class 12      0.6087     0.7179     0.5283    
+Optimal Thresholds: 0.39, 0.36, 0.51, 0.42, 0.43, 0.33, 0.54, 0.36, 0.39, 0.42, 0.28, 0.20, 0.43
+########################################
+
+2024-11-21 14:47:21,788 - INFO - New best model found at epoch 1 with Micro F1: 0.5480
+2024-11-21 14:47:22,563 - INFO - Model saved to: ./artifacts/models\fold_3_best_model
+2024-11-21 14:47:22,565 - INFO - Optimal thresholds for fold 3 saved to: ./artifacts/thresholds\fold_3_optimal_thresholds.pkl
+2024-11-21 14:47:22,565 - INFO - -----------------------------------
+
+2024-11-21 14:47:22,566 - INFO - 
+Epoch 2/10
+2024-11-21 14:47:22,566 - INFO - -----------------------------------
+2024-11-21 14:47:41,621 - INFO - Train Loss: 0.0141
+2024-11-21 14:47:44,632 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0125
+Micro F1 Score: 0.7137
+Macro F1 Score: 0.6735
+Weighted F1 Score: 0.7137
+Hamming Loss: 0.0677
+Jaccard Index: 0.6479
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.6774     0.6774     0.6774    
+Class 1       0.7000     0.6774     0.7241    
+Class 2       0.6490     0.6806     0.6203    
+Class 3       0.7184     0.7400     0.6981    
+Class 4       0.7013     0.7105     0.6923    
+Class 5       0.6588     0.5957     0.7368    
+Class 6       0.8311     0.8483     0.8146    
+Class 7       0.7333     0.7857     0.6875    
+Class 8       0.7059     0.7143     0.6977    
+Class 9       0.6829     0.8235     0.5833    
+Class 10      0.5517     1.0000     0.3810    
+Class 11      0.4324     0.3810     0.5000    
+Class 12      0.7132     0.6053     0.8679    
+Optimal Thresholds: 0.43, 0.29, 0.40, 0.46, 0.41, 0.43, 0.59, 0.44, 0.39, 0.56, 0.43, 0.31, 0.40
+########################################
+
+2024-11-21 14:47:44,632 - INFO - New best model found at epoch 2 with Micro F1: 0.7137
+2024-11-21 14:47:45,704 - INFO - Model saved to: ./artifacts/models\fold_3_best_model
+2024-11-21 14:47:45,704 - INFO - Optimal thresholds for fold 3 saved to: ./artifacts/thresholds\fold_3_optimal_thresholds.pkl
+2024-11-21 14:47:45,705 - INFO - -----------------------------------
+
+2024-11-21 14:47:45,705 - INFO - 
+Epoch 3/10
+2024-11-21 14:47:45,706 - INFO - -----------------------------------
+2024-11-21 14:48:05,007 - INFO - Train Loss: 0.0103
+2024-11-21 14:48:07,958 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0119
+Micro F1 Score: 0.7213
+Macro F1 Score: 0.6869
+Weighted F1 Score: 0.7194
+Hamming Loss: 0.0643
+Jaccard Index: 0.6454
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7119     0.7500     0.6774    
+Class 1       0.7379     0.8444     0.6552    
+Class 2       0.6986     0.7612     0.6456    
+Class 3       0.6923     0.7059     0.6792    
+Class 4       0.7368     0.7568     0.7179    
+Class 5       0.6761     0.7273     0.6316    
+Class 6       0.8105     0.8000     0.8212    
+Class 7       0.7333     0.7857     0.6875    
+Class 8       0.6869     0.6071     0.7907    
+Class 9       0.7083     0.7083     0.7083    
+Class 10      0.5455     0.7500     0.4286    
+Class 11      0.5185     0.6364     0.4375    
+Class 12      0.6726     0.6333     0.7170    
+Optimal Thresholds: 0.47, 0.49, 0.53, 0.46, 0.36, 0.52, 0.54, 0.42, 0.34, 0.41, 0.57, 0.50, 0.41
+########################################
+
+2024-11-21 14:48:07,959 - INFO - New best model found at epoch 3 with Micro F1: 0.7213
+2024-11-21 14:48:08,756 - INFO - Model saved to: ./artifacts/models\fold_3_best_model
+2024-11-21 14:48:08,757 - INFO - Optimal thresholds for fold 3 saved to: ./artifacts/thresholds\fold_3_optimal_thresholds.pkl
+2024-11-21 14:48:08,758 - INFO - -----------------------------------
+
+2024-11-21 14:48:08,759 - INFO - 
+Epoch 4/10
+2024-11-21 14:48:08,759 - INFO - -----------------------------------
+2024-11-21 14:48:27,673 - INFO - Train Loss: 0.0081
+2024-11-21 14:48:30,668 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0123
+Micro F1 Score: 0.7373
+Macro F1 Score: 0.7053
+Weighted F1 Score: 0.7340
+Hamming Loss: 0.0625
+Jaccard Index: 0.6722
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7273     0.8333     0.6452    
+Class 1       0.7586     0.7586     0.7586    
+Class 2       0.7126     0.6526     0.7848    
+Class 3       0.7103     0.7037     0.7170    
+Class 4       0.7532     0.7632     0.7436    
+Class 5       0.7077     0.8519     0.6053    
+Class 6       0.8115     0.7840     0.8411    
+Class 7       0.7419     0.7667     0.7188    
+Class 8       0.6747     0.7000     0.6512    
+Class 9       0.7234     0.7391     0.7083    
+Class 10      0.5161     0.8000     0.3810    
+Class 11      0.6087     1.0000     0.4375    
+Class 12      0.7231     0.6104     0.8868    
+Optimal Thresholds: 0.53, 0.36, 0.42, 0.59, 0.35, 0.61, 0.45, 0.52, 0.43, 0.40, 0.55, 0.47, 0.34
+########################################
+
+2024-11-21 14:48:30,669 - INFO - New best model found at epoch 4 with Micro F1: 0.7373
+2024-11-21 14:48:31,603 - INFO - Model saved to: ./artifacts/models\fold_3_best_model
+2024-11-21 14:48:31,605 - INFO - Optimal thresholds for fold 3 saved to: ./artifacts/thresholds\fold_3_optimal_thresholds.pkl
+2024-11-21 14:48:31,605 - INFO - -----------------------------------
+
+2024-11-21 14:48:31,605 - INFO - 
+Epoch 5/10
+2024-11-21 14:48:31,607 - INFO - -----------------------------------
+2024-11-21 14:48:50,603 - INFO - Train Loss: 0.0064
+2024-11-21 14:48:53,572 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0126
+Micro F1 Score: 0.7373
+Macro F1 Score: 0.7025
+Weighted F1 Score: 0.7342
+Hamming Loss: 0.0634
+Jaccard Index: 0.6767
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7077     0.6765     0.7419    
+Class 1       0.7480     0.7077     0.7931    
+Class 2       0.7135     0.6630     0.7722    
+Class 3       0.7339     0.7143     0.7547    
+Class 4       0.7805     0.7442     0.8205    
+Class 5       0.7105     0.7105     0.7105    
+Class 6       0.8143     0.8013     0.8278    
+Class 7       0.7188     0.7188     0.7188    
+Class 8       0.6750     0.7297     0.6279    
+Class 9       0.6957     0.7273     0.6667    
+Class 10      0.5000     0.7273     0.3810    
+Class 11      0.6087     1.0000     0.4375    
+Class 12      0.7258     0.6338     0.8491    
+Optimal Thresholds: 0.46, 0.38, 0.42, 0.50, 0.28, 0.37, 0.54, 0.45, 0.53, 0.47, 0.56, 0.42, 0.31
+########################################
+
+2024-11-21 14:48:53,573 - INFO - No improvement in Micro F1. (1/3)
+2024-11-21 14:48:53,573 - INFO - -----------------------------------
+
+2024-11-21 14:48:53,574 - INFO - 
+Epoch 6/10
+2024-11-21 14:48:53,575 - INFO - -----------------------------------
+2024-11-21 14:49:12,483 - INFO - Train Loss: 0.0053
+2024-11-21 14:49:15,441 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0131
+Micro F1 Score: 0.7355
+Macro F1 Score: 0.7013
+Weighted F1 Score: 0.7337
+Hamming Loss: 0.0627
+Jaccard Index: 0.6700
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7213     0.7333     0.7097    
+Class 1       0.7500     0.8478     0.6724    
+Class 2       0.6889     0.6139     0.7848    
+Class 3       0.7477     0.7407     0.7547    
+Class 4       0.7654     0.7381     0.7949    
+Class 5       0.7059     0.8000     0.6316    
+Class 6       0.8191     0.8451     0.7947    
+Class 7       0.7250     0.6042     0.9062    
+Class 8       0.6750     0.7297     0.6279    
+Class 9       0.6809     0.6957     0.6667    
+Class 10      0.5161     0.8000     0.3810    
+Class 11      0.5833     0.8750     0.4375    
+Class 12      0.7377     0.6522     0.8491    
+Optimal Thresholds: 0.47, 0.72, 0.44, 0.52, 0.39, 0.58, 0.52, 0.26, 0.61, 0.49, 0.58, 0.55, 0.38
+########################################
+
+2024-11-21 14:49:15,441 - INFO - No improvement in Micro F1. (2/3)
+2024-11-21 14:49:15,442 - INFO - -----------------------------------
+
+2024-11-21 14:49:15,442 - INFO - 
+Epoch 7/10
+2024-11-21 14:49:15,443 - INFO - -----------------------------------
+2024-11-21 14:49:34,356 - INFO - Train Loss: 0.0044
+2024-11-21 14:49:37,307 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0135
+Micro F1 Score: 0.7330
+Macro F1 Score: 0.6979
+Weighted F1 Score: 0.7337
+Hamming Loss: 0.0632
+Jaccard Index: 0.6690
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7213     0.7333     0.7097    
+Class 1       0.7500     0.7778     0.7241    
+Class 2       0.6909     0.6628     0.7215    
+Class 3       0.7500     0.7647     0.7358    
+Class 4       0.7692     0.6731     0.8974    
+Class 5       0.7059     0.8000     0.6316    
+Class 6       0.8316     0.8643     0.8013    
+Class 7       0.6970     0.6765     0.7188    
+Class 8       0.6750     0.7297     0.6279    
+Class 9       0.7111     0.7619     0.6667    
+Class 10      0.5000     0.4444     0.5714    
+Class 11      0.5600     0.7778     0.4375    
+Class 12      0.7107     0.6324     0.8113    
+Optimal Thresholds: 0.49, 0.52, 0.43, 0.51, 0.29, 0.59, 0.63, 0.34, 0.57, 0.48, 0.33, 0.47, 0.34
+########################################
+
+2024-11-21 14:49:37,308 - INFO - No improvement in Micro F1. (3/3)
+2024-11-21 14:49:37,308 - INFO - Early stopping triggered.
+2024-11-21 14:49:37,309 - INFO - Training complete for Fold 3.
+2024-11-21 14:49:39,152 - INFO - Fold 3 weight based on Micro F1: 0.7373
+2024-11-21 14:49:39,153 - INFO - Fold 3 model added to ensemble.
+2024-11-21 14:49:39,153 - INFO - 
+=== Fold 4/5 ===
+2024-11-21 14:49:39,155 - INFO - Datasets and DataLoaders created for this fold.
+2024-11-21 14:49:39,511 - INFO - Model initialized for this fold.
+2024-11-21 14:49:39,515 - INFO - Optimizer and scheduler initialized for this fold.
+2024-11-21 14:49:39,515 - INFO - 
+Epoch 1/10
+2024-11-21 14:49:39,516 - INFO - -----------------------------------
+2024-11-21 14:49:58,486 - INFO - Train Loss: 0.0296
+2024-11-21 14:50:01,400 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0197
+Micro F1 Score: 0.4936
+Macro F1 Score: 0.4029
+Weighted F1 Score: 0.5144
+Hamming Loss: 0.1406
+Jaccard Index: 0.3747
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.5000     0.6190     0.4194    
+Class 1       0.6721     0.6406     0.7069    
+Class 2       0.5126     0.4250     0.6456    
+Class 3       0.6042     0.6744     0.5472    
+Class 4       0.3411     0.2444     0.5641    
+Class 5       0.3966     0.2911     0.6216    
+Class 6       0.7500     0.7451     0.7550    
+Class 7       0.1081     0.4000     0.0625    
+Class 8       0.3286     0.2371     0.5349    
+Class 9       0.2707     0.1667     0.7200    
+Class 10      0.0909     0.5000     0.0500    
+Class 11      0.0476     0.0385     0.0625    
+Class 12      0.6154     0.7179     0.5385    
+Optimal Thresholds: 0.31, 0.38, 0.35, 0.33, 0.32, 0.28, 0.42, 0.25, 0.36, 0.28, 0.25, 0.21, 0.45
+########################################
+
+2024-11-21 14:50:01,400 - INFO - New best model found at epoch 1 with Micro F1: 0.4936
+2024-11-21 14:50:02,285 - INFO - Model saved to: ./artifacts/models\fold_4_best_model
+2024-11-21 14:50:02,286 - INFO - Optimal thresholds for fold 4 saved to: ./artifacts/thresholds\fold_4_optimal_thresholds.pkl
+2024-11-21 14:50:02,286 - INFO - -----------------------------------
+
+2024-11-21 14:50:02,287 - INFO - 
+Epoch 2/10
+2024-11-21 14:50:02,287 - INFO - -----------------------------------
+2024-11-21 14:50:21,318 - INFO - Train Loss: 0.0153
+2024-11-21 14:50:24,276 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0137
+Micro F1 Score: 0.6972
+Macro F1 Score: 0.6577
+Weighted F1 Score: 0.7024
+Hamming Loss: 0.0741
+Jaccard Index: 0.6239
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7667     0.7931     0.7419    
+Class 1       0.7611     0.7818     0.7414    
+Class 2       0.6067     0.5455     0.6835    
+Class 3       0.6610     0.6000     0.7358    
+Class 4       0.7838     0.8286     0.7436    
+Class 5       0.6885     0.8750     0.5676    
+Class 6       0.8094     0.8176     0.8013    
+Class 7       0.6349     0.6452     0.6250    
+Class 8       0.6535     0.5690     0.7674    
+Class 9       0.5098     0.5000     0.5200    
+Class 10      0.4912     0.3784     0.7000    
+Class 11      0.4138     0.4615     0.3750    
+Class 12      0.7692     0.7692     0.7692    
+Optimal Thresholds: 0.54, 0.63, 0.33, 0.48, 0.44, 0.55, 0.51, 0.35, 0.48, 0.39, 0.34, 0.31, 0.43
+########################################
+
+2024-11-21 14:50:24,277 - INFO - New best model found at epoch 2 with Micro F1: 0.6972
+2024-11-21 14:50:25,276 - INFO - Model saved to: ./artifacts/models\fold_4_best_model
+2024-11-21 14:50:25,277 - INFO - Optimal thresholds for fold 4 saved to: ./artifacts/thresholds\fold_4_optimal_thresholds.pkl
+2024-11-21 14:50:25,277 - INFO - -----------------------------------
+
+2024-11-21 14:50:25,278 - INFO - 
+Epoch 3/10
+2024-11-21 14:50:25,278 - INFO - -----------------------------------
+2024-11-21 14:50:44,265 - INFO - Train Loss: 0.0111
+2024-11-21 14:50:47,183 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0128
+Micro F1 Score: 0.7045
+Macro F1 Score: 0.6750
+Weighted F1 Score: 0.7105
+Hamming Loss: 0.0721
+Jaccard Index: 0.6330
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7636     0.8750     0.6774    
+Class 1       0.7719     0.7857     0.7586    
+Class 2       0.6211     0.5315     0.7468    
+Class 3       0.7368     0.6885     0.7925    
+Class 4       0.7848     0.7750     0.7949    
+Class 5       0.7273     0.8276     0.6486    
+Class 6       0.7803     0.7727     0.7881    
+Class 7       0.6567     0.6286     0.6875    
+Class 8       0.6750     0.7297     0.6279    
+Class 9       0.5373     0.4286     0.7200    
+Class 10      0.4906     0.3939     0.6500    
+Class 11      0.4800     0.6667     0.3750    
+Class 12      0.7500     0.9167     0.6346    
+Optimal Thresholds: 0.53, 0.35, 0.39, 0.41, 0.47, 0.49, 0.39, 0.30, 0.45, 0.39, 0.36, 0.34, 0.57
+########################################
+
+2024-11-21 14:50:47,183 - INFO - New best model found at epoch 3 with Micro F1: 0.7045
+2024-11-21 14:50:48,179 - INFO - Model saved to: ./artifacts/models\fold_4_best_model
+2024-11-21 14:50:48,181 - INFO - Optimal thresholds for fold 4 saved to: ./artifacts/thresholds\fold_4_optimal_thresholds.pkl
+2024-11-21 14:50:48,181 - INFO - -----------------------------------
+
+2024-11-21 14:50:48,181 - INFO - 
+Epoch 4/10
+2024-11-21 14:50:48,182 - INFO - -----------------------------------
+2024-11-21 14:51:07,201 - INFO - Train Loss: 0.0085
+2024-11-21 14:51:10,136 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0128
+Micro F1 Score: 0.7135
+Macro F1 Score: 0.6782
+Weighted F1 Score: 0.7174
+Hamming Loss: 0.0702
+Jaccard Index: 0.6466
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7719     0.8462     0.7097    
+Class 1       0.7719     0.7857     0.7586    
+Class 2       0.6145     0.5500     0.6962    
+Class 3       0.7434     0.7000     0.7925    
+Class 4       0.7733     0.8056     0.7436    
+Class 5       0.7200     0.7105     0.7297    
+Class 6       0.8155     0.7975     0.8344    
+Class 7       0.6774     0.7000     0.6562    
+Class 8       0.6596     0.6078     0.7209    
+Class 9       0.5600     0.5600     0.5600    
+Class 10      0.5098     0.4194     0.6500    
+Class 11      0.4706     0.4444     0.5000    
+Class 12      0.7292     0.7955     0.6731    
+Optimal Thresholds: 0.47, 0.56, 0.34, 0.46, 0.43, 0.38, 0.41, 0.42, 0.40, 0.42, 0.33, 0.28, 0.57
+########################################
+
+2024-11-21 14:51:10,137 - INFO - New best model found at epoch 4 with Micro F1: 0.7135
+2024-11-21 14:51:11,019 - INFO - Model saved to: ./artifacts/models\fold_4_best_model
+2024-11-21 14:51:11,020 - INFO - Optimal thresholds for fold 4 saved to: ./artifacts/thresholds\fold_4_optimal_thresholds.pkl
+2024-11-21 14:51:11,020 - INFO - -----------------------------------
+
+2024-11-21 14:51:11,021 - INFO - 
+Epoch 5/10
+2024-11-21 14:51:11,021 - INFO - -----------------------------------
+2024-11-21 14:51:30,809 - INFO - Train Loss: 0.0068
+2024-11-21 14:51:33,747 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0135
+Micro F1 Score: 0.7177
+Macro F1 Score: 0.6871
+Weighted F1 Score: 0.7210
+Hamming Loss: 0.0704
+Jaccard Index: 0.6472
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7742     0.7742     0.7742    
+Class 1       0.7692     0.7627     0.7759    
+Class 2       0.6272     0.5889     0.6709    
+Class 3       0.7321     0.6949     0.7736    
+Class 4       0.7750     0.7561     0.7949    
+Class 5       0.7222     0.7429     0.7027    
+Class 6       0.8012     0.7544     0.8543    
+Class 7       0.6441     0.7037     0.5938    
+Class 8       0.7253     0.6875     0.7674    
+Class 9       0.5818     0.5333     0.6400    
+Class 10      0.4590     0.3415     0.7000    
+Class 11      0.5714     0.6667     0.5000    
+Class 12      0.7500     0.7500     0.7500    
+Optimal Thresholds: 0.41, 0.51, 0.34, 0.40, 0.47, 0.40, 0.36, 0.32, 0.46, 0.37, 0.28, 0.33, 0.56
+########################################
+
+2024-11-21 14:51:33,748 - INFO - New best model found at epoch 5 with Micro F1: 0.7177
+2024-11-21 14:51:34,560 - INFO - Model saved to: ./artifacts/models\fold_4_best_model
+2024-11-21 14:51:34,562 - INFO - Optimal thresholds for fold 4 saved to: ./artifacts/thresholds\fold_4_optimal_thresholds.pkl
+2024-11-21 14:51:34,562 - INFO - -----------------------------------
+
+2024-11-21 14:51:34,563 - INFO - 
+Epoch 6/10
+2024-11-21 14:51:34,563 - INFO - -----------------------------------
+2024-11-21 14:51:53,590 - INFO - Train Loss: 0.0057
+2024-11-21 14:51:56,516 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0139
+Micro F1 Score: 0.7209
+Macro F1 Score: 0.6889
+Weighted F1 Score: 0.7268
+Hamming Loss: 0.0674
+Jaccard Index: 0.6579
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7419     0.7419     0.7419    
+Class 1       0.7611     0.7818     0.7414    
+Class 2       0.6395     0.5914     0.6962    
+Class 3       0.7455     0.7193     0.7736    
+Class 4       0.7632     0.7838     0.7436    
+Class 5       0.7467     0.7368     0.7568    
+Class 6       0.8200     0.8255     0.8146    
+Class 7       0.6667     0.6774     0.6562    
+Class 8       0.6914     0.7368     0.6512    
+Class 9       0.6316     0.5625     0.7200    
+Class 10      0.4590     0.3415     0.7000    
+Class 11      0.5333     0.5714     0.5000    
+Class 12      0.7556     0.8947     0.6538    
+Optimal Thresholds: 0.33, 0.52, 0.31, 0.42, 0.42, 0.37, 0.47, 0.37, 0.50, 0.41, 0.28, 0.35, 0.62
+########################################
+
+2024-11-21 14:51:56,517 - INFO - New best model found at epoch 6 with Micro F1: 0.7209
+2024-11-21 14:51:57,178 - INFO - Model saved to: ./artifacts/models\fold_4_best_model
+2024-11-21 14:51:57,179 - INFO - Optimal thresholds for fold 4 saved to: ./artifacts/thresholds\fold_4_optimal_thresholds.pkl
+2024-11-21 14:51:57,180 - INFO - -----------------------------------
+
+2024-11-21 14:51:57,180 - INFO - 
+Epoch 7/10
+2024-11-21 14:51:57,181 - INFO - -----------------------------------
+2024-11-21 14:52:16,204 - INFO - Train Loss: 0.0047
+2024-11-21 14:52:19,138 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0144
+Micro F1 Score: 0.7182
+Macro F1 Score: 0.6832
+Weighted F1 Score: 0.7204
+Hamming Loss: 0.0663
+Jaccard Index: 0.6528
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7619     0.7500     0.7742    
+Class 1       0.7857     0.8148     0.7586    
+Class 2       0.5988     0.5682     0.6329    
+Class 3       0.7434     0.7000     0.7925    
+Class 4       0.7632     0.7838     0.7436    
+Class 5       0.7143     0.7576     0.6757    
+Class 6       0.8203     0.8403     0.8013    
+Class 7       0.6364     0.6176     0.6562    
+Class 8       0.6923     0.7714     0.6279    
+Class 9       0.5763     0.5000     0.6800    
+Class 10      0.4615     0.4737     0.4500    
+Class 11      0.5714     0.6667     0.5000    
+Class 12      0.7556     0.8947     0.6538    
+Optimal Thresholds: 0.49, 0.61, 0.37, 0.42, 0.44, 0.42, 0.43, 0.35, 0.50, 0.36, 0.46, 0.39, 0.65
+########################################
+
+2024-11-21 14:52:19,139 - INFO - No improvement in Micro F1. (1/3)
+2024-11-21 14:52:19,139 - INFO - -----------------------------------
+
+2024-11-21 14:52:19,140 - INFO - 
+Epoch 8/10
+2024-11-21 14:52:19,140 - INFO - -----------------------------------
+2024-11-21 14:52:38,191 - INFO - Train Loss: 0.0041
+2024-11-21 14:52:41,109 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0148
+Micro F1 Score: 0.7218
+Macro F1 Score: 0.6878
+Weighted F1 Score: 0.7252
+Hamming Loss: 0.0687
+Jaccard Index: 0.6539
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7500     0.7273     0.7742    
+Class 1       0.7788     0.8000     0.7586    
+Class 2       0.6250     0.6173     0.6329    
+Class 3       0.7477     0.7407     0.7547    
+Class 4       0.7632     0.7838     0.7436    
+Class 5       0.7000     0.9130     0.5676    
+Class 6       0.8201     0.7394     0.9205    
+Class 7       0.6667     0.6216     0.7188    
+Class 8       0.7059     0.7143     0.6977    
+Class 9       0.6061     0.4878     0.8000    
+Class 10      0.4516     0.3333     0.7000    
+Class 11      0.5714     0.6667     0.5000    
+Class 12      0.7556     0.8947     0.6538    
+Optimal Thresholds: 0.40, 0.58, 0.35, 0.43, 0.47, 0.69, 0.29, 0.30, 0.51, 0.33, 0.25, 0.38, 0.65
+########################################
+
+2024-11-21 14:52:41,109 - INFO - New best model found at epoch 8 with Micro F1: 0.7218
+2024-11-21 14:52:42,056 - INFO - Model saved to: ./artifacts/models\fold_4_best_model
+2024-11-21 14:52:42,057 - INFO - Optimal thresholds for fold 4 saved to: ./artifacts/thresholds\fold_4_optimal_thresholds.pkl
+2024-11-21 14:52:42,057 - INFO - -----------------------------------
+
+2024-11-21 14:52:42,058 - INFO - 
+Epoch 9/10
+2024-11-21 14:52:42,059 - INFO - -----------------------------------
+2024-11-21 14:53:01,079 - INFO - Train Loss: 0.0037
+2024-11-21 14:53:04,002 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0150
+Micro F1 Score: 0.7159
+Macro F1 Score: 0.6833
+Weighted F1 Score: 0.7221
+Hamming Loss: 0.0678
+Jaccard Index: 0.6526
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7419     0.7419     0.7419    
+Class 1       0.7857     0.8148     0.7586    
+Class 2       0.6296     0.6145     0.6456    
+Class 3       0.7387     0.7069     0.7736    
+Class 4       0.7397     0.7941     0.6923    
+Class 5       0.7042     0.7353     0.6757    
+Class 6       0.8188     0.8299     0.8079    
+Class 7       0.6316     0.7200     0.5625    
+Class 8       0.7073     0.7436     0.6744    
+Class 9       0.6061     0.4878     0.8000    
+Class 10      0.4516     0.3333     0.7000    
+Class 11      0.5714     0.6667     0.5000    
+Class 12      0.7556     0.8947     0.6538    
+Optimal Thresholds: 0.46, 0.57, 0.36, 0.45, 0.47, 0.45, 0.46, 0.50, 0.52, 0.35, 0.29, 0.39, 0.64
+########################################
+
+2024-11-21 14:53:04,003 - INFO - No improvement in Micro F1. (1/3)
+2024-11-21 14:53:04,003 - INFO - -----------------------------------
+
+2024-11-21 14:53:04,004 - INFO - 
+Epoch 10/10
+2024-11-21 14:53:04,004 - INFO - -----------------------------------
+2024-11-21 14:53:22,940 - INFO - Train Loss: 0.0035
+2024-11-21 14:53:25,859 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0151
+Micro F1 Score: 0.7167
+Macro F1 Score: 0.6867
+Weighted F1 Score: 0.7232
+Hamming Loss: 0.0678
+Jaccard Index: 0.6543
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7541     0.7667     0.7419    
+Class 1       0.7857     0.8148     0.7586    
+Class 2       0.6087     0.5976     0.6203    
+Class 3       0.7500     0.7119     0.7925    
+Class 4       0.7595     0.7500     0.7692    
+Class 5       0.7143     0.7576     0.6757    
+Class 6       0.8188     0.8299     0.8079    
+Class 7       0.6316     0.7200     0.5625    
+Class 8       0.7160     0.7632     0.6744    
+Class 9       0.5882     0.4651     0.8000    
+Class 10      0.4516     0.3333     0.7000    
+Class 11      0.5926     0.7273     0.5000    
+Class 12      0.7556     0.8947     0.6538    
+Optimal Thresholds: 0.47, 0.57, 0.35, 0.43, 0.41, 0.47, 0.47, 0.50, 0.53, 0.32, 0.28, 0.41, 0.66
+########################################
+
+2024-11-21 14:53:25,860 - INFO - No improvement in Micro F1. (2/3)
+2024-11-21 14:53:25,861 - INFO - -----------------------------------
+
+2024-11-21 14:53:25,861 - INFO - Training complete for Fold 4.
+2024-11-21 14:53:27,666 - INFO - Fold 4 weight based on Micro F1: 0.7218
+2024-11-21 14:53:27,667 - INFO - Fold 4 model added to ensemble.
+2024-11-21 14:53:27,668 - INFO - 
+=== Fold 5/5 ===
+2024-11-21 14:53:27,669 - INFO - Datasets and DataLoaders created for this fold.
+2024-11-21 14:53:28,048 - INFO - Model initialized for this fold.
+2024-11-21 14:53:28,052 - INFO - Optimizer and scheduler initialized for this fold.
+2024-11-21 14:53:28,052 - INFO - 
+Epoch 1/10
+2024-11-21 14:53:28,054 - INFO - -----------------------------------
+2024-11-21 14:53:46,994 - INFO - Train Loss: 0.0283
+2024-11-21 14:53:49,940 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0173
+Micro F1 Score: 0.5640
+Macro F1 Score: 0.4830
+Weighted F1 Score: 0.5771
+Hamming Loss: 0.1126
+Jaccard Index: 0.4568
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.5455     0.6250     0.4839    
+Class 1       0.5918     0.7073     0.5088    
+Class 2       0.5846     0.4914     0.7215    
+Class 3       0.6200     0.6596     0.5849    
+Class 4       0.4314     0.3492     0.5641    
+Class 5       0.6316     0.6154     0.6486    
+Class 6       0.8078     0.7949     0.8212    
+Class 7       0.3000     0.3214     0.2812    
+Class 8       0.4742     0.4259     0.5349    
+Class 9       0.3333     0.2619     0.4583    
+Class 10      0.2991     0.1860     0.7619    
+Class 11      0.1111     0.5000     0.0625    
+Class 12      0.5490     0.5714     0.5283    
+Optimal Thresholds: 0.34, 0.45, 0.36, 0.36, 0.33, 0.38, 0.49, 0.32, 0.40, 0.44, 0.26, 0.30, 0.45
+########################################
+
+2024-11-21 14:53:49,941 - INFO - New best model found at epoch 1 with Micro F1: 0.5640
+2024-11-21 14:53:50,814 - INFO - Model saved to: ./artifacts/models\fold_5_best_model
+2024-11-21 14:53:50,815 - INFO - Optimal thresholds for fold 5 saved to: ./artifacts/thresholds\fold_5_optimal_thresholds.pkl
+2024-11-21 14:53:50,815 - INFO - -----------------------------------
+
+2024-11-21 14:53:50,816 - INFO - 
+Epoch 2/10
+2024-11-21 14:53:50,817 - INFO - -----------------------------------
+2024-11-21 14:54:09,914 - INFO - Train Loss: 0.0143
+2024-11-21 14:54:12,860 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0131
+Micro F1 Score: 0.7226
+Macro F1 Score: 0.6849
+Weighted F1 Score: 0.7282
+Hamming Loss: 0.0691
+Jaccard Index: 0.6649
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7797     0.8214     0.7419    
+Class 1       0.7130     0.7069     0.7193    
+Class 2       0.6700     0.5537     0.8481    
+Class 3       0.6972     0.6786     0.7170    
+Class 4       0.7879     0.9630     0.6667    
+Class 5       0.7500     0.6977     0.8108    
+Class 6       0.8421     0.8366     0.8477    
+Class 7       0.8065     0.8333     0.7812    
+Class 8       0.6306     0.5147     0.8140    
+Class 9       0.5283     0.4828     0.5833    
+Class 10      0.4681     0.4231     0.5238    
+Class 11      0.4828     0.5385     0.4375    
+Class 12      0.7475     0.8043     0.6981    
+Optimal Thresholds: 0.29, 0.36, 0.40, 0.39, 0.36, 0.47, 0.54, 0.34, 0.35, 0.24, 0.35, 0.34, 0.58
+########################################
+
+2024-11-21 14:54:12,861 - INFO - New best model found at epoch 2 with Micro F1: 0.7226
+2024-11-21 14:54:13,737 - INFO - Model saved to: ./artifacts/models\fold_5_best_model
+2024-11-21 14:54:13,738 - INFO - Optimal thresholds for fold 5 saved to: ./artifacts/thresholds\fold_5_optimal_thresholds.pkl
+2024-11-21 14:54:13,739 - INFO - -----------------------------------
+
+2024-11-21 14:54:13,739 - INFO - 
+Epoch 3/10
+2024-11-21 14:54:13,740 - INFO - -----------------------------------
+2024-11-21 14:54:32,832 - INFO - Train Loss: 0.0105
+2024-11-21 14:54:35,771 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0121
+Micro F1 Score: 0.7169
+Macro F1 Score: 0.6861
+Weighted F1 Score: 0.7233
+Hamming Loss: 0.0695
+Jaccard Index: 0.6589
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.8214     0.9200     0.7419    
+Class 1       0.7360     0.6765     0.8070    
+Class 2       0.6709     0.6709     0.6709    
+Class 3       0.6992     0.6143     0.8113    
+Class 4       0.7879     0.9630     0.6667    
+Class 5       0.7848     0.7381     0.8378    
+Class 6       0.8255     0.8367     0.8146    
+Class 7       0.6984     0.7097     0.6875    
+Class 8       0.6000     0.5745     0.6279    
+Class 9       0.6429     0.5625     0.7500    
+Class 10      0.4545     0.3333     0.7143    
+Class 11      0.5000     0.5833     0.4375    
+Class 12      0.6981     0.6981     0.6981    
+Optimal Thresholds: 0.56, 0.35, 0.43, 0.43, 0.49, 0.47, 0.52, 0.50, 0.44, 0.37, 0.25, 0.37, 0.47
+########################################
+
+2024-11-21 14:54:35,772 - INFO - No improvement in Micro F1. (1/3)
+2024-11-21 14:54:35,772 - INFO - -----------------------------------
+
+2024-11-21 14:54:35,774 - INFO - 
+Epoch 4/10
+2024-11-21 14:54:35,774 - INFO - -----------------------------------
+2024-11-21 14:54:54,728 - INFO - Train Loss: 0.0081
+2024-11-21 14:54:57,666 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0122
+Micro F1 Score: 0.7267
+Macro F1 Score: 0.6997
+Weighted F1 Score: 0.7342
+Hamming Loss: 0.0652
+Jaccard Index: 0.6710
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.8475     0.8929     0.8065    
+Class 1       0.7333     0.6984     0.7719    
+Class 2       0.6790     0.6627     0.6962    
+Class 3       0.6929     0.5946     0.8302    
+Class 4       0.8000     0.9032     0.7179    
+Class 5       0.7742     0.9600     0.6486    
+Class 6       0.8281     0.8806     0.7815    
+Class 7       0.7719     0.8800     0.6875    
+Class 8       0.6400     0.5614     0.7442    
+Class 9       0.6250     0.6250     0.6250    
+Class 10      0.4828     0.3784     0.6667    
+Class 11      0.5000     0.5000     0.5000    
+Class 12      0.7216     0.7955     0.6604    
+Optimal Thresholds: 0.39, 0.39, 0.46, 0.38, 0.44, 0.61, 0.56, 0.47, 0.37, 0.33, 0.29, 0.34, 0.52
+########################################
+
+2024-11-21 14:54:57,667 - INFO - New best model found at epoch 4 with Micro F1: 0.7267
+2024-11-21 14:54:58,555 - INFO - Model saved to: ./artifacts/models\fold_5_best_model
+2024-11-21 14:54:58,555 - INFO - Optimal thresholds for fold 5 saved to: ./artifacts/thresholds\fold_5_optimal_thresholds.pkl
+2024-11-21 14:54:58,556 - INFO - -----------------------------------
+
+2024-11-21 14:54:58,556 - INFO - 
+Epoch 5/10
+2024-11-21 14:54:58,557 - INFO - -----------------------------------
+2024-11-21 14:55:17,640 - INFO - Train Loss: 0.0064
+2024-11-21 14:55:20,588 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0127
+Micro F1 Score: 0.7388
+Macro F1 Score: 0.7057
+Weighted F1 Score: 0.7435
+Hamming Loss: 0.0622
+Jaccard Index: 0.6800
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7857     0.8800     0.7097    
+Class 1       0.7692     0.7500     0.7895    
+Class 2       0.6784     0.6304     0.7342    
+Class 3       0.7087     0.6081     0.8491    
+Class 4       0.8493     0.9118     0.7949    
+Class 5       0.7647     0.8387     0.7027    
+Class 6       0.8462     0.8963     0.8013    
+Class 7       0.7869     0.8276     0.7500    
+Class 8       0.6022     0.5600     0.6512    
+Class 9       0.6667     0.6296     0.7083    
+Class 10      0.5000     0.4194     0.6190    
+Class 11      0.4800     0.6667     0.3750    
+Class 12      0.7368     0.8333     0.6604    
+Optimal Thresholds: 0.41, 0.44, 0.46, 0.30, 0.54, 0.53, 0.63, 0.45, 0.45, 0.32, 0.35, 0.42, 0.50
+########################################
+
+2024-11-21 14:55:20,589 - INFO - New best model found at epoch 5 with Micro F1: 0.7388
+2024-11-21 14:55:21,570 - INFO - Model saved to: ./artifacts/models\fold_5_best_model
+2024-11-21 14:55:21,571 - INFO - Optimal thresholds for fold 5 saved to: ./artifacts/thresholds\fold_5_optimal_thresholds.pkl
+2024-11-21 14:55:21,572 - INFO - -----------------------------------
+
+2024-11-21 14:55:21,572 - INFO - 
+Epoch 6/10
+2024-11-21 14:55:21,572 - INFO - -----------------------------------
+2024-11-21 14:55:40,625 - INFO - Train Loss: 0.0053
+2024-11-21 14:55:43,555 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0132
+Micro F1 Score: 0.7334
+Macro F1 Score: 0.7021
+Weighted F1 Score: 0.7377
+Hamming Loss: 0.0631
+Jaccard Index: 0.6796
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.7857     0.8800     0.7097    
+Class 1       0.7302     0.6667     0.8070    
+Class 2       0.6905     0.6517     0.7342    
+Class 3       0.6990     0.7200     0.6792    
+Class 4       0.8108     0.8571     0.7692    
+Class 5       0.7879     0.8966     0.7027    
+Class 6       0.8374     0.8768     0.8013    
+Class 7       0.7541     0.7931     0.7188    
+Class 8       0.6087     0.5714     0.6512    
+Class 9       0.6939     0.6800     0.7083    
+Class 10      0.4912     0.3889     0.6667    
+Class 11      0.5000     0.7500     0.3750    
+Class 12      0.7379     0.7600     0.7170    
+Optimal Thresholds: 0.43, 0.37, 0.50, 0.42, 0.43, 0.56, 0.57, 0.34, 0.38, 0.42, 0.30, 0.55, 0.49
+########################################
+
+2024-11-21 14:55:43,555 - INFO - No improvement in Micro F1. (1/3)
+2024-11-21 14:55:43,556 - INFO - -----------------------------------
+
+2024-11-21 14:55:43,557 - INFO - 
+Epoch 7/10
+2024-11-21 14:55:43,557 - INFO - -----------------------------------
+2024-11-21 14:56:02,583 - INFO - Train Loss: 0.0044
+2024-11-21 14:56:05,531 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0134
+Micro F1 Score: 0.7382
+Macro F1 Score: 0.7107
+Weighted F1 Score: 0.7440
+Hamming Loss: 0.0620
+Jaccard Index: 0.6863
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.8333     0.8621     0.8065    
+Class 1       0.7563     0.7258     0.7895    
+Class 2       0.7093     0.6559     0.7722    
+Class 3       0.7048     0.7115     0.6981    
+Class 4       0.7945     0.8529     0.7436    
+Class 5       0.7761     0.8667     0.7027    
+Class 6       0.8327     0.9000     0.7748    
+Class 7       0.7931     0.8846     0.7188    
+Class 8       0.5981     0.5000     0.7442    
+Class 9       0.6818     0.7500     0.6250    
+Class 10      0.5000     0.4000     0.6667    
+Class 11      0.5217     0.8571     0.3750    
+Class 12      0.7379     0.7600     0.7170    
+Optimal Thresholds: 0.47, 0.38, 0.44, 0.44, 0.47, 0.57, 0.64, 0.38, 0.33, 0.45, 0.33, 0.61, 0.55
+########################################
+
+2024-11-21 14:56:05,531 - INFO - No improvement in Micro F1. (2/3)
+2024-11-21 14:56:05,532 - INFO - -----------------------------------
+
+2024-11-21 14:56:05,532 - INFO - 
+Epoch 8/10
+2024-11-21 14:56:05,533 - INFO - -----------------------------------
+2024-11-21 14:56:24,518 - INFO - Train Loss: 0.0038
+2024-11-21 14:56:27,459 - INFO - 
+########## Validation Metrics ##########
+Validation Loss: 0.0138
+Micro F1 Score: 0.7386
+Macro F1 Score: 0.7064
+Weighted F1 Score: 0.7421
+Hamming Loss: 0.0629
+Jaccard Index: 0.6851
+
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.8077     1.0000     0.6774    
+Class 1       0.7541     0.7077     0.8070    
+Class 2       0.7024     0.6629     0.7468    
+Class 3       0.7273     0.6471     0.8302    
+Class 4       0.7945     0.8529     0.7436    
+Class 5       0.7879     0.8966     0.7027    
+Class 6       0.8333     0.8075     0.8609    
+Class 7       0.7797     0.8519     0.7188    
+Class 8       0.5870     0.5510     0.6279    
+Class 9       0.6818     0.7500     0.6250    
+Class 10      0.4912     0.3889     0.6667    
+Class 11      0.5000     0.5833     0.4375    
+Class 12      0.7368     0.8333     0.6604    
+Optimal Thresholds: 0.68, 0.40, 0.44, 0.32, 0.48, 0.61, 0.46, 0.37, 0.44, 0.43, 0.32, 0.37, 0.53
+########################################
+
+2024-11-21 14:56:27,459 - INFO - No improvement in Micro F1. (3/3)
+2024-11-21 14:56:27,460 - INFO - Early stopping triggered.
+2024-11-21 14:56:27,460 - INFO - Training complete for Fold 5.
+2024-11-21 14:56:29,284 - INFO - Fold 5 weight based on Micro F1: 0.7388
+2024-11-21 14:56:29,285 - INFO - Fold 5 model added to ensemble.
+2024-11-21 14:56:29,286 - INFO - 
+K-Fold Cross-Validation Training Complete.
+
+2024-11-21 14:56:29,286 - INFO - Normalized fold weights: [0.2033749638221162, 0.2018941596270645, 0.1995141561606019, 0.19529961560431433, 0.19991710478590322]
+2024-11-21 14:56:29,287 - INFO - Fold weights saved to: ./artifacts/thresholds\fold_weights.pkl
+2024-11-21 14:56:35,448 - INFO - Ensemble predictions on test set obtained.
+2024-11-21 14:56:35,449 - INFO - 
+Optimal thresholds for the ensemble determined by averaging fold thresholds:
+2024-11-21 14:56:35,449 - INFO - Class 0: Threshold = 0.40
+2024-11-21 14:56:35,450 - INFO - Class 1: Threshold = 0.45
+2024-11-21 14:56:35,450 - INFO - Class 2: Threshold = 0.40
+2024-11-21 14:56:35,451 - INFO - Class 3: Threshold = 0.45
+2024-11-21 14:56:35,451 - INFO - Class 4: Threshold = 0.45
+2024-11-21 14:56:35,452 - INFO - Class 5: Threshold = 0.57
+2024-11-21 14:56:35,452 - INFO - Class 6: Threshold = 0.48
+2024-11-21 14:56:35,452 - INFO - Class 7: Threshold = 0.48
+2024-11-21 14:56:35,453 - INFO - Class 8: Threshold = 0.44
+2024-11-21 14:56:35,453 - INFO - Class 9: Threshold = 0.34
+2024-11-21 14:56:35,454 - INFO - Class 10: Threshold = 0.41
+2024-11-21 14:56:35,454 - INFO - Class 11: Threshold = 0.39
+2024-11-21 14:56:35,455 - INFO - Class 12: Threshold = 0.49
+2024-11-21 14:56:35,456 - INFO - 
+Ensemble optimal thresholds saved to: ./artifacts/thresholds\ensemble_optimal_thresholds.pkl
+2024-11-21 14:56:35,469 - INFO - 
+########## Ensemble Test Set Metrics ##########
+2024-11-21 14:56:35,470 - INFO - Micro F1: 0.7359
+2024-11-21 14:56:35,470 - INFO - Macro F1: 0.7042
+2024-11-21 14:56:35,471 - INFO - Weighted F1: 0.7359
+2024-11-21 14:56:35,471 - INFO - Hamming Loss: 0.0637
+2024-11-21 14:56:35,472 - INFO - Jaccard Index: 0.6711
+2024-11-21 14:56:35,472 - INFO - Optimal Thresholds: 0.40, 0.45, 0.40, 0.45, 0.45, 0.57, 0.48, 0.48, 0.44, 0.34, 0.41, 0.39, 0.49
+2024-11-21 14:56:35,472 - INFO - ###############################################
+
+2024-11-21 14:56:35,474 - INFO - Ensemble test metrics saved to: ./artifacts/metrics\ensemble_test_metrics.pkl
