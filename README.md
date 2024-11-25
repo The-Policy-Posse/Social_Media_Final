@@ -1,59 +1,37 @@
 # Social Media Classification Modeling for Policy Topics
 
 
-markdown
-Copy code
 # Social Media Classification Modeling for Policy Topics
 
 ## Index
-1. **Introduction**  
-   1.1 Overview of the Project  
-   1.2 Research Objectives and Goals  
-
-2. **Reddit Data Collection**  
-   2.1 Tools and Scripts Overview  
-   2.2 Data Collection Process  
-   2.3 Challenges and Solutions  
-
-3. **Exploratory Data Analysis (EDA)**  
-   3.1 Initial Data Validation  
-   3.2 Allotaxonometry for Trend Detection  
-   3.3 Topic Modeling Explorations  
-
-4. **Data Preparation for Manual Labeling**  
-   4.1 Image Handling and Preprocessing  
-   4.2 Sampling Methodology and Label Studio Setup  
-
-5. **Manual Labeling Process**  
-   5.1 Label Studio Setup and Workflow  
-   5.2 Training and Quality Assurance for Annotators  
-
-6. **Preprocessing for Classification Modeling**  
-   6.1 Labeled Data Preprocessing  
-   6.2 Unlabeled Data Handling  
-   6.3 Summary Statistics and Dataset Characteristics  
-
-7. **Multi-Label Classification Model Development**  
-   7.1 Model Architecture and Training Setup  
-   7.2 Loss Functions and Threshold Optimization  
-   7.3 Evaluation Metrics and Results  
-
-8. **Prediction and Human-in-the-Loop Review**  
-   8.1 Ensemble Prediction Workflow  
-   8.2 Confidence Scoring and Selection  
-   8.3 Visualization Techniques  
-
-9. **Outputs and Deliverables**  
-   9.1 Model Artifacts and Thresholds  
-   9.2 Predictions and Visualizations  
-   9.3 Final Dataset Characteristics  
+1. [Project Overview](#project-overview)
+2. [Data Collection](#data-collection)
+   - [Reddit Post Collection](#reddit-post-collection)
+   - [Reddit Comment Collection](#reddit-comment-collection)
+3. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis)
+4. [Image Handling and Sampling for Label Studio](#image-handling-and-sampling-for-label-studio)
+   - [Image Download Script](#image-download-script)
+   - [Data Sampling Methodology](#data-sampling-methodology)
+5. [Label Studio Annotation Process](#label-studio-annotation-process)
+   - [Labeling Process Overview](#labeling-process-overview)
+   - [Label Studio Setup](#label-studio-setup)
+6. [Preprocessing Pipeline](#preprocessing-pipeline)
+   - [Labeled Data Preprocessing](#labeled-data-preprocessing)
+   - [Unlabeled Data Preprocessing](#unlabeled-data-preprocessing)
+7. [Classification Model](#classification-model)
+   - [Model Architecture and Training](#model-architecture-and-training)
+   - [Evaluation Metrics](#evaluation-metrics)
+8. [Prediction and Visualization](#prediction-and-visualization)
+   - [Ensemble Model Predictions](#ensemble-model-predictions)
+   - [Visualization Outputs](#visualization-outputs)
+9. [Outputs and Results](#outputs-and-results)
 
 ---
 
-## Introduction
-**Social Media Classification Modeling for Policy Topics**
+## Project Overview
+This project focuses on classifying social media content from Reddit into predefined policy topics. The data was collected from state-specific subreddits, processed using a pipeline that integrates manual labeling with machine learning models, and then analyzed to extract insights about policy discussions across states. 
 
-This project develops a scalable framework for classifying social media discussions, specifically Reddit posts, into distinct policy-related categories. By focusing on state-specific subreddit data, the initiative identifies trends, sentiments, and thematic distributions related to various policy issues.
+The classification models use a multi-label approach to accommodate posts belonging to multiple policy areas. This repository provides scripts for data collection, preprocessing, modeling, and prediction, along with tools for visualization and annotation.
 
 ### Key Objectives:
 - **Data Collection**: Automate the large-scale collection of Reddit data, including posts and comments.
