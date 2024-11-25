@@ -2,6 +2,8 @@
 
 Welcome to the **Social Media Classification Modeling for Policy Topics** repository! This project focuses on collecting, processing, and classifying Reddit data to analyze discussions around various policy topics across different U.S. states. By leveraging advanced data scraping techniques, exploratory data analysis (EDA), manual labeling, and sophisticated classification models, this project aims to provide insightful classifications of social media conversations related to policy issues.
 
+Current Dashboard of Multi-Label Model Output General Analysis can be viewed here: https://policy-ensemble-social-posts-classification.streamlit.app/
+
 ## Table of Contents
 
 1. [Introduction](#introduction)
@@ -767,10 +769,37 @@ This script uses the ensemble of fine-tuned RoBERTa models to perform multi-labe
 
 # Results
 
+We've had increasingly competitive performance on both Fusion and Non-Fusion ensemble models, where we have been tuning hyperparameters as well as utilizing Human-In-The-Loop active learning to target both low-confidence predictions and increasing training data for underperforming or under-represented classes.  We're genuinely excited by the performance of the models and classification results, and believe we're only scratching the surface in terms of further improvement.
+
+Our t-SNE of the embeddings show several clear policy clusters -- and shows serious improvement over the unsupervised methods explored in our EDA process.  
 
 <p align="center">
 <img src="images/tsne_combined_all_topics.png" alt="Weighted Sample Distribution for State Activity" style="width: 50%;">  
 </p>  
+
+Non-Fusion Multi-Label Classification Roberta-basd Model
+Per-Class Metrics:
+Class      F1         Precision  Recall    
+----------------------------------------
+Class 0       0.8077     1.0000     0.6774    
+Class 1       0.7541     0.7077     0.8070    
+Class 2       0.7024     0.6629     0.7468    
+Class 3       0.7273     0.6471     0.8302    
+Class 4       0.7945     0.8529     0.7436    
+Class 5       0.7879     0.8966     0.7027    
+Class 6       0.8333     0.8075     0.8609    
+Class 7       0.7797     0.8519     0.7188    
+Class 8       0.5870     0.5510     0.6279    
+Class 9       0.6818     0.7500     0.6250    
+Class 10      0.4912     0.3889     0.6667    
+Class 11      0.5000     0.5833     0.4375    
+Class 12      0.7368     0.8333     0.6604    
+
+
+Our most difficult classification tasks fall between Other / Uncategorized and Culture and Recreation.  Since we're not specifically filtering for topics or keywords in our scrape, many posts and conversations have nothing to do with policy areas relating to political bill topics/areas, so it's somewhat expected.  However, these posts often straddle a thin, but imporant line between Culture and Recreation based posts.  We considered merging or dropping these categories earlier on in the modeling process, but with additonal attention, 
+
+
+
 
 
 
