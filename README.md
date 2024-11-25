@@ -4,10 +4,6 @@ Welcome to the **Social Media Classification Modeling for Policy Topics** reposi
 
 ## Table of Contents
 
-Welcome to the **Social Media Classification Modeling for Policy Topics** repository! This project focuses on collecting, processing, and classifying Reddit data to analyze discussions around various policy topics across different U.S. states. By leveraging advanced data scraping techniques, exploratory data analysis (EDA), manual labeling, and sophisticated classification models, this project aims to provide insightful classifications of social media conversations related to policy issues.
-
-## Table of Contents
-
 1. [Introduction](#introduction)
 2. [Reddit Data Collection](#reddit-data-collection)
    - [Files in the Folder](#files-in-the-folder)
@@ -66,30 +62,18 @@ This project aims to systematically collect and analyze Reddit posts and comment
 
 By integrating these components, the project not only facilitates the classification of social media content but also provides a scalable framework for analyzing policy-related discussions across various platforms. Whether you're a data scientist, policy analyst, or researcher, this repository offers valuable tools and insights to explore the intersection of social media and policy discourse.
 
-By integrating these components, the project not only facilitates the classification of social media content but also provides a scalable framework for analyzing policy-related discussions across various platforms. Whether you're a data scientist, policy analyst, or researcher, this repository offers valuable tools and insights to explore the intersection of social media and policy discourse.
-
 ---
 
-Feel free to explore each section to understand the project's structure, methodologies, and outcomes. Contributions are welcome, and for any questions or suggestions, please refer to the [Contact](#contact) section.
+#### License
 
----
+This project is licensed under the MIT License
 
-## Contributing
+#### Contact
+For any questions or feedback, please reach out to dforcade@gatech.edu).
 
-Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.
+#### Acknowledgements
+- Special thanks to all of our annotators!
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For any questions or feedback, please reach out to [your.email@example.com](mailto:your.email@example.com).
-
-## Acknowledgements
-
-- Special thanks to the contributors and the community that supported this project.
-- Inspired by the need to bridge social media data with policy analysis.
 
 ### Key Objectives:
 - **Data Collection**: Automate the large-scale collection of Reddit data, including posts and comments.
