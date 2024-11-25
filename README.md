@@ -672,17 +672,33 @@ This script uses the ensemble of fine-tuned RoBERTa models to perform multi-labe
 
 ---
 
-#### **Requirements**
+#### **Requirements:**
 - Pre-trained ensemble models, thresholds, and `MultiLabelBinarizer` saved during training.
 - Unlabeled data in `/data/processed/unlabeled_reddit_posts_processed` (From the Classification Preprocessing Step)
+ **Usage:**
+- Configure the paths and settings in the `CONFIG` dictionary within the script.
+-  Run the script:
+   `python nonFusion_Predict.py`
 
----
 
-### **Usage**
-1. Configure the paths and settings in the `CONFIG` dictionary within the script.
-2. Run the script:
-   ```bash
-   python nonFusion_Predict.py
+
+# Results
+
+
+<p align="center">
+<img src="images/tsne_combined_all_topics.png" alt="Weighted Sample Distribution for State Activity" style="width: 50%;">  
+</p>  
+
+
+
+
+
+
+
+https://policy-ensemble-social-posts-classification.streamlit.app/
+
+
+
 
 
 
