@@ -115,12 +115,19 @@ The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and la
 
 Once the data successfully scraped and validated, extensive EDA was run using several exploratory methods to determine if this data would be a good candidate for modeling.  
 
-The first step was employing Allotaxonometry-Style graphs on several test states to determine if rough trends and differences could be detected in the data, or if it was simply too noisy to be worth the trouble.    
-
+The first step was employing Allotaxonometry-Style graphs on several test states to determine if rough trends and differences could be detected in the data, or if it was simply too noisy to be worth the trouble.  With our EDA Allotaxonemtry, we were able to detect a Marijunana Legalization Trend uptick due to recent legislation around that date, and in Vermont we were able to detect Foliage-related terms:
 
 <p>
   <img src="images/kentucky-5-01-23.png" alt="EDA Allotaxonometry of Kentucky" style="width: 45%;">
   <img src="images/vermont_7-30.png" alt="EDA Allotaxonometry of Vermont" style="width: 45%;">
+</p>
+
+
+From there, we used exploratory Topic Modeling with BeRTopic and KMeans clustering.  When converting embeddings to t-SNE, we saw some promising results -- but not directly usable for our policy classification/modeling task.  K-Means was strugging to differentiate in a meaningful way - and when BeRTopic clusters were individually investigated, they were too fragemented for usable downstream analysis.
+
+<p>
+  <img src="images/tsneKmeans.png" alt="EDA Allotaxonometry of Kentucky" style="width: 45%;">
+  <img src="images/tsneBertTopic.png" alt="EDA Allotaxonometry of Vermont" style="width: 45%;">
 </p>
 
 
