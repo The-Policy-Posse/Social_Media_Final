@@ -4,12 +4,16 @@ Welcome to the **Social Media Classification Modeling for Policy Topics** reposi
 
 ## Table of Contents
 
+Welcome to the **Social Media Classification Modeling for Policy Topics** repository! This project focuses on collecting, processing, and classifying Reddit data to analyze discussions around various policy topics across different U.S. states. By leveraging advanced data scraping techniques, exploratory data analysis (EDA), manual labeling, and sophisticated classification models, this project aims to provide insightful classifications of social media conversations related to policy issues.
+
+## Table of Contents
+
 1. [Introduction](#introduction)
 2. [Reddit Data Collection](#reddit-data-collection)
-   - [Reddit Data Scrapers](#reddit-data-scrapers)
    - [Files in the Folder](#files-in-the-folder)
    - [Requirements](#requirements)
-   - [Steps to Collect Data](#steps-to-collect-data)
+   - [Step 1: Run `redditPostPull.py`](#step-1-run-redditpostpullpy)
+   - [Step 2: Run `redditCommentPull.py`](#step-2-run-redditcommentpullpy)
 3. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
    - [Overview](#overview)
    - [EDA Allotaxonometry](#eda-allotaxonometry)
@@ -59,6 +63,8 @@ This project aims to systematically collect and analyze Reddit posts and comment
 5. **Classification Model Preprocessing**: Preparing both labeled and unlabeled datasets for training machine learning models, involving text cleaning, normalization, and label encoding.
 6. **Model Development**: Building and fine-tuning multi-label classification models based on transformer architectures (RoBERTa) to accurately categorize posts into multiple policy areas.
 7. **Evaluation and Results**: Assessing model performance using robust metrics and presenting comprehensive results to validate the effectiveness of the classification approach.
+
+By integrating these components, the project not only facilitates the classification of social media content but also provides a scalable framework for analyzing policy-related discussions across various platforms. Whether you're a data scientist, policy analyst, or researcher, this repository offers valuable tools and insights to explore the intersection of social media and policy discourse.
 
 By integrating these components, the project not only facilitates the classification of social media content but also provides a scalable framework for analyzing policy-related discussions across various platforms. Whether you're a data scientist, policy analyst, or researcher, this repository offers valuable tools and insights to explore the intersection of social media and policy discourse.
 
@@ -202,9 +208,9 @@ The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and la
 | `author`         | Username of the comment's author                            |
 
 
+## EDA
 
-
-## Quick Overview on **Why** we decided on on investing in manual labeling and advanced Classification Models  
+### Quick Overview on **Why** we decided on on investing in manual labeling and advanced Classification Models  
 
 Once the data successfully scraped and validated, extensive EDA was run using several exploratory methods to determine if this data would be a good candidate for modeling.  
 
