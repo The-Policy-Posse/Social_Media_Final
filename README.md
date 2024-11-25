@@ -118,13 +118,12 @@ Once the data successfully scraped and validated, extensive EDA was run using se
 The first step was employing Allotaxonometry-Style graphs on several test states to determine if rough trends and differences could be detected in the data, or if it was simply too noisy to be worth the trouble.    
 
 
-<p>
-<img src="images/kentucky-5-01-23.png" alt="EDA Allotaxonometry of Kentucky" style="width: 40%;">  
-</p>   
-
-<p>
-<img src="images/vermont_7-30.png" alt="EDA Allotaxonometry of Vermont" style="width: 40%;">  
-</p>  
+<p style="display: inline-block; margin-right: 10px;">
+  <img src="images/kentucky-5-01-23.png" alt="EDA Allotaxonometry of Kentucky" style="width: 45%;">
+</p>
+<p style="display: inline-block;">
+  <img src="images/vermont_7-30.png" alt="EDA Allotaxonometry of Vermont" style="width: 45%;">
+</p>
 
 
 ## Image Handling and Sampling for Label Studio
