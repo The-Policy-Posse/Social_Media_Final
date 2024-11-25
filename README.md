@@ -118,10 +118,11 @@ Once the data successfully scraped and validated, extensive EDA was run using se
 The first step was employing Allotaxonometry-Style graphs on several test states to determine if rough trends and differences could be detected in the data, or if it was simply too noisy to be worth the trouble.    
 
 
-<p">
+<p>
 <img src="images/kentucky-5-01-23" alt="Weighted Sample Distribution for State Activity" style="width: 40%;">  
-</p>  
-<p">
+</p>   
+
+<p>
 <img src="images/vermont_7-30" alt="Weighted Sample Distribution for State Activity" style="width: 40%;">  
 </p>  
 
