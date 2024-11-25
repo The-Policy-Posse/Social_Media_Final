@@ -119,11 +119,11 @@ The first step was employing Allotaxonometry-Style graphs on several test states
 
 
 <p>
-<img src="images/kentucky-5-01-23" alt="Weighted Sample Distribution for State Activity" style="width: 40%;">  
+<img src="images/kentucky-5-01-23.png" alt="EDA Allotaxonometry of Kentucky" style="width: 40%;">  
 </p>   
 
 <p>
-<img src="images/vermont_7-30" alt="Weighted Sample Distribution for State Activity" style="width: 40%;">  
+<img src="images/vermont_7-30.png" alt="EDA Allotaxonometry of Vermont" style="width: 40%;">  
 </p>  
 
 
