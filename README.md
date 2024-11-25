@@ -133,7 +133,7 @@ From there, we used exploratory Topic Modeling with BeRTopic and KMeans clusteri
 
 We also ran additional statistical tests on simple sentiment analysis between clusters and groups to determine if there was validitity to our intuiton, and the results were statistically significant.  With these (and a few more metrics/analysis), we made the decision that this data was a good candidate for manual labeling and transformer based classification for our goal of identifying political topic discussion.
 
-Full EDA Modeling report can be found here: [EDA Modeling Report](Sentiment_Report_1.pdf)  
+Full EDA Modeling report can be found here: [EDA Modeling Report](pdfs/Sentiment_Report_1.pdf)  
 
 
 
