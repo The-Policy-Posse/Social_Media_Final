@@ -1,0 +1,619 @@
+---
+title: "Reddit_Comments_Labeling_Check"
+author: "DCF"
+date: "2024-11-11"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(data.table)
+library(httr)
+library(stringr)
+library(textstem)
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(tidyr)
+```  
+
+
+```{r dataLoad}
+## Load Data
+myPosts <- fread('reddit_posts.csv')
+
+```  
+
+```{r labelTest}
+## Define image and Reddit-specific extensions/patterns
+image_extensions <- c("jpg", "jpeg", "png", "gif", "bmp", "tiff", "webp")
+reddit_patterns <- c("reddit.com/gallery", "v.redd.it")
+
+## Create 'image_url' column only for posts with valid image URLs
+myPosts[, image_url := ifelse(
+  tolower(tools::file_ext(url)) %in% image_extensions & grepl("^https://", url),
+  paste0("https://storage.googleapis.com/policy_posse_reddit_images/reddit_post_images/", post_id, ".jpg"),
+  NA_character_
+)]
+
+## Create 'context_url' column for external websites, excluding images and Reddit-specific URLs
+myPosts[, context_url := ifelse(
+  !tolower(tools::file_ext(url)) %in% image_extensions &              # Not an image file
+  !grepl(paste(reddit_patterns, collapse = "|"), url) &               # Not a Reddit-specific URL
+  grepl("^https://", url),                                            # A valid URL
+  url,                                                                # Use the URL as context
+  NA_character_                                                       # Otherwise, set to NA
+)]
+
+## Define the path to the directory containing downloaded images
+image_dir <- "../../reddit_post_images"
+
+## List all images in the directory
+downloaded_images <- list.files(image_dir, pattern = "\\.jpg$", full.names = FALSE)
+downloaded_post_ids <- sub("\\.jpg$", "", downloaded_images)
+
+## Make a copy of the original image_url column
+myPosts <- myPosts[, original_image_url := image_url]
+
+## Update image_url column to NA if the image does not exist
+myPosts <- myPosts[, image_url := ifelse(post_id %in% downloaded_post_ids, image_url, NA_character_)]
+
+### Check Filtered Results ###
+## Display rows with a non-NA context_url
+print(myPosts[!is.na(context_url), .(post_id, url, context_url)])
+
+```  
+
+
+
+```{r policyView}
+  
+### Apply stemming or lemmatization to the text fields ###
+
+## Create a copy of the original data for lemmatization purposes
+lemmatizedPosts <- copy(myPosts)
+
+## Apply lemmatization to the title and selftext columns in the copied dataframe
+lemmatizedPosts[, title_lemmatized := lemmatize_strings(title)]
+lemmatizedPosts[, selftext_lemmatized := lemmatize_strings(selftext)]
+
+## Keep only the lemmatized columns and post_id to link back to the original
+lemmatizedPosts <- lemmatizedPosts[, .(post_id, title_lemmatized, selftext_lemmatized, state)]
+
+## Keywords List
+keywords <- list(
+    Health = c("health", "healthcare", "medicine", "hospital", "insurance", "pharma", "mental", "doctor", "nurse", "public", "epidemic", "pandemic", "drug", "medical", "therapy", "treatment", "disease", "illness"),
+    `Defense and National Security` = c("military", "defense", "security", "troop", "veteran", "terror", "homeland", "army", "navy", "air", "national", "weapon", "missile", "nuclear", "warfare", "intelligence", "cybersecurity", "safety"),
+    `Crime and Law Enforcement` = c("crime", "law", "enforcement", "police", "justice", "criminal", "prison", "detention", "arrest", "court", "trial", "convict", "offense", "homicide", "fraud", "investigation", "penalty"),
+    `International Affairs and Trade` = c("foreign", "policy", "trade", "diplomacy", "international", "UN", "NATO", "treaty", "sanction", "global", "export", "import", "alliance", "embassy", "aid", "relief", "agreement"),
+    `Government Operations and Politics` = c("government", "congress", "senate", "election", "legislation", "bill", "representative", "senator", "campaign", "politician", "policy", "party", "judiciary", "executive", "law", "reform", "constitution"),
+    `Economy and Finance` = c("tax", "finance", "economy", "job", "budget", "inflation", "recession", "interest", "stock", "invest", "employment", "debt", "growth", "fiscal", "trade", "money", "corporate", "loan", "banking"),
+    `Environment and Natural Resources` = c("environment", "climate", "pollution", "conservation", "natural", "resource", "wildlife", "global warming", "sustainable", "ecology", "biodiversity", "forest", "ocean", "habitat", "carbon", "emission", "renewable", "ecosystem"),
+    `Education and Social Services` = c("education", "school", "welfare", "housing", "family", "social service", "student", "teacher", "curriculum", "tuition", "public school", "childcare", "university", "scholarship", "training", "youth"),
+    `Agriculture and Food` = c("agriculture", "farming", "food", "crop", "farmer", "agri", "harvest", "grain", "dairy", "livestock", "fisheries", "pest", "soil", "rural", "produce", "meat", "fishery"),
+    `Science, Technology, and Communications` = c("science", "technology", "research", "innovation", "communication", "internet", "AI", "data", "digital", "cyber", "robotic", "scientific", "satellite", "software", "computer", "telecom", "biotech"),
+    `Immigration and Civil Rights` = c("immigration", "civil right", "liberty", "equality", "minority", "racial", "refugee", "border", "asylum", "human right", "citizen", "diversity", "integration", "deportation"),
+    `Transportation and Infrastructure` = c("transportation", "infrastructure", "road", "bridge", "transit", "public work", "highway", "rail", "airport", "construction", "logistic", "traffic", "metro", "urban", "subway"),
+    `Culture and Recreation` = c("culture", "arts", "religion", "sport", "recreation", "entertainment", "museum", "festival", "event", "music", "film", "heritage", "theater", "game", "tourism", "leisure"),
+    `Other / Uncategorized` = c("miscellaneous", "general", "other", "NA")
+)
+
+# Function to classify each post based on keywords
+classify_policy_area <- function(text) {
+    for (category in names(keywords)) {
+        if (any(str_detect(text, paste(keywords[[category]], collapse = "|")))) {
+            return(category)
+        }
+    }
+    return("Other / Uncategorized")
+}
+
+## Apply the classify function to the lemmatized text
+lemmatizedPosts[, policy_area := sapply(paste(title_lemmatized, selftext_lemmatized), classify_policy_area)]
+
+## Summarize Counts by Policy Area
+policy_counts <- lemmatizedPosts[, .N, by = policy_area]
+print(policy_counts$policy_area)
+
+
+
+```
+
+```{r createSample}
+
+#######################
+## Merge myPosts and lemmatizedPosts on 'post_id'
+#######################
+
+fullData <- myPosts %>%
+  select(-state) %>%
+  left_join(lemmatizedPosts, by = "post_id") %>% 
+  mutate(state = as.factor(state))
+
+
+
+#######################
+## Define Sampling Parameters
+#######################
+
+## Define minimum and maximum sample sizes per state
+min_samples <- 90 
+max_samples <- 350
+
+## Total desired sample size
+total_sample_size <- 6000
+
+
+
+#######################
+## Calculate Total Comments per State
+#######################
+
+state_comments <- fullData %>%
+  group_by(state) %>%
+  summarise(total_comments = sum(num_comments, na.rm = TRUE)) %>%
+  ungroup()
+
+
+#######################
+##  Initial Sample Size Allocation
+#######################
+
+## Calculate initial weights based on total_comments
+state_comments <- state_comments %>%
+  mutate(weight = total_comments / sum(total_comments)) %>%
+  mutate(initial_sample_size = round(weight * total_sample_size))
+
+
+#######################
+##  Apply Minimum and Maximum Constraints
+#######################
+
+## Apply minimum and maximum sample size constraints
+state_comments <- state_comments %>%
+  mutate(sample_size = pmax(initial_sample_size, min_samples)) %>%
+  mutate(sample_size = pmin(sample_size, max_samples))
+
+
+#######################
+##  Adjust Sample Sizes to Sum to Total Desired Size
+#######################
+
+
+## Calculate the current total sample size
+current_total <- sum(state_comments$sample_size)
+
+## Calculate the difference from desired total
+delta <- total_sample_size - current_total
+
+if(delta != 0){
+  if(delta > 0){
+    ## Allocate the remaining samples proportionally to states not at max_samples
+    adjustable_states <- state_comments %>%
+      filter(sample_size < max_samples) %>%
+      mutate(additional_weight = total_comments / sum(total_comments[sample_size < max_samples]))
+    
+    state_comments <- state_comments %>%
+      left_join(adjustable_states %>% select(state, additional_weight), by = "state") %>%
+      mutate(additional_weight = replace_na(additional_weight, 0)) %>%
+      mutate(additional_samples = round(additional_weight * delta)) %>%
+      mutate(sample_size = pmin(sample_size + additional_samples, max_samples)) %>%
+      select(-additional_weight, -additional_samples)
+    
+    ## Recalculate the total
+    current_total <- sum(state_comments$sample_size)
+    delta <- total_sample_size - current_total
+    
+    ## If still delta remains, distribute randomly among adjustable states
+    if(delta > 0){
+      adjustable_states <- state_comments %>%
+        filter(sample_size < max_samples)
+      
+      if(nrow(adjustable_states) > 0){
+        additional_indices <- sample(1:nrow(adjustable_states), delta, replace = TRUE)
+        state_comments <- state_comments %>%
+          mutate(sample_size = if_else(state %in% adjustable_states$state[additional_indices], 
+                                       pmin(sample_size + 1, max_samples), sample_size))
+      }
+    }
+    
+  } else {
+    ## delta < 0: Reduce samples proportionally from states above min_samples
+    delta_abs <- abs(delta)
+    
+    adjustable_states <- state_comments %>%
+      filter(sample_size > min_samples) %>%
+      mutate(reduction_weight = total_comments / sum(total_comments[sample_size > min_samples]))
+    
+    state_comments <- state_comments %>%
+      left_join(adjustable_states %>% select(state, reduction_weight), by = "state") %>%
+      mutate(reduction_weight = replace_na(reduction_weight, 0)) %>%
+      mutate(reduction_samples = round(reduction_weight * delta_abs)) %>%
+      mutate(sample_size = pmax(sample_size - reduction_samples, min_samples)) %>%
+      select(-reduction_weight, -reduction_samples)
+    
+    ## Recalculate the total
+    current_total <- sum(state_comments$sample_size)
+    delta <- total_sample_size - current_total
+    
+    ## If still delta remains, reduce randomly among adjustable states
+    if(delta < 0){
+      delta_abs <- abs(delta)
+      adjustable_states <- state_comments %>%
+        filter(sample_size > min_samples)
+      
+      if(nrow(adjustable_states) > 0){
+        reduction_indices <- sample(1:nrow(adjustable_states), delta_abs, replace = TRUE)
+        state_comments <- state_comments %>%
+          mutate(sample_size = if_else(state %in% adjustable_states$state[reduction_indices], 
+                                       pmax(sample_size - 1, min_samples), sample_size))
+      }
+    }
+  }
+}
+
+
+
+#######################
+##  Verify Total Sample Size
+#######################
+
+final_total <- sum(state_comments$sample_size)
+print(paste("Final total sample size:", final_total))
+
+## If not equal, adjust by sampling down or up
+if(final_total != total_sample_size){
+  if(final_total > total_sample_size){
+    excess <- final_total - total_sample_size
+    ## Reduce randomly from states not at min_samples
+    adjustable_states <- state_comments %>%
+      filter(sample_size > min_samples)
+    
+    if(nrow(adjustable_states) > 0){
+      reduce_states <- sample(adjustable_states$state, excess, replace = TRUE)
+      state_comments <- state_comments %>%
+        mutate(sample_size = if_else(state %in% reduce_states, sample_size - 1, sample_size))
+    }
+  } else {
+    deficit <- total_sample_size - final_total
+    ## Add randomly to states not at max_samples
+    adjustable_states <- state_comments %>%
+      filter(sample_size < max_samples)
+    
+    if(nrow(adjustable_states) > 0){
+      add_states <- sample(adjustable_states$state, deficit, replace = TRUE)
+      state_comments <- state_comments %>%
+        mutate(sample_size = if_else(state %in% add_states, sample_size + 1, sample_size))
+    }
+  }
+}
+
+## Final check
+final_total <- sum(state_comments$sample_size)
+print(paste("Adjusted final total sample size:", final_total))
+
+
+
+#######################
+##  Perform Sampling per State
+#######################
+
+
+## Initialize an empty data frame to store sampled posts
+final_sample <- data.frame()
+
+## Iterate over each state to perform sampling
+for(i in 1:nrow(state_comments)){
+    state_name <- state_comments$state[i]
+    size <- state_comments$sample_size[i]
+    
+    ## Filter data for the current state **and exclude "Other / Uncategorized"**
+    state_data <- fullData %>%
+      filter(state == state_name & policy_area != "Other / Uncategorized")
+    
+    ## Skip if no data for the state
+    if(nrow(state_data) == 0){
+        next
+    }
+    
+    
+    ## Calculate the 80th percentile thresholds
+    num_comments_threshold <- quantile(state_data$num_comments, 0.80, na.rm = TRUE)
+    score_threshold <- quantile(state_data$score, 0.80, na.rm = TRUE)
+    
+    ## Select top 80% by num_comments and score
+    top_num_comments <- state_data %>%
+      filter(num_comments >= num_comments_threshold)
+    
+    top_score <- state_data %>%
+      filter(score >= score_threshold)
+    
+    ## Combine and remove duplicates
+    top_combined <- bind_rows(top_num_comments, top_score) %>%
+      distinct(post_id, .keep_all = TRUE)
+    
+    ## Number of posts selected so far
+    selected_n <- nrow(top_combined)
+    
+    ## Calculate remaining sample size
+    remaining_size <- size - selected_n
+    
+    
+    if(remaining_size <= 0){
+        # #If more than needed, randomly sample 'size' posts
+        sample_posts <- top_combined %>%
+          sample_n(size)
+    } else {
+      
+        ## Stratified sampling based on 'policy_area' excluding Other / Uncategorized
+        stratify_data <- state_data %>%
+          filter(policy_area != "Other / Uncategorized" & 
+                 !post_id %in% top_combined$post_id)
+        
+        if(nrow(stratify_data) > 0){
+          
+            ## Calculate distribution of policy_area
+            policy_dist <- stratify_data %>%
+              group_by(policy_area) %>%
+              summarise(count = n()) %>%
+              mutate(prop = count / sum(count))
+            
+            ## Allocate samples based on policy_area distribution
+            stratify_size <- round(remaining_size * 0.5)  ## 50% stratified
+            policy_dist <- policy_dist %>%
+              mutate(samples = round(prop * stratify_size))
+            
+            # #Perform stratified sampling
+            stratified_sample <- stratify_data %>%
+              group_by(policy_area) %>%
+              do(sample_n(., size = min(policy_dist$samples[policy_dist$policy_area == unique(.$policy_area)], n()), replace = FALSE)) %>%
+              ungroup()
+        } else {
+            stratified_sample <- NULL
+        }
+        
+        ## Update selected_n
+        if(!is.null(stratified_sample)){
+            selected_n <- selected_n + nrow(stratified_sample)
+        }
+        
+        ## Calculate new remaining size
+        remaining_size_new <- size - selected_n
+        
+        ## Perform random sampling for the rest
+        if(remaining_size_new > 0){
+            random_data <- state_data %>%
+              filter(!post_id %in% c(top_combined$post_id, 
+                                     if(!is.null(stratified_sample)) stratified_sample$post_id else NULL))
+            
+            if(nrow(random_data) > 0){
+                random_sample <- random_data %>%
+                  sample_n(size = min(remaining_size_new, n()), replace = FALSE)
+            } else {
+                random_sample <- NULL
+            }
+        } else {
+            random_sample <- NULL
+        }
+        
+        ## Combine all sampled posts for the state
+        sample_posts <- bind_rows(
+            top_combined,
+            if(!is.null(stratified_sample)) stratified_sample else NULL,
+            if(!is.null(random_sample)) random_sample else NULL
+        )
+        
+        ## If over-sampled, truncate to 'size'
+        if(nrow(sample_posts) > size){
+            sample_posts <- sample_posts %>%
+              sample_n(size)
+        }
+    }
+    
+    # #Add the sampled posts to the final sample
+    final_sample <- bind_rows(final_sample, sample_posts)
+}
+
+
+
+#######################
+##  Final Adjustments
+#######################
+
+## Ensure the final sample size does not exceed 6000
+if(nrow(final_sample) > total_sample_size){
+    final_sample <- final_sample %>%
+      sample_n(total_sample_size)
+}
+
+## Warn if the final sample is smaller than 6000
+if(nrow(final_sample) < total_sample_size){
+    warning(paste("Final sample size is less than", total_sample_size, ":", nrow(final_sample)))
+}
+
+
+
+#######################
+##  Add "Other / Uncategorized" Posts
+#######################
+
+## Define the desired number of "Other / Uncategorized" posts
+additional_other_size <- 1000
+
+
+## Filter "Other / Uncategorized" posts from the original dataset
+other_uncategorized <- fullData %>%
+  filter(policy_area == "Other / Uncategorized")
+
+## Check the number of available "Other / Uncategorized" posts
+num_available_other <- nrow(other_uncategorized)
+print(paste("Number of available 'Other / Uncategorized' posts:", num_available_other))
+
+
+## Sample 1,000 posts or all available if fewer than 1,000
+if(num_available_other >= additional_other_size){
+  sampled_other <- other_uncategorized %>%
+    sample_n(additional_other_size)
+  print(paste("Sampled", additional_other_size, "'Other / Uncategorized' posts."))
+} else {
+  sampled_other <- other_uncategorized
+  warning(paste("Only", num_available_other, "'Other / Uncategorized' posts available. Sampled all available posts."))
+}
+
+
+
+#######################
+##  Combine the Samples
+#######################
+
+## Combine the balanced sample (6,000 posts) with the "Other / Uncategorized" sample
+final_sample_combined <- bind_rows(final_sample, sampled_other)
+
+## Verify the total number of posts
+total_sampled_posts <- nrow(final_sample_combined)
+print(paste("Total number of sampled posts (6,000 +", 
+            ifelse(num_available_other >= additional_other_size, additional_other_size, num_available_other), 
+            "):", 
+            total_sampled_posts))
+
+
+#######################
+##  Verify Distributions in the Combined Sample
+#######################
+
+## State Distribution
+state_distribution_combined <- final_sample_combined %>%
+  group_by(state) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = round((count / sum(count)) * 100, 2)) %>%
+  arrange(desc(count))
+
+print("State Distribution in Combined Sample:")
+print(state_distribution_combined)
+
+
+## Policy Area Distribution
+policy_distribution_combined <- final_sample_combined %>%
+  group_by(policy_area) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = round((count / sum(count)) * 100, 2)) %>%
+  arrange(desc(count))
+
+print("Policy Area Distribution in Combined Sample:")
+print(policy_distribution_combined)
+
+## Visualize State Distribution
+ggplot(state_distribution_combined, aes(x = reorder(state, -count), y = count)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  labs(title = "Distribution of States in Combined Sample",
+       x = "State",
+       y = "Number of Posts") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(aes(label = count), vjust = -0.5, size = 3) +
+  ylim(0, max(state_distribution_combined$count) * 1.1)
+
+## Visualize Policy Area Distribution
+ggplot(policy_distribution_combined, aes(x = reorder(policy_area, -count), y = count)) +
+  geom_bar(stat = "identity", fill = "coral") +
+  labs(title = "Distribution of Policy Areas in Combined Sample",
+       x = "Policy Area",
+       y = "Number of Posts") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(aes(label = count), vjust = -0.5, size = 3) +
+  ylim(0, max(policy_distribution_combined$count) * 1.1)
+
+
+
+#######################
+##  Compare with Original Data
+#######################
+
+
+## State Distribution in Original Data
+original_state_distribution <- fullData %>%
+  group_by(state) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = round((count / sum(count)) * 100, 2)) %>%
+  arrange(desc(count))
+
+print("State Distribution in Original Data:")
+print(original_state_distribution)
+
+## Policy Area Distribution in Original Data
+original_policy_distribution <- fullData %>%
+  group_by(policy_area) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = round((count / sum(count)) * 100, 2)) %>%
+  arrange(desc(count))
+
+print("Policy Area Distribution in Original Data:")
+print(original_policy_distribution)
+
+## Visualization: Side-by-Side Comparison for States
+state_comparison_combined <- state_distribution_combined %>%
+  select(state, combined_count = count, combined_percentage = percentage) %>%
+  left_join(original_state_distribution %>% 
+              select(state, original_count = count, original_percentage = percentage),
+            by = "state")
+
+state_comparison_long_combined <- state_comparison_combined %>%
+  select(state, combined_percentage, original_percentage) %>%
+  pivot_longer(cols = c(combined_percentage, original_percentage), 
+               names_to = "Dataset", values_to = "Percentage")
+
+state_comparison_long_combined$Dataset <- recode(state_comparison_long_combined$Dataset,
+                                                "combined_percentage" = "Combined Sample",
+                                                "original_percentage" = "Original Data")
+
+ggplot(state_comparison_long_combined, aes(x = reorder(state, -Percentage), y = Percentage, fill = Dataset)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "State Distribution: Combined Sample vs. Original Data",
+       x = "State",
+       y = "Percentage of Posts",
+       fill = "Dataset") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_y_continuous(labels = percent_format(scale = 1))
+
+## Visualization: Side-by-Side Comparison for Policy Areas
+policy_comparison_combined <- policy_distribution_combined %>%
+  select(policy_area, combined_count = count, combined_percentage = percentage) %>%
+  left_join(original_policy_distribution %>% 
+              select(policy_area, original_count = count, original_percentage = percentage),
+            by = "policy_area")
+
+policy_comparison_long_combined <- policy_comparison_combined %>%
+  select(policy_area, combined_percentage, original_percentage) %>%
+  pivot_longer(cols = c(combined_percentage, original_percentage), 
+               names_to = "Dataset", values_to = "Percentage")
+
+policy_comparison_long_combined$Dataset <- recode(policy_comparison_long_combined$Dataset,
+                                                 "combined_percentage" = "Combined Sample",
+                                                 "original_percentage" = "Original Data")
+
+ggplot(policy_comparison_long_combined, aes(x = reorder(policy_area, -Percentage), y = Percentage, fill = Dataset)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "Policy Area Distribution: Combined Sample vs. Original Data",
+       x = "Policy Area",
+       y = "Percentage of Posts",
+       fill = "Dataset") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_y_continuous(labels = percent_format(scale = 1))
+
+
+## Count occurrences of each policy_area
+policy_area_counts <- final_sample_combined %>%
+  count(policy_area, name = "count") %>%
+  arrange(desc(count))
+
+## Display the result
+policy_area_counts
+
+## Write sample to csv
+write.csv(final_sample_combined, 'final_sample.csv', row.names = FALSE) 
+
+
+```

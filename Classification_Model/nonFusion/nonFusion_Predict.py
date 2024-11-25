@@ -1,8 +1,54 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Nov 21 15:59:07 2024
+Prediction Script for Multi-Label Classification Using RoBERTa Ensemble
 
-@author: dforc
+This script performs predictions on unlabeled Reddit posts using a fine-tuned
+ensemble of RoBERTa models for multi-label classification. It includes label
+assignment, confidence scoring, high-confidence sample selection, and data
+visualization (t-SNE and word clouds).
+
+Key Features:
+- **Ensemble Predictions**:
+  Aggregates predictions from multiple models using weighted averaging.
+- **Label Assignment**:
+  Assigns multi-label classifications using class-specific thresholds while
+  limiting the number of labels per instance.
+- **Confidence Scoring**:
+  Computes confidence scores for predictions using methods like average
+  and maximum probability.
+- **High-Confidence Sample Selection**:
+  Selects the top percentage of samples based on confidence scores for further
+  analysis or manual labeling.
+- **t-SNE Visualizations**:
+  Reduces ensemble prediction probabilities to two dimensions for visualization.
+  Outputs both individual topic plots and a combined plot.
+- **Contrastive Word Clouds**:
+  Generates word clouds for each predicted topic, highlighting distinctive
+  terms based on contrastive TF-IDF scores.
+
+Outputs:
+1. CSV Files:
+   - Predictions with assigned labels and confidence scores.
+   - High-confidence samples.
+   - Labeled data with t-SNE coordinates.
+2. Visualizations:
+   - Topic-specific and combined t-SNE plots.
+   - Contrastive word clouds for each topic.
+3. Log File:
+   - Detailed logs of the prediction workflow.
+
+Requirements:
+- Pre-trained ensemble models, thresholds, and MultiLabelBinarizer saved during training.
+- Unlabeled data in a CSV file with a `combined_text` column.
+
+Usage:
+Run the script using:
+    python prediction_script.py
+
+Make sure to configure the paths and settings in the `CONFIG` dictionary before execution.
+
+@dforc
+Updated on: November 21, 2024
 """
 
 
@@ -33,14 +79,13 @@ from wordcloud import WordCloud, STOPWORDS
 
 
 
-
 ##############################
 ## Configuration and Setup ##
 ##############################
 
 ## Configuration Dictionary
 CONFIG = {
-    'seed': 47,
+    'seed': 99,
     'device': torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu'),
     'max_len': 128,
     'batch_size': 128,
