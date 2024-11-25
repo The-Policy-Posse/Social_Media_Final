@@ -1,6 +1,69 @@
 # Social Media Classification Modeling for Policy Topics
 
 
+markdown
+Copy code
+# Social Media Classification Modeling for Policy Topics
+
+## Index
+1. **Introduction**  
+   1.1 Overview of the Project  
+   1.2 Research Objectives and Goals  
+
+2. **Reddit Data Collection**  
+   2.1 Tools and Scripts Overview  
+   2.2 Data Collection Process  
+   2.3 Challenges and Solutions  
+
+3. **Exploratory Data Analysis (EDA)**  
+   3.1 Initial Data Validation  
+   3.2 Allotaxonometry for Trend Detection  
+   3.3 Topic Modeling Explorations  
+
+4. **Data Preparation for Manual Labeling**  
+   4.1 Image Handling and Preprocessing  
+   4.2 Sampling Methodology and Label Studio Setup  
+
+5. **Manual Labeling Process**  
+   5.1 Label Studio Setup and Workflow  
+   5.2 Training and Quality Assurance for Annotators  
+
+6. **Preprocessing for Classification Modeling**  
+   6.1 Labeled Data Preprocessing  
+   6.2 Unlabeled Data Handling  
+   6.3 Summary Statistics and Dataset Characteristics  
+
+7. **Multi-Label Classification Model Development**  
+   7.1 Model Architecture and Training Setup  
+   7.2 Loss Functions and Threshold Optimization  
+   7.3 Evaluation Metrics and Results  
+
+8. **Prediction and Human-in-the-Loop Review**  
+   8.1 Ensemble Prediction Workflow  
+   8.2 Confidence Scoring and Selection  
+   8.3 Visualization Techniques  
+
+9. **Outputs and Deliverables**  
+   9.1 Model Artifacts and Thresholds  
+   9.2 Predictions and Visualizations  
+   9.3 Final Dataset Characteristics  
+
+---
+
+## Introduction
+**Social Media Classification Modeling for Policy Topics**
+
+This project develops a scalable framework for classifying social media discussions, specifically Reddit posts, into distinct policy-related categories. By focusing on state-specific subreddit data, the initiative identifies trends, sentiments, and thematic distributions related to various policy issues.
+
+### Key Objectives:
+- **Data Collection**: Automate the large-scale collection of Reddit data, including posts and comments.
+- **Exploratory Data Analysis (EDA)**: Apply advanced techniques to validate and prepare the dataset for classification.
+- **Model Development**: Create and fine-tune multi-label classification models to categorize posts into predefined policy areas.
+- **Human-in-the-Loop**: Incorporate manual labeling and review processes to ensure high-quality datasets and nuanced model outputs.
+
+
+
+
 ## Reddit Data Collection
 
 The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and large-scale collection of Reddit posts and comments from state-specific subreddits. These scripts utilize multiple Reddit API keys to manage rate limits and optimize asynchronous data fetching.  They are configured to pull the top 600 threads/posts from the past year for the 50 state subreddits, and all of the comments (including nested comments) from those threads (around 4.5 million comments).  The comments script takes around 16 hours to run, posts is much faster.
