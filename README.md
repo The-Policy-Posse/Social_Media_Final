@@ -115,7 +115,7 @@ The `Reddit_Data_Scrapers` folder contains scripts designed for efficient and la
 
 Once the data successfully scraped and validated, extensive EDA was run using several exploratory methods to determine if this data would be a good candidate for modeling.  
 
-The first step was employing Allotaxonometry-Style graphs on several test states to determine if rough trends and differences could be detected in the data, or if it was simply too noisy to be worth the trouble.  With our EDA Allotaxonemtry, we were able to detect a Marijunana Legalization Trend downtick due to a legislative event that was losing steam, and in Vermont we were able to detect Foliage-related terms:
+The first step was employing Allotaxonometry-Style graphs on several test states to determine if rough trends and differences could be detected in the data, or if it was simply too noisy to be worth the trouble.  With our EDA Allotaxonemtry, we were able to detect a Marijunana Legalization Trend downtick due to a legislative event that was losing steam, and in Vermont we were able to detect Foliage-related terms trending going into the Fall:
 
 <p>
   <img src="images/kentucky-5-01-23.png" alt="EDA Allotaxonometry of Kentucky" style="width: 45%;">
@@ -128,7 +128,15 @@ From there, we used exploratory Topic Modeling with BeRTopic and KMeans clusteri
 <p>
   <img src="images/tsneKmeans.png" alt="EDA Allotaxonometry of Kentucky" style="width: 45%;">
   <img src="images/tsneBertTopic.png" alt="EDA Allotaxonometry of Vermont" style="width: 45%;">
-</p>
+</p>  
+
+
+We also ran additional statistical tests on simple sentiment analysis between clusters and groups to determine if there was validitity to our intuiton, and the results were statistically significant.  With these (and a few more metrics/analysis), we made the decision that this data was a good candidate for manual labeling and transformer based classification for our goal of identifying political topic discussion.
+
+Full EDA Modeling report can be found here: [EDA Modeling Report](Sentiment_Report_1.pdf)  
+
+
+
 
 
 ## Image Handling and Sampling for Label Studio
